@@ -1,0 +1,8 @@
+{
+  "name": "@Opetushallitus/virkailija-styles",
+  "version": "0.0.1",
+  "style": "styles/styles.css",
+  "files": [
+    "styles"
+  ]
+}
