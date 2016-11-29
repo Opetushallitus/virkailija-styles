@@ -1,0 +1,13 @@
+.test{
+    width: 100px;
+    height: 200px;
+    background-color: blue;
+}
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight:600;
+    font-size: 32px;
+    color: #2A2A2A;
+    letter-spacing: 0;
+}
