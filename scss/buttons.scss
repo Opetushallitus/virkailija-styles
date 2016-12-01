@@ -1,0 +1,46 @@
+
+.button{
+  padding: 10px 15px;
+  background: #159ECB;
+  border-radius: 2px;
+  font-size: 15px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 20px;
+  font-weight: 600;
+  display: inline-block;
+
+  &.large{
+    font-size: 16px;
+    line-height: 20px;
+    padding: 15px 44px;
+  }
+
+  &.disabled{
+    background: #CCCCCC;
+    color: #F5F5F5;
+    &:hover{
+      background: #CCCCCC;
+      cursor: not-allowed;
+    }
+  }
+
+  &.remove{
+    background: #E44E4E;
+    &:hover{
+      background: #E44E4E;
+      cursor: pointer;
+    }
+  }
+
+  &:hover{
+    background: #00B5F0;
+    cursor: pointer;
+  }
+}
+
+.large-button{
+  @extend .button;
+  font-size: 16px;
+  line-height: 20px;
+}

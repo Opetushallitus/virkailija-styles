@@ -1,13 +1,87 @@
-.test{
-    width: 100px;
-    height: 200px;
-    background-color: blue;
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #2B2B2B;
+    letter-spacing: 0;
+    line-height: 19px;
 }
 
-h1{
+hr {
+    background: #AEAEAE;
+}
+
+h1 {
     font-family: 'Open Sans', sans-serif;
-    font-weight:600;
+    font-weight: 600;
     font-size: 32px;
     color: #2A2A2A;
     letter-spacing: 0;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #2A2A2A;
+    letter-spacing: 0;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #2A2A2A;
+    letter-spacing: 0;
+}
+
+.error-txt {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #E44E4E;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #159ECB;
+    letter-spacing: 0;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+a.large {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #149ECB;
+    letter-spacing: 0;
+}
+
+input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #2B2B2B;
+    letter-spacing: 0;
+    line-height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #AEAEAE;
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 2px;
+    padding-left: 10px;
+}
+
+input:focus{
+    background: #DEF1FF;
+    border: 1px solid #A6DCEE;
+}
+
+input.error{
+    background: #FFE9E9;
+    border: 1px solid #E09191;
+}
+
+input:disabled {
+    background: #F4F4F4;
+    border: 1px solid #CCCCCC;
 }

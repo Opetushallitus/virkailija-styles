@@ -1,0 +1,35 @@
+.notification {
+  display: inline-block;
+  padding: 15px 15px;
+  background: #DEF2FF;
+  border: 1px solid #A6DCEE;
+  border-radius: 2px;
+  font-size: 15px;
+  color: #2B2B2B;
+  letter-spacing: 0;
+  line-height: 16px;
+
+  &.positive{
+    background: #E6FFC1;
+    border: 1px solid #99D740;
+  }
+
+  &.important{
+    background: #FFF7BC;
+    border: 1px solid #FFD024;
+  }
+
+  &.error{
+    background: #FFE9E9;
+    border: 1px solid #E09191;
+  }
+
+  &.info{
+    background: #F6F4F0;
+    border: 1px solid #AEAEAE;
+    font-size: 13px;
+    color: #666666;
+    line-height: 18px;
+  }
+}
+

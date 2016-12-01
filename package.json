@@ -8,5 +8,15 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Opetushallitus/virkailija-styles.git"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/styles.scss public/styles.css"
+  },
+  "dependencies": {
+    "font-awesome": "4.7.0"
+  },
+  "devDependencies": {
+    "node-sass": "^3.13.0",
+    "nodemon": "^1.11.0"
   }
 }
