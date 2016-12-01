@@ -2330,19 +2330,19 @@
 
 @font-face {
   font-family: "OpenSans";
-  src: url("../node_modules/open-sans-fontface/fonts/Regular/OpenSans-Regular.svg") format("svg");
-  src: url("../node_modules/open-sans-fontface/fonts/Regular/OpenSans-Regular.eot") format("eot");
-  src: url("../node_modules/open-sans-fontface/fonts/Regular/OpenSans-Regular.ttf") format("ttf");
-  src: url("../node_modules/open-sans-fontface/fonts/Regular/OpenSans-Regular.woff") format("woff");
-  src: url("../node_modules/open-sans-fontface/fonts/Regular/OpenSans-Regular.woff2") format("woff2"); }
+  src: url("../fonts/OpenSans-Regular.svg") format("svg");
+  src: url("../fonts/OpenSans-Regular.eot") format("eot");
+  src: url("../fonts/OpenSans-Regular.ttf") format("ttf");
+  src: url("../fonts/OpenSans-Regular.woff") format("woff");
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"); }
 
 @font-face {
   font-family: "OpenSans-Semibold";
-  src: url("../node_modules/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.svg") format("svg");
-  src: url("../node_modules/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.eot") format("eot");
-  src: url("../node_modules/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.ttf") format("ttf");
-  src: url("../node_modules/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.woff") format("woff");
-  src: url("../node_modules/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.woff2") format("woff2"); }
+  src: url("../fonts/OpenSans-Semibold.svg") format("svg");
+  src: url("../fonts/OpenSans-Semibold.eot") format("eot");
+  src: url("../fonts/OpenSans-Semibold.ttf") format("ttf");
+  src: url("../fonts/OpenSans-Semibold.woff") format("woff");
+  src: url("../fonts/OpenSans-Semibold.woff2") format("woff2"); }
 
 body {
   font-family: "OpenSans", sans-serif;

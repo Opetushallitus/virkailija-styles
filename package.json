@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build-css": "node-sass --include-path scss styles/main.scss styles/styles.css",
-    "postinstall": "mkdir -p fonts && cp -R node_modules/open-sans-fontface/fonts/Regular/* ./fonts/ && cp -R node_modules/open-sans-fontface/fonts/Semibold/* ./fonts/"
+    "cp-fonts": "mkdir -p fonts && cp -R node_modules/open-sans-fontface/fonts/Regular/* ./fonts/ && cp -R node_modules/open-sans-fontface/fonts/Semibold/* ./fonts/"
   },
   "dependencies": {
     "font-awesome": "4.7.0",
