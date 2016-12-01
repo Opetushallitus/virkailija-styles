@@ -30,6 +30,15 @@
     font-size: 13px;
     color: #666666;
     line-height: 18px;
+    vertical-align: middle;
+
+    i{
+      @extend .fa;
+      @extend .fa-info-circle;
+      padding-right: 5px;
+      font-size: 14px;
+      color: #00526C;
+    }
   }
 }
 
