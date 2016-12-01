@@ -13,7 +13,8 @@
     "build-css": "node-sass --include-path scss styles/main.scss styles/styles.css"
   },
   "dependencies": {
-    "font-awesome": "4.7.0"
+    "font-awesome": "4.7.0",
+    "open-sans-fontface": "1.4.0"
   },
   "devDependencies": {
     "node-sass": "^3.13.0",

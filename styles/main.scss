@@ -2,9 +2,30 @@ $fa-font-path: "../node_modules/font-awesome/fonts";
 @import "../node_modules/font-awesome/scss/font-awesome";
 
 $active: #159ECB;
+$bg-blue: #0A789C;
+$bg-dark-blue: #00526C;
+$bg-gray: #2B2B2B;
 
-@mixin font($size, $color) {
-  font-family: 'Open Sans', sans-serif;
+@font-face {
+  font-family: "OpenSans";
+  src: url("../node_modules/open-sans-fontface/fonts/Regular/OpenSans-Regular.svg") format("svg");
+  src: url("../node_modules/open-sans-fontface/fonts/Regular/OpenSans-Regular.eot") format("eot");
+  src: url("../node_modules/open-sans-fontface/fonts/Regular/OpenSans-Regular.ttf") format("ttf");
+  src: url("../node_modules/open-sans-fontface/fonts/Regular/OpenSans-Regular.woff") format("woff");
+  src: url("../node_modules/open-sans-fontface/fonts/Regular/OpenSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "OpenSans-Semibold";
+  src: url("../node_modules/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.svg") format("svg");
+  src: url("../node_modules/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.eot") format("eot");
+  src: url("../node_modules/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.ttf") format("ttf");
+  src: url("../node_modules/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.woff") format("woff");
+  src: url("../node_modules/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.woff2") format("woff2");
+}
+
+@mixin font($size, $color, $font: 'OpenSans') {
+  font-family: quote($font), sans-serif;
   font-size: $size;
   color: $color;
   letter-spacing: 0;
@@ -20,18 +41,15 @@ hr {
 }
 
 h1 {
-  @include font(32px, #2A2A2A);
-  font-weight: 600;
+  @include font(32px, #2A2A2A, 'OpenSans-Semibold');
 }
 
 h2 {
-  @include font(24px, #2A2A2A);
-  font-weight: 600;
+  @include font(24px, #2A2A2A, 'OpenSans-Semibold');
 }
 
 h3 {
-  @include font(16px, #2A2A2A);
-  font-weight: 600;
+  @include font(16px, #2A2A2A, 'OpenSans-Semibold');
 }
 
 .error-txt {
@@ -45,16 +63,12 @@ h3 {
 
 a {
   color: $active;
-  letter-spacing: 0;
   line-height: 16px;
   text-decoration: none;
 }
 
 a.large-link {
-  font-size: 18px;
-  color: #149ECB;
-  letter-spacing: 0;
-  font-weight: 600;
+  @include font(18px, #149ECB, 'OpenSans-Semibold');
 }
 
 @import "input";
