@@ -3,20 +3,17 @@
   "version": "0.0.1",
   "style": "styles/styles.css",
   "files": [
-    "styles",
-    "fonts"
+    "styles"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Opetushallitus/virkailija-styles.git"
   },
   "scripts": {
-    "build-css": "node-sass --include-path scss styles/main.scss styles/styles.css",
-    "cp-fonts": "mkdir -p fonts && cp -R node_modules/open-sans-fontface/fonts/Regular/* ./fonts/ && cp -R node_modules/open-sans-fontface/fonts/Semibold/* ./fonts/"
+    "build-css": "node-sass --include-path scss styles/main.scss styles/styles.css"
   },
   "dependencies": {
-    "font-awesome": "4.7.0",
-    "open-sans-fontface": "1.4.0"
+    "font-awesome": "4.7.0"
   },
   "devDependencies": {
     "node-sass": "^3.13.0",

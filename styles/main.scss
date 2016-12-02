@@ -1,35 +1,19 @@
 $fa-font-path: "../node_modules/font-awesome/fonts";
 @import "../node_modules/font-awesome/scss/font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+$font-family-open-sans: 'Open Sans', sans-serif;
 $active: #159ECB;
 $bg-blue: #0A789C;
 $bg-dark-blue: #00526C;
 $bg-gray: #2B2B2B;
 
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Regular.svg") format("svg");
-  src: url("../fonts/OpenSans-Regular.eot") format("eot");
-  src: url("../fonts/OpenSans-Regular.ttf") format("ttf");
-  src: url("../fonts/OpenSans-Regular.woff") format("woff");
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "OpenSans-Semibold";
-  src: url("../fonts/OpenSans-Semibold.svg") format("svg");
-  src: url("../fonts/OpenSans-Semibold.eot") format("eot");
-  src: url("../fonts/OpenSans-Semibold.ttf") format("ttf");
-  src: url("../fonts/OpenSans-Semibold.woff") format("woff");
-  src: url("../fonts/OpenSans-Semibold.woff2") format("woff2");
-}
-
-@mixin font($size, $color, $font: 'OpenSans') {
-  font-family: quote($font), sans-serif;
+@mixin font($size, $color, $weight: 400) {
+  font-family: $font-family-open-sans;
   font-size: $size;
   color: $color;
-  letter-spacing: 0;
   line-height: 19px;
+  font-weight: $weight;
 }
 
 body {
@@ -41,15 +25,15 @@ hr {
 }
 
 h1 {
-  @include font(32px, #2A2A2A, 'OpenSans-Semibold');
+  @include font(32px, #2A2A2A, 600);
 }
 
 h2 {
-  @include font(24px, #2A2A2A, 'OpenSans-Semibold');
+  @include font(24px, #2A2A2A, 600);
 }
 
 h3 {
-  @include font(16px, #2A2A2A, 'OpenSans-Semibold');
+  @include font(16px, #2A2A2A, 600);
 }
 
 .error-txt {
@@ -68,7 +52,7 @@ a {
 }
 
 a.large-link {
-  @include font(18px, #149ECB, 'OpenSans-Semibold');
+  @include font(18px, #149ECB, 600);
 }
 
 @import "input";

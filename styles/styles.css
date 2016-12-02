@@ -5,6 +5,7 @@
  */
 /* FONT PATH
  * -------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @font-face {
   font-family: 'FontAwesome';
   src: url("../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
@@ -2328,52 +2329,36 @@
   overflow: visible;
   clip: auto; }
 
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Regular.svg") format("svg");
-  src: url("../fonts/OpenSans-Regular.eot") format("eot");
-  src: url("../fonts/OpenSans-Regular.ttf") format("ttf");
-  src: url("../fonts/OpenSans-Regular.woff") format("woff");
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"); }
-
-@font-face {
-  font-family: "OpenSans-Semibold";
-  src: url("../fonts/OpenSans-Semibold.svg") format("svg");
-  src: url("../fonts/OpenSans-Semibold.eot") format("eot");
-  src: url("../fonts/OpenSans-Semibold.ttf") format("ttf");
-  src: url("../fonts/OpenSans-Semibold.woff") format("woff");
-  src: url("../fonts/OpenSans-Semibold.woff2") format("woff2"); }
-
 body {
-  font-family: "OpenSans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   color: #2B2B2B;
-  letter-spacing: 0;
-  line-height: 19px; }
+  line-height: 19px;
+  font-weight: 400; }
 
 hr {
   background: #AEAEAE; }
 
 h1 {
-  font-family: "OpenSans-Semibold", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 32px;
   color: #2A2A2A;
-  letter-spacing: 0;
-  line-height: 19px; }
+  line-height: 19px;
+  font-weight: 600; }
 
 h2 {
-  font-family: "OpenSans-Semibold", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   color: #2A2A2A;
-  letter-spacing: 0;
-  line-height: 19px; }
+  line-height: 19px;
+  font-weight: 600; }
 
 h3 {
-  font-family: "OpenSans-Semibold", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #2A2A2A;
-  letter-spacing: 0;
-  line-height: 19px; }
+  line-height: 19px;
+  font-weight: 600; }
 
 .error-txt {
   font-size: 15px;
@@ -2388,11 +2373,11 @@ a {
   text-decoration: none; }
 
 a.large-link {
-  font-family: "OpenSans-Semibold", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   color: #149ECB;
-  letter-spacing: 0;
-  line-height: 19px; }
+  line-height: 19px;
+  font-weight: 600; }
 
 .input-group label {
   display: block; }
