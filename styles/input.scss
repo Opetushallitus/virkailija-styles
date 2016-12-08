@@ -43,8 +43,18 @@ input:disabled {
     margin: 5px 0;
 
     &.new-item{
-      @extend input:disabled;
+      border-radius: 2px;
       cursor: pointer;
+      color: #666666;
+
+      &:not(.active){
+        box-shadow: none;
+        border: 1px dashed #AEAEAE;
+      }
+
+      &.active{
+        color: $active;
+      }
     }
   }
 

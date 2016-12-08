@@ -2424,7 +2424,7 @@ input.error {
   background: #FFE9E9;
   border: 1px solid #E09191; }
 
-input:disabled, .field-set li input.new-item {
+input:disabled {
   background: #F4F4F4;
   color: #9B9B9B;
   border: 1px solid #CCCCCC; }
@@ -2436,7 +2436,14 @@ input:disabled, .field-set li input.new-item {
     width: 300px;
     margin: 5px 0; }
     .field-set li input.new-item {
-      cursor: pointer; }
+      border-radius: 2px;
+      cursor: pointer;
+      color: #666666; }
+      .field-set li input.new-item:not(.active) {
+        box-shadow: none;
+        border: 1px dashed #AEAEAE; }
+      .field-set li input.new-item.active {
+        color: #159ECB; }
   .field-set span.close {
     position: relative;
     display: inline-block;
