@@ -1,8 +1,8 @@
 $fa-font-path: "../node_modules/font-awesome/fonts";
 @import "../node_modules/font-awesome/scss/font-awesome";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
-$font-family-open-sans: 'Open Sans', sans-serif;
+$font-family-open-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $active: #159ECB;
 $bg-blue: #0A789C;
 $bg-dark-blue: #00526C;
