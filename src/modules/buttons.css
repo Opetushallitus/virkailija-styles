@@ -66,7 +66,11 @@
 /**
 * @styles 2-disabled-button Disabled button
 *
-* @description Use *disabled* attribute instead of *oph-button-is-disabled* class with *button* tag
+* Use *disabled* attribute instead of *oph-button-is-disabled* class with *button* tag.
+*
+* Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events),
+* and may need JS to be completely blocked.
+*
 * @demo demos/buttons/button-disabled.html
 */
 .oph-button-is-disabled,
@@ -78,7 +82,7 @@
   color: var(--color);
   border-color: var(--disabled-bg-color);
   background-color: var(--disabled-bg-color);
-  cursor: not-allowed;
+  /* For disabling links */
   pointer-events: none;
 }
 
@@ -93,7 +97,7 @@
 
 :root {
   --font-family: var(--base-font-family);
-  --font-size: var(--base-font-size);
+  --font-size: var(--h4);
   --font-weight: var(--font-weight-bold);
   --line-height: 1.125;
 

@@ -2,14 +2,15 @@
 * @stylesheet src/modules/base.css Base element
 * @parent index
 *
-* @description Use *oph-base* class in a container element to set font family, size, color and line height.
+* @description Use *oph-base* class in an element to set font family, size, color and line height.
 */
 
 .oph-base {
   font-family: var(--base-font-family);
   font-size: var(--base-font-size);
-  color: var(--black);
   line-height: var(--base-line-height);
+  text-size-adjust: 100%;
+  color: var(--black);
 }
 
 /*
@@ -26,13 +27,18 @@
   --h6: .75rem;
 
   --base-font-family: "Open Sans", "Helvetica", sans-sefif;
-  --base-font-size: 90%;
+
+  /*
+    Use a relative unit to allow the changing of user agent's font size
+    95% = 15.2px in Chrome on default font size
+  */
+  --base-font-size: 95%;
 
   --base-line-height: 1.45;
 
   --font-weight-bold: 600;
 
-  /* Consistent spacing scale for margins & paddings */
+  /* Consistent scale for margins & paddings */
   --space-05: .25rem;
   --space-1:  .5rem;
   --space-2:  1rem;
