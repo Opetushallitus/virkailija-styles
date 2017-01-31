@@ -1,0 +1,117 @@
+/**
+* @stylesheet src/modules/buttons.css Buttons
+* @parent index
+*
+* Use with *a* or *button* tag
+*/
+
+.oph-button {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  text-decoration: none;
+  display: inline-block;
+  padding: var(--padding-x) var(--padding-y);
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  transition: background var(--transition);
+  cursor: pointer;
+}
+
+.oph-button:focus {
+  outline: 0;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+* @styles 0-primary-button Primary button
+*
+* @demo demos/buttons/button-primary.html
+*/
+.oph-button-primary {
+  color: var(--color);
+  border-color: var(--primary-bg-color);
+  background-color: var(--primary-bg-color);
+}
+
+.oph-button-primary:hover,
+.oph-button-primary:focus {
+  border-color: var(--primary-bg-color-hover);
+  background-color: var(--primary-bg-color-hover);
+}
+
+/**
+* @styles 1-confirm-button Confirm button
+*
+* @demo demos/buttons/button-confirm.html
+*/
+.oph-button-confirm {
+  color: var(--color);
+  border-color: var(--confirm-bg-color);
+  background-color: var(--confirm-bg-color);
+}
+
+.oph-button-confirm:hover,
+.oph-button-confirm:focus {
+  border-color: var(--confirm-bg-color-hover);
+  background-color: var(--confirm-bg-color-hover);
+}
+
+/**
+* @styles 2-disabled-button Disabled button
+*
+* @description Use *disabled* attribute instead of *oph-button-is-disabled* class with *button* tag
+* @demo demos/buttons/button-disabled.html
+*/
+.oph-button-is-disabled,
+.oph-button:disabled,
+.oph-button-is-disabled:hover,
+.oph-button:disabled:hover,
+.oph-button-is-disabled:focus,
+.oph-button:disabled:focus {
+  color: var(--color);
+  border-color: var(--disabled-bg-color);
+  background-color: var(--disabled-bg-color);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/**
+* @styles 3-big-button Big button
+*
+* @demo demos/buttons/button-big.html
+*/
+.oph-button-big {
+  padding: var(--big-padding-x) var(--big-padding-y);
+}
+
+:root {
+  --font-family: var(--base-font-family);
+  --font-size: var(--base-font-size);
+  --font-weight: var(--font-weight-bold);
+  --line-height: 1.125;
+
+  --padding-x: var(--space-1);
+  --padding-y: var(--space-2);
+  --big-padding-x: var(--space-2);
+  --big-padding-y: var(--space-3);
+
+  --border-radius: var(--base-border-radius);
+
+  --color: var(--white);
+
+  --primary-bg-color: var(--blue-lighten-1);
+  --primary-bg-color-hover: var(--blue-lighten-2);
+
+  --confirm-bg-color: var(--red);
+  --confirm-bg-color-hover: var(--red-lighten-1);
+
+  --disabled-color: var(--white);
+  --disabled-bg-color: var(--gray-lighten-3);
+}

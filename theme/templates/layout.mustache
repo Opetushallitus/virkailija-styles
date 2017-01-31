@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    {{{generatedWarning}}}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{makeParentTitle}} {{#if title}}- {{title}} {{else}} {{#if name}}- {{name}}{{/if}}{{/if}}</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    {{^devBuild}}
+        <link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+    {{/devBuild}}
+</head>
+
+<body class="docs">
+{{#unless hideHeader}}
+    <header>
+        <nav class="container">
+            <div class="logo-menu">
+                <a class="brand" href="./index.html">{{makeParentTitle}}</a>
+            </div>
+        </nav>
+    </header>
+{{/unless}}
+
+{{{content}}}
+
+<script type="text/javascript">
+    var docObject = {{{docObjectString}}};
+</script>
+
+{{#if devBuild}}
+    <script type='text/javascript'
+            data-main="static"
+            data-config="./static/config.js"
+            src="./static/steal/steal.js"></script>
+{{else}}
+    <script>
+        steal = {
+            instantiated: {
+                "bundles/static.css!$css" : null
+            }
+        }
+    </script>
+    <script type='text/javascript'
+            data-main="static"
+            data-config="./static/config.js"
+            src="./static/steal.production.js"
+            bundles-path="bundles"></script>
+{{/if}}
+</body>
+
+</html>

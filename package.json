@@ -1,22 +1,27 @@
 {
-  "name": "virkailija-styles",
-  "version": "0.0.1",
-  "style": "styles/styles.css",
-  "files": [
-    "styles"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Opetushallitus/virkailija-styles.git"
-  },
+  "name": "oph-virkailija-style-guide",
+  "version": "0.1.0",
+  "description": "",
   "scripts": {
-    "build-css": "node-sass --include-path scss styles/main.scss styles/styles.css"
+    "build": "npm run build-css && npm run minify-css && npm run build-styleguide && npm run copy-demos",
+    "build-css": "node_modules/postcss-cli/bin/postcss -c postcss.json",
+    "minify-css": "node_modules/.bin/cssnano oph-styles.css oph-styles-min.css",
+    "build-styleguide": "node_modules/.bin/documentjs -f",
+    "copy-demos": "rsync -r demos/* styleguide/demos"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "3.10.0",
+    "cssnano-cli": "1.0.5",
+    "documentjs": "0.4.4",
+    "postcss": "5.2.6",
+    "postcss-cli": "2.6.0",
+    "postcss-cssnext": "2.9.0",
+    "postcss-smart-import": "0.6.0"
   },
   "dependencies": {
     "font-awesome": "4.7.0"
-  },
-  "devDependencies": {
-    "node-sass": "^3.13.0",
-    "nodemon": "^1.11.0"
   }
 }

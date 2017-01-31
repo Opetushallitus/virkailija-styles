@@ -1,0 +1,13 @@
+{
+  "siteDefaults": {
+    "static": "theme/static",
+    "templates": "theme/templates"
+  },
+  "sites": {
+    "styles": {
+      "glob": "{pages,src/modules}/*.{css,md}",
+      "parent": "index",
+      "dest": "styleguide"
+    }
+  }
+}
