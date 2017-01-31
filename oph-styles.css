@@ -1,125 +1,5 @@
-/* Modules */
-/**
-* @stylesheet src/modules/base.css Base element
-* @parent index
-*
-* @description Use *oph-base* class in a container element to set font family, size, color and line height.
-*/
-.oph-base {
-  font-family: "Open Sans", "Helvetica", sans-sefif;
-  font-size: 90%;
-  color: #2a2a2a;
-  line-height: 1.45;
-}
-/*
-  Variables
-  Naming: component-property-modifier
-*/
-:root {
-  /* Type scale */
 
-  /* Consistent spacing scale for margins & paddings */
-
-  /* Colors */
-
-  /* Borders */
-
-  /* Transitions */
-
-  /* Miscellaneous */
-
-  /* Media queries */
-}
-/* Typography */
-.oph-h1 {
-
-}
-/**
-* @stylesheet src/modules/buttons.css Buttons
-* @parent index
-*
-* Use with *a* or *button* tag
-*/
-.oph-button {
-  font-family: "Open Sans", "Helvetica", sans-sefif;
-  font-size: 90%;
-  font-weight: 600;
-  line-height: 1.125;
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-  padding: .5rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 2px;
-  background-color: transparent;
-  -webkit-transition: background .15s ease;
-  transition: background .15s ease;
-  cursor: pointer;
-}
-.oph-button:focus {
-  outline: 0;
-}
-::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-/**
-* @styles 0-primary-button Primary button
-*
-* @demo demos/buttons/button-primary.html
-*/
-.oph-button-primary {
-  color: #fdfdfd;
-  border-color: #159ecb;
-  background-color: #159ecb;
-}
-.oph-button-primary:hover,
-.oph-button-primary:focus {
-  border-color: #00b5f0;
-  background-color: #00b5f0;
-}
-/**
-* @styles 1-confirm-button Confirm button
-*
-* @demo demos/buttons/button-confirm.html
-*/
-.oph-button-confirm {
-  color: #fdfdfd;
-  border-color: #e44e4e;
-  background-color: #e44e4e;
-}
-.oph-button-confirm:hover,
-.oph-button-confirm:focus {
-  border-color: #e09191;
-  background-color: #e09191;
-}
-/**
-* @styles 2-disabled-button Disabled button
-*
-* @description Use *disabled* attribute instead of *oph-button-is-disabled* class with *button* tag
-* @demo demos/buttons/button-disabled.html
-*/
-.oph-button-is-disabled,
-.oph-button:disabled,
-.oph-button-is-disabled:hover,
-.oph-button:disabled:hover,
-.oph-button-is-disabled:focus,
-.oph-button:disabled:focus {
-  color: #fdfdfd;
-  border-color: #aeaeae;
-  background-color: #aeaeae;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-/**
-* @styles 3-big-button Big button
-*
-* @demo demos/buttons/button-big.html
-*/
-.oph-button-big {
-  padding: 16px 32px;
-  padding: 1rem 2rem;
-}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 /* External dependencies */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2453,4 +2333,122 @@
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+/* Modules */
+/**
+* @stylesheet src/modules/base.css Base element
+* @parent index
+*
+* @description Use *oph-base* class in a container element to set font family, size, color and line height.
+*/
+.oph-base {
+  font-family: "Open Sans", "Helvetica", sans-sefif;
+  font-size: 90%;
+  color: #2a2a2a;
+  line-height: 1.45;
+}
+/*
+  Variables
+  Naming: component-property-modifier
+*/
+:root {
+  /* Type scale */
+
+  /* Consistent spacing scale for margins & paddings */
+
+  /* Colors */
+
+  /* Borders */
+
+  /* Transitions */
+
+  /* Miscellaneous */
+
+  /* Media queries */
+}
+/**
+* @stylesheet src/modules/buttons.css Buttons
+* @parent index
+*
+* Use with *a* or *button* tag
+*/
+.oph-button {
+  font-family: "Open Sans", "Helvetica", sans-sefif;
+  font-size: 90%;
+  font-weight: 600;
+  line-height: 1.125;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  padding: .5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: transparent;
+  -webkit-transition: background .15s ease;
+  transition: background .15s ease;
+  cursor: pointer;
+}
+.oph-button:focus {
+  outline: 0;
+}
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+* @styles 0-primary-button Primary button
+*
+* @demo demos/buttons/button-primary.html
+*/
+.oph-button-primary {
+  color: #fdfdfd;
+  border-color: #159ecb;
+  background-color: #159ecb;
+}
+.oph-button-primary:hover,
+.oph-button-primary:focus {
+  border-color: #00b5f0;
+  background-color: #00b5f0;
+}
+/**
+* @styles 1-confirm-button Confirm button
+*
+* @demo demos/buttons/button-confirm.html
+*/
+.oph-button-confirm {
+  color: #fdfdfd;
+  border-color: #e44e4e;
+  background-color: #e44e4e;
+}
+.oph-button-confirm:hover,
+.oph-button-confirm:focus {
+  border-color: #e09191;
+  background-color: #e09191;
+}
+/**
+* @styles 2-disabled-button Disabled button
+*
+* @description Use *disabled* attribute instead of *oph-button-is-disabled* class with *button* tag
+* @demo demos/buttons/button-disabled.html
+*/
+.oph-button-is-disabled,
+.oph-button:disabled,
+.oph-button-is-disabled:hover,
+.oph-button:disabled:hover,
+.oph-button-is-disabled:focus,
+.oph-button:disabled:focus {
+  color: #fdfdfd;
+  border-color: #aeaeae;
+  background-color: #aeaeae;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+/**
+* @styles 3-big-button Big button
+*
+* @demo demos/buttons/button-big.html
+*/
+.oph-button-big {
+  padding: 16px 32px;
+  padding: 1rem 2rem;
 }
