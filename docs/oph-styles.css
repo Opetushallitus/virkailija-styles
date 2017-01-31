@@ -2339,13 +2339,16 @@
 * @stylesheet src/modules/base.css Base element
 * @parent index
 *
-* @description Use *oph-base* class in a container element to set font family, size, color and line height.
+* @description Use *oph-base* class in an element to set font family, size, color and line height.
 */
 .oph-base {
   font-family: "Open Sans", "Helvetica", sans-sefif;
-  font-size: 90%;
-  color: #2a2a2a;
+  font-size: 95%;
   line-height: 1.45;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  color: #2a2a2a;
 }
 /*
   Variables
@@ -2354,7 +2357,12 @@
 :root {
   /* Type scale */
 
-  /* Consistent spacing scale for margins & paddings */
+  /*
+    Use a relative unit to allow the changing of user agent's font size
+    95% = 15.2px in Chrome on default font size
+  */
+
+  /* Consistent scale for margins & paddings */
 
   /* Colors */
 
@@ -2374,7 +2382,8 @@
 */
 .oph-button {
   font-family: "Open Sans", "Helvetica", sans-sefif;
-  font-size: 90%;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.125;
   text-decoration: none;
@@ -2428,7 +2437,11 @@
 /**
 * @styles 2-disabled-button Disabled button
 *
-* @description Use *disabled* attribute instead of *oph-button-is-disabled* class with *button* tag
+* Use *disabled* attribute instead of *oph-button-is-disabled* class with *button* tag.
+*
+* Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events),
+* and may need JS to be completely blocked.
+*
 * @demo demos/buttons/button-disabled.html
 */
 .oph-button-is-disabled,
@@ -2440,7 +2453,7 @@
   color: #fdfdfd;
   border-color: #aeaeae;
   background-color: #aeaeae;
-  cursor: not-allowed;
+  /* For disabling links */
   pointer-events: none;
 }
 /**
