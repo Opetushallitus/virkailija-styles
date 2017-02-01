@@ -2335,34 +2335,20 @@
   clip: auto;
 }
 /* Modules */
-/**
-* @stylesheet src/modules/base.css Base element
-* @parent index
-*
-* @description Use *oph-base* class in an element to set font family, size, color and line height.
-*/
-.oph-base {
-  font-family: "Open Sans", "Helvetica", sans-sefif;
-  font-size: 95%;
-  line-height: 1.45;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
-  color: #2a2a2a;
-}
 /*
   Variables
-  Naming: component-property-modifier
+  Naming: property-modifier
 */
 :root {
-  /* Type scale */
 
   /*
-    Use a relative unit to allow the changing of user agent's font size
+    A relative unit is used to allow the changing of user agent's font size
     95% = 15.2px in Chrome on default font size
   */
 
-  /* Consistent scale for margins & paddings */
+  /* Type scale */
+
+  /* Spacing scale for margins & paddings */
 
   /* Colors */
 
@@ -2375,10 +2361,51 @@
   /* Media queries */
 }
 /**
+* @stylesheet src/modules/typography.css Typography
+* @parent index
+*/
+/**
+* @styles 0-base-element Base element
+*
+* @description Use *oph-base* class in an element to set font family, size, color and line height.
+*
+* @demo demos/typography/base.html
+*/
+.oph-base {
+  font-family: "Open Sans", "Helvetica", sans-sefif;
+  font-size: 95%;
+  line-height: 1.45;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  color: #2a2a2a;
+}
+.black { color: #2a2a2a; }
+.white { color: #fdfdfd; }
+.gray { color: #2b2b2b; }
+.gray-lighten-1 { color: #666; }
+.gray-lighten-2 { color: #9b9b9b; }
+.gray-lighten-3 { color: #aeaeae; }
+.gray-lighten-4 { color: #ccc; }
+.gray-lighten-5 { color: #f6f4f0; }
+.red { color: #e44e4e; }
+.red-lighten-1 { color: #e09191; }
+.red-lighten-2 { color: #ffe9e9; }
+.blue { color: #0a789c; }
+.blue-lighten-1 { color: #159ecb; }
+.blue-lighten-2 { color: #00b5f0; }
+.blue-lighten-3 { color: #a6dcee; }
+.blue-lighten-4 { color: #def2ff; }
+.blue-darken-1 { color: #00526c; }
+.green { color: #99d740; }
+.green-lighten-1 { color: #e6ffc1; }
+.yellow { color: #ffd024; }
+.yellow-lighten-1 { color: #fff7bc; }
+/**
 * @stylesheet src/modules/buttons.css Buttons
 * @parent index
 *
-* Use with *a* or *button* tag
+* Use with *a*, *button* or *input* tag
 */
 .oph-button {
   font-family: "Open Sans", "Helvetica", sans-sefif;
@@ -2393,8 +2420,8 @@
   border: 1px solid transparent;
   border-radius: 2px;
   background-color: transparent;
-  -webkit-transition: background .15s ease;
-  transition: background .15s ease;
+  -webkit-transition: background .15 ease;
+  transition: background .15 ease;
   cursor: pointer;
 }
 .oph-button:focus {
@@ -2453,7 +2480,6 @@
   color: #fdfdfd;
   border-color: #aeaeae;
   background-color: #aeaeae;
-  /* For disabling links */
   pointer-events: none;
 }
 /**

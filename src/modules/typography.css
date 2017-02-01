@@ -1,0 +1,51 @@
+/**
+* @stylesheet src/modules/typography.css Typography
+* @parent index
+*/
+
+/**
+* @styles 0-base-element Base element
+*
+* @description Use *oph-base* class in an element to set font family, size, color and line height.
+*
+* @demo demos/typography/base.html
+*/
+.oph-base {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  text-size-adjust: 100%;
+  color: var(--font-color);
+}
+
+.black { color: var(--black); }
+
+.white { color: var(--white); }
+
+.gray { color: var(--gray); }
+.gray-lighten-1 { color: var(--gray-lighten-1); }
+.gray-lighten-2 { color: var(--gray-lighten-2); }
+.gray-lighten-3 { color: var(--gray-lighten-3); }
+.gray-lighten-4 { color: var(--gray-lighten-4); }
+.gray-lighten-5 { color: var(--gray-lighten-5); }
+
+.red { color: var(--red); }
+.red-lighten-1 { color: var(--red-lighten-1); }
+.red-lighten-2 { color: var(--red-lighten-2); }
+
+.blue { color: var(--blue); }
+.blue-lighten-1 { color: var(--blue-lighten-1); }
+.blue-lighten-2 { color: var(--blue-lighten-2); }
+.blue-lighten-3 { color: var(--blue-lighten-3); }
+.blue-lighten-4 { color: var(--blue-lighten-4); }
+.blue-darken-1 { color: var(--blue-darken-1); }
+
+.green { color: var(--green); }
+.green-lighten-1 { color: var(--green-lighten-1); }
+
+.yellow { color: var(--yellow); }
+.yellow-lighten-1 { color: var(--yellow-lighten-1); }
+
+:root {
+  --font-color: var(--black);
+}

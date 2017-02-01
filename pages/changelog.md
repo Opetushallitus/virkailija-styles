@@ -1,8 +1,11 @@
 @page change-log Change log
 @parent index
 
-All notable changes to this style guide will be documented in this file.
+All notable changes to this style guide will be documented on this page.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
-and this style guide adheres to [Semantic Versioning](http://semver.org/).
+and versioning is based on [Semantic Versioning](http://semver.org/).
 
+- New pages increase the major version
+- Added or removed styles increase the minor version
+- Changes to existing styles increase the patch version

@@ -39,14 +39,3 @@ add a link tag to your HTML (or any template) file:
 ```
 <link href="[path/to/resources]/oph-styles-min.css" rel="stylesheet">
 ```
-
-***
-
-## Fonts
-
-[Open Sans](https://fonts.google.com/specimen/Open+Sans) is used as the base font. 
-Include it with a link tag:
-
-```
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-```
