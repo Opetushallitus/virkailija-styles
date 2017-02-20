@@ -5,9 +5,9 @@
   "scripts": {
     "build": "npm run build-css && npm run minify-css && npm run build-styleguide",
     "build-css": "node_modules/postcss-cli/bin/postcss -c postcss.json",
-    "minify-css": "node_modules/.bin/cssnano oph-styles.css oph-styles-min.css",
+    "minify-css": "node_modules/.bin/cssnano --no-zindex oph-styles.css oph-styles-min.css",
     "build-styleguide": "node_modules/.bin/documentjs",
-    "copy-styleguide": "cp -a oph-styles.css demos styleguide ../virkailija-styles/docs"
+    "copy-styleguide": "cp -a oph-styles.css oph-styles-min.css demos styleguide ../virkailija-styles/docs"
   },
   "keywords": [],
   "author": "",

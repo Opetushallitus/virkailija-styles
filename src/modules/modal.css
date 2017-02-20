@@ -53,6 +53,10 @@
   margin-top: 0;
 }
 
+.oph-modal-big .oph-modal-dialog {
+  max-width: 100%;
+}
+
 :root {
-  --modal-width: 45em;
+  --modal-width: calc(var(--container-width) / 2);
 }

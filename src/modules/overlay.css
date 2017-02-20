@@ -1,10 +1,12 @@
 .oph-overlay {
+  display: none;
   position: relative;
   overflow: auto;
   background-color: var(--overlay-bg);
 }
 
 .oph-overlay-is-visible {
+  display: block;
   position: fixed;
   top: 0;
   right: 0;
