@@ -1,8 +1,9 @@
 /* External dependencies */
-@import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 /* Modules */
-@import "modules/base.css";
-@import "modules/typography.css";
+@import "modules/variables.css";
 @import "modules/buttons.css";
+@import "modules/modal.css";
+@import "modules/overlay.css";
+@import "modules/typography.css";

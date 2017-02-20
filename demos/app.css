@@ -1,0 +1,29 @@
+/* Demo styles */
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.col-2 {
+  box-sizing: border-box;
+  width: 16.66667%
+}
+
+.p1 {
+  padding: .5rem;
+}
+
+.pr1 {
+  padding-right: .5rem;
+}
+
+.rounded {
+  border-radius: 2px;
+}
+
+.demo-modal {
+  height: 20em;
+}

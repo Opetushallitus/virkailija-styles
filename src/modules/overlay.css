@@ -1,0 +1,18 @@
+.oph-overlay {
+  position: relative;
+  overflow: auto;
+  background-color: var(--modal-bg);
+}
+
+.oph-overlay-is-visible {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z5);
+}
+
+:root {
+  --modal-bg: rgba(0, 0, 0, .20);
+}

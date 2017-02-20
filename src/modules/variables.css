@@ -11,9 +11,8 @@
   */
   --font-size-base: 95%;
 
-  --line-height-base: 1.45;
-
   --font-weight-bold: 600;
+  --line-height-base: 1.45;
 
   /* Type scale */
   --h1: 2rem;
@@ -29,6 +28,8 @@
   --space-3: 2rem;
   --space-4: 4rem;
 
+  --container-width: 90em;
+
   /* Colors */
   --black:            #2a2a2a;
 
@@ -36,7 +37,7 @@
 
   --gray:             #2b2b2b;
   --gray-lighten-1:   #666;
-  --gray-lighten-2:   #9b9b9b;
+  --gray-lighten-2:   #999;
   --gray-lighten-3:   #aeaeae;
   --gray-lighten-4:   #ccc;
   --gray-lighten-5:   #f6f4f0;
@@ -61,9 +62,17 @@
   /* Borders */
   --border-radius-base: 2px;
 
+  /* Z-index scale */
+  --z1: 100;
+  --z2: 200;
+  --z3: 300;
+  --z4: 400;
+  --z5: 500;
+  --z6: 600;
+
   /* Transitions */
-  --transition-timing-base: .15;
-  --transition-animation-base: ease;
+  --transition-duration-base: .15s;
+  --transition-timing-function-base: ease;
 
   /* Miscellaneous */
   --box-shadow: 0 1px 4px rgba(0, 0, 0, .2);

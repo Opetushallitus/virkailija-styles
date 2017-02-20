@@ -4,48 +4,118 @@
 */
 
 /**
-* @styles 0-base-element Base element
+* @styles 0-base-element Typography base
 *
-* @description Use *oph-base* class in an element to set font family, size, color and line height.
+* Use *oph-typography* class in an element to set font family, size, color and line height.
+* Base font size is set to 95% of the browser's default font size.
 *
 * @demo demos/typography/base.html
 */
-.oph-base {
+.oph-typography {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   text-size-adjust: 100%;
-  color: var(--font-color);
+  color: var(--font-color-base);
 }
 
-.black { color: var(--black); }
+/**
+* @styles 1-type-scale Type scale
+*
+* Adjust elements' font size with *oph-h[1-6]* classes. Overrides default size.
+*
+* [Rem](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#Rems) units are used for sizing.
+* Combine the classes with fluidly sized elements for best results.
+*
+* @demo demos/typography/type-scale.html
+*/
+.oph-h1 { font-size: var(--h1); }
+.oph-h2 { font-size: var(--h2); }
+.oph-h3 { font-size: var(--h3); }
+.oph-h4 { font-size: var(--h4); }
+.oph-h5 { font-size: var(--h5); }
+.oph-h6 { font-size: var(--h6); }
 
-.white { color: var(--white); }
 
-.gray { color: var(--gray); }
-.gray-lighten-1 { color: var(--gray-lighten-1); }
-.gray-lighten-2 { color: var(--gray-lighten-2); }
-.gray-lighten-3 { color: var(--gray-lighten-3); }
-.gray-lighten-4 { color: var(--gray-lighten-4); }
-.gray-lighten-5 { color: var(--gray-lighten-5); }
+/**
+* @styles 2-headings Headings (and bold text)
+*
+* Use *.oph-bold* class with the font size classes to style headings. Font weight is set to 600.
+*
+* @demo demos/typography/headings.html
+*/
+.oph-bold {
+  font-weight: var(--font-weight-bold);
+}
 
-.red { color: var(--red); }
-.red-lighten-1 { color: var(--red-lighten-1); }
-.red-lighten-2 { color: var(--red-lighten-2); }
+/**
+* @styles 3-links Links
+*
+* @demo demos/typography/links.html
+*/
+.oph-link {
+  text-decoration: none;
+  color: var(--link-color);
+  transition-property: color;
+  transition-duration: var(--transition-duration-base);
+  transition-timing-function: var(--transition-timing-function-base);
+}
 
-.blue { color: var(--blue); }
-.blue-lighten-1 { color: var(--blue-lighten-1); }
-.blue-lighten-2 { color: var(--blue-lighten-2); }
-.blue-lighten-3 { color: var(--blue-lighten-3); }
-.blue-lighten-4 { color: var(--blue-lighten-4); }
-.blue-darken-1 { color: var(--blue-darken-1); }
+.oph-link:hover,
+.oph-link:focus {
+  color: var(--link-color-hover);
+}
 
-.green { color: var(--green); }
-.green-lighten-1 { color: var(--green-lighten-1); }
+/**
+* @styles 4-contextual-colors Contextual colors
+*
+* @demo demos/typography/contextual-colors.html
+*/
+.oph-muted { color: var(--font-color-muted); }
 
-.yellow { color: var(--yellow); }
-.yellow-lighten-1 { color: var(--yellow-lighten-1); }
+.oph-error { color: var(--font-color-error); }
+
+/**
+* @styles 5-colors Color palette
+*
+* Use *oph-[color]* classes to set text color. Every color defined in the Sketch specs has
+* a corresponding class. Overrides default color.
+*
+* @iframe demos/typography/colors.html 360
+*/
+.oph-black { color: var(--black); }
+
+.oph-white { color: var(--white); }
+
+.oph-gray { color: var(--gray); }
+.oph-gray-lighten-1 { color: var(--gray-lighten-1); }
+.oph-gray-lighten-2 { color: var(--gray-lighten-2); }
+.oph-gray-lighten-3 { color: var(--gray-lighten-3); }
+.oph-gray-lighten-4 { color: var(--gray-lighten-4); }
+.oph-gray-lighten-5 { color: var(--gray-lighten-5); }
+
+.oph-red { color: var(--red); }
+.oph-red-lighten-1 { color: var(--red-lighten-1); }
+.oph-red-lighten-2 { color: var(--red-lighten-2); }
+
+.oph-blue { color: var(--blue); }
+.oph-blue-lighten-1 { color: var(--blue-lighten-1); }
+.oph-blue-lighten-2 { color: var(--blue-lighten-2); }
+.oph-blue-lighten-3 { color: var(--blue-lighten-3); }
+.oph-blue-lighten-4 { color: var(--blue-lighten-4); }
+.oph-blue-darken-1 { color: var(--blue-darken-1); }
+
+.oph-green { color: var(--green); }
+.oph-green-lighten-1 { color: var(--green-lighten-1); }
+
+.oph-yellow { color: var(--yellow); }
+.oph-yellow-lighten-1 { color: var(--yellow-lighten-1); }
 
 :root {
-  --font-color: var(--black);
+  --font-color-base: var(--black);
+  --font-color-muted: var(--gray-lighten-2);
+  --font-color-error: var(--red);
+
+  --link-color: var(--blue-lighten-1);
+  --link-color-hover: var(--blue-lighten-2)
 }

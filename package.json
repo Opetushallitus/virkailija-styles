@@ -6,7 +6,7 @@
     "build": "npm run build-css && npm run minify-css && npm run build-styleguide",
     "build-css": "node_modules/postcss-cli/bin/postcss -c postcss.json",
     "minify-css": "node_modules/.bin/cssnano oph-styles.css oph-styles-min.css",
-    "build-styleguide": "node_modules/.bin/documentjs -f",
+    "build-styleguide": "node_modules/.bin/documentjs",
     "copy-styleguide": "cp -a oph-styles.css demos styleguide ../virkailija-styles/docs"
   },
   "keywords": [],
@@ -24,8 +24,5 @@
     "postcss-cli": "2.6.0",
     "postcss-cssnext": "2.9.0",
     "postcss-smart-import": "0.6.0"
-  },
-  "dependencies": {
-    "font-awesome": "4.7.0"
   }
 }
