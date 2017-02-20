@@ -171,7 +171,8 @@
 * @demo demos/modal/modal.html
 */
 .oph-modal {
-  max-width: 90em;
+  max-width: 1440px;
+  max-width: 90rem;
   margin-top: 0;
   margin-right: auto;
   margin-bottom: 0;
@@ -189,7 +190,8 @@
 .oph-modal-dialog {
   position: relative;
   width: 100%;
-  max-width: 45em;
+  max-width: 720px;
+  max-width: 45rem;
   margin-top: 0;
   margin-right: auto;
   margin-bottom: 0;
@@ -216,12 +218,17 @@
   font-weight: 600;
   margin-top: 0;
 }
+.oph-modal-big .oph-modal-dialog {
+  max-width: 100%;
+}
 .oph-overlay {
+  display: none;
   position: relative;
   overflow: auto;
   background-color: rgba(0, 0, 0, .20);
 }
 .oph-overlay-is-visible {
+  display: block;
   position: fixed;
   top: 0;
   right: 0;
