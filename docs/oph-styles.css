@@ -33,7 +33,7 @@
 * @stylesheet src/modules/buttons.css Buttons
 * @parent index
 *
-* Use with *a*, *button* or *input* tag
+* Use with *a*, *button* or *input type="submit"* tag
 */
 .oph-button {
   font-family: "Open Sans", "Helvetica", sans-sefif;
@@ -77,7 +77,7 @@
 * @demo demos/buttons/button-primary.html
 */
 .oph-button-primary {
-  color: #fdfdfd;
+  color: #fff;
   border-color: #159ecb;
   background-color: #159ecb;
 }
@@ -92,7 +92,7 @@
 * @demo demos/buttons/button-confirm.html
 */
 .oph-button-confirm {
-  color: #fdfdfd;
+  color: #fff;
   border-color: #e44e4e;
   background-color: #e44e4e;
 }
@@ -104,7 +104,7 @@
 /**
 * @styles 2-disabled-button Disabled button
 *
-* Use *disabled* attribute instead of *oph-button-is-disabled* class with *button* tag.
+* Use *disabled* attribute instead of *.oph-button-is-disabled* class with *button* and *input* tag.
 *
 * Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events),
 * and may need JS to be completely blocked.
@@ -117,9 +117,9 @@
 .oph-button:disabled:hover,
 .oph-button-is-disabled:focus,
 .oph-button:disabled:focus {
-  color: #fdfdfd;
-  border-color: #aeaeae;
-  background-color: #aeaeae;
+  color: #fff;
+  border-color: #ccc;
+  background-color: #ccc;
   pointer-events: none;
 }
 /**
@@ -151,12 +151,25 @@
   font-weight: 400;
   position: absolute;
   top: 0;
-  right: 0
+  right: 0;
+  color: #999;
+  z-index: 200;
 }
 .oph-button-close:hover,
 .oph-button-close:focus {
   color: #00b5f0;
 }
+.oph-button-close:disabled,
+.oph-button-close.oph-button-is-disabled {
+  color: #ccc;
+  border-color: transparent;
+  background-color: transparent;
+}
+/**
+* @styles 5-loading-state Loading state
+*
+* @demo demos/buttons/loading-state.html
+*/
 /**
 * @stylesheet src/modules/modal.css Modal
 * @parent index
@@ -203,7 +216,7 @@
   padding-bottom: 2rem;
   padding-left: 0;
   border-radius: 2px;
-  background-color: #fdfdfd;
+  background-color: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
 }
 .oph-modal-content {
@@ -218,6 +231,11 @@
   font-weight: 600;
   margin-top: 0;
 }
+/**
+* @styles 1-modal-big Big modal
+*
+* @demo demos/modal/modal-big.html
+*/
 .oph-modal-big .oph-modal-dialog {
   max-width: 100%;
 }
@@ -236,6 +254,101 @@
   left: 0;
   z-index: 500;
 }
+.oph-spinner {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100px;
+  text-align: center;
+}
+.oph-spinner-in-button {
+  display: inline-block;
+  width: auto;
+  margin-right: 8px;
+  margin-right: .5rem;
+}
+.oph-spinner .oph-bounce {
+  width: 18px;
+  height: 18px;
+  background-color: #159ecb;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.oph-spinner-in-button .oph-bounce {
+  display: inline-block;
+  width: 14px;
+  width: .875rem;
+  height: 14px;
+  height: .875rem;
+  background-color: #fff;
+}
+.oph-spinner .oph-bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.oph-spinner .oph-bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+}
+/**
+* @stylesheet src/modules/backgrounds.css Backgrounds
+* @parent index
+*/
+/**
+* @styles 0-contextual-colors Application background
+*
+* Set application's background color with *.oph-bg-app*.
+*/
+.oph-bg-app {
+  background-color: #f6f4f0;
+}
+/**
+* @styles 1-colors Color palette
+*
+* Use *.oph-bg-[color]* classes to set background color. Every color defined in the Sketch specs has
+* a corresponding class. Overrides default background color.
+*
+* @iframe demos/backgrounds/colors.html 630
+*/
+.oph-bg-black { background-color: #2a2a2a; }
+.oph-bg-white { background-color: #fff; }
+.oph-bg-gray { background-color: #666; }
+.oph-bg-gray-lighten-1 { background-color: #999; }
+.oph-bg-gray-lighten-2 { background-color: #aeaeae; }
+.oph-bg-gray-lighten-3 { background-color: #ccc; }
+.oph-bg-gray-lighten-4 { background-color: #f6f4f0; }
+.oph-bg-gray-lighten-5 { background-color: #f5f5f5; }
+.oph-bg-red { background-color: #e44e4e; }
+.oph-bg-red-lighten-1 { background-color: #e09191; }
+.oph-bg-red-lighten-2 { background-color: #ffe9e9; }
+.oph-bg-blue { background-color: #0a789c; }
+.oph-bg-blue-lighten-1 { background-color: #159ecb; }
+.oph-bg-blue-lighten-2 { background-color: #00b5f0; }
+.oph-bg-blue-lighten-3 { background-color: #a6dcee; }
+.oph-bg-blue-lighten-4 { background-color: #def2ff; }
+.oph-bg-blue-darken-1 { background-color: #00526c; }
+.oph-bg-green { background-color: #99d740; }
+.oph-bg-green-lighten-1 { background-color: #e6ffc1; }
+.oph-bg-yellow { background-color: #ffd024; }
+.oph-bg-yellow-lighten-1 { background-color: #fff7bc; }
 /**
 * @stylesheet src/modules/typography.css Typography
 * @parent index
@@ -245,6 +358,8 @@
 *
 * Use *oph-typography* class in an element to set font family, size, color and line height.
 * Base font size is set to 95% of the browser's default font size.
+*
+* Set this as high in the element hierarchy as possible, preferably to the main element of your app.
 *
 * @demo demos/typography/base.html
 */
@@ -274,7 +389,7 @@
 .oph-h5 { font-size: 14px; font-size: .875rem; }
 .oph-h6 { font-size: 12px; font-size: .75rem; }
 /**
-* @styles 2-headings Headings (and bold text)
+* @styles 2-headings Headings (and bolded text)
 *
 * Use *.oph-bold* class with the font size classes to style headings. Font weight is set to 600.
 *
@@ -302,29 +417,34 @@
 .oph-link:focus {
   color: #00b5f0;
 }
+.oph-link-big {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
 /**
 * @styles 4-contextual-colors Contextual colors
 *
 * @demo demos/typography/contextual-colors.html
 */
-.oph-muted { color: #999; }
+.oph-muted { color: #aeaeae; }
 .oph-error { color: #e44e4e; }
 /**
 * @styles 5-colors Color palette
 *
-* Use *oph-[color]* classes to set text color. Every color defined in the Sketch specs has
+* Use *.oph-[color]* classes to set text color. Every color defined in the Sketch specs has
 * a corresponding class. Overrides default color.
 *
 * @iframe demos/typography/colors.html 360
 */
 .oph-black { color: #2a2a2a; }
-.oph-white { color: #fdfdfd; }
-.oph-gray { color: #2b2b2b; }
-.oph-gray-lighten-1 { color: #666; }
-.oph-gray-lighten-2 { color: #999; }
-.oph-gray-lighten-3 { color: #aeaeae; }
-.oph-gray-lighten-4 { color: #ccc; }
-.oph-gray-lighten-5 { color: #f6f4f0; }
+.oph-white { color: #fff; }
+.oph-gray { color: #666; }
+.oph-gray-lighten-1 { color: #999; }
+.oph-gray-lighten-2 { color: #aeaeae; }
+.oph-gray-lighten-3 { color: #ccc; }
+.oph-gray-lighten-4 { color: #f6f4f0; }
+.oph-gray-lighten-5 { color: #f5f5f5; }
 .oph-red { color: #e44e4e; }
 .oph-red-lighten-1 { color: #e09191; }
 .oph-red-lighten-2 { color: #ffe9e9; }
