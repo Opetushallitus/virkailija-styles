@@ -2,7 +2,7 @@
 * @stylesheet src/modules/buttons.css Buttons
 * @parent index
 *
-* Use with *a*, *button* or *input* tag
+* Use with *a*, *button* or *input type="submit"* tag
 */
 
 .oph-button {
@@ -73,7 +73,7 @@
 /**
 * @styles 2-disabled-button Disabled button
 *
-* Use *disabled* attribute instead of *oph-button-is-disabled* class with *button* tag.
+* Use *disabled* attribute instead of *.oph-button-is-disabled* class with *button* and *input* tag.
 *
 * Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events),
 * and may need JS to be completely blocked.
@@ -117,13 +117,29 @@
   font-weight: 400;
   position: absolute;
   top: 0;
-  right: 0
+  right: 0;
+  color: var(--gray-lighten-1);
+  z-index: var(--z2);
 }
 
 .oph-button-close:hover,
 .oph-button-close:focus {
   color: var(--bg-color-primary-hover);
 }
+
+.oph-button-close:disabled,
+.oph-button-close.oph-button-is-disabled {
+  color: var(--gray-lighten-3);
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/**
+* @styles 5-loading-state Loading state
+*
+* @demo demos/buttons/loading-state.html
+*/
+
 
 :root {
   --button-line-height: 1.125;

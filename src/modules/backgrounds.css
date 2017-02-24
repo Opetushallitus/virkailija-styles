@@ -1,0 +1,53 @@
+/**
+* @stylesheet src/modules/backgrounds.css Backgrounds
+* @parent index
+*/
+
+/**
+* @styles 0-contextual-colors Application background
+*
+* Set application's background color with *.oph-bg-app*.
+*/
+.oph-bg-app {
+  background-color: var(--bg-app);
+}
+
+/**
+* @styles 1-colors Color palette
+*
+* Use *.oph-bg-[color]* classes to set background color. Every color defined in the Sketch specs has
+* a corresponding class. Overrides default background color.
+*
+* @iframe demos/backgrounds/colors.html 630
+*/
+.oph-bg-black { background-color: var(--black); }
+
+.oph-bg-white { background-color: var(--white); }
+
+.oph-bg-gray { background-color: var(--gray); }
+.oph-bg-gray-lighten-1 { background-color: var(--gray-lighten-1); }
+.oph-bg-gray-lighten-2 { background-color: var(--gray-lighten-2); }
+.oph-bg-gray-lighten-3 { background-color: var(--gray-lighten-3); }
+.oph-bg-gray-lighten-4 { background-color: var(--gray-lighten-4); }
+.oph-bg-gray-lighten-5 { background-color: var(--gray-lighten-5); }
+
+.oph-bg-red { background-color: var(--red); }
+.oph-bg-red-lighten-1 { background-color: var(--red-lighten-1); }
+.oph-bg-red-lighten-2 { background-color: var(--red-lighten-2); }
+
+.oph-bg-blue { background-color: var(--blue); }
+.oph-bg-blue-lighten-1 { background-color: var(--blue-lighten-1); }
+.oph-bg-blue-lighten-2 { background-color: var(--blue-lighten-2); }
+.oph-bg-blue-lighten-3 { background-color: var(--blue-lighten-3); }
+.oph-bg-blue-lighten-4 { background-color: var(--blue-lighten-4); }
+.oph-bg-blue-darken-1 { background-color: var(--blue-darken-1); }
+
+.oph-bg-green { background-color: var(--green); }
+.oph-bg-green-lighten-1 { background-color: var(--green-lighten-1); }
+
+.oph-bg-yellow { background-color: var(--yellow); }
+.oph-bg-yellow-lighten-1 { background-color: var(--yellow-lighten-1); }
+
+:root {
+  --bg-app: var(--gray-lighten-4);
+}

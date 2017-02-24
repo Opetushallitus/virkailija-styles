@@ -1,4 +1,12 @@
 /* Demo styles */
+.h5 {
+  font-size: .875rem;
+}
+
+.center {
+  text-align: center;
+}
+
 .flex {
   display: flex;
 }
@@ -12,12 +20,30 @@
   width: 16.66667%
 }
 
+.col-12 {
+  width: 100%;
+}
+
+.mt2 {
+  margin-top: 1rem;
+}
+
+.mb2 {
+  margin-bottom: 1rem;
+}
+
 .p1 {
   padding: .5rem;
 }
 
-.pr1 {
-  padding-right: .5rem;
+.px2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.py1 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
 .rounded {
@@ -26,4 +52,9 @@
 
 .demo-modal {
   height: 20em;
+}
+
+.color-swatch {
+  height: 2rem;
+  border-radius: 2px;
 }

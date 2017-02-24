@@ -53,6 +53,11 @@
   margin-top: 0;
 }
 
+/**
+* @styles 1-modal-big Big modal
+*
+* @demo demos/modal/modal-big.html
+*/
 .oph-modal-big .oph-modal-dialog {
   max-width: 100%;
 }
