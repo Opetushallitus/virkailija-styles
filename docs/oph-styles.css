@@ -25,20 +25,102 @@
 
   /* Transitions */
 
-  /* Miscellaneous */
+  /* Box shadows */
 
   /* Media queries */
+}
+/**
+* @stylesheet src/modules/alerts.css Alerts
+* @parent index
+*
+* The content is wrapped in `.oph-alert-container` (centered and has a maximum width)
+* for full screen wide alerts.
+*/
+.oph-alert {
+  text-align: center;
+  display: block;
+  color: #2a2a2a;
+}
+.oph-alert-container {
+  position: relative;
+  max-width: 1440px;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 16px 64px;
+  padding: 1rem 4rem;
+}
+.oph-alert-title {
+  font-weight: 600;
+}
+.oph-alert-text {
+  margin-top: 8px;
+  margin-top: .5rem;
+}
+/**
+* @styles 0-info Info
+*
+* @demo demos/alerts/alert-info.html
+*/
+.oph-alert-info {
+  background-color: #def2ff;
+}
+/**
+* @styles 1-success Success
+*
+* @demo demos/alerts/alert-success.html
+*/
+.oph-alert-success {
+  background-color: #e6ffc1;
+}
+.oph-alert-success .oph-alert-title {
+  color: #4c7f00;
+}
+/**
+* @styles 2-warning Warning
+*
+* @demo demos/alerts/alert-warning.html
+*/
+.oph-alert-warning {
+  background-color: #fff7bc;
+}
+/**
+* @styles 3-error Error
+*
+* @demo demos/alerts/alert-error.html
+*/
+.oph-alert-error {
+  background-color: #ffe9e9;
+}
+.oph-alert-error .oph-alert-title {
+  color: #e44e4e;
+}
+/**
+* @styles 4-help-text Help text
+*
+* @demo demos/alerts/alert-help.html
+*/
+.oph-alert-help {
+  font-size: 14px;
+  font-size: .875rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #aeaeae;
+  border-radius: 2px;
+  background-color: #f6f4f0;
+  color: #666;
+}
+.oph-alert-help .oph-alert-title {
+  font-weight: 400;
 }
 /**
 * @stylesheet src/modules/buttons.css Buttons
 * @parent index
 *
-* Use with *a*, *button* or *input type="submit"* tag
+* Use `.oph-button-{variant}` with `a`, `button` and `input type="submit"` tags.
 */
 .oph-button {
-  font-family: "Open Sans", "Helvetica", sans-sefif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-family: inherit;
+  font-size: inherit;
   font-weight: 600;
   line-height: 1.125;
   text-decoration: none;
@@ -168,8 +250,233 @@
 /**
 * @styles 5-loading-state Loading state
 *
-* @demo demos/buttons/loading-state.html
+* @demo demos/buttons/button-in-loading-state.html
 */
+/**
+* @stylesheet src/modules/forms.css Forms
+* @parent index
+*/
+::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+::-moz-placeholder {
+  color: #aeaeae;
+}
+:-ms-input-placeholder {
+  color: #aeaeae;
+}
+::placeholder {
+  color: #aeaeae;
+}
+.oph-field {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+.oph-fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.oph-label,
+.oph-legend {
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-bottom: .5rem;
+}
+.oph-field-text {
+  margin-top: 8px;
+  margin-top: .5rem;
+  color: #aeaeae;
+}
+/**
+* @styles 0-input-regular Regular input
+*
+* @demo demos/forms/input-regular.html
+*/
+.oph-input {
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  padding: 8px;
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2);
+  -webkit-transition-property: border, background;
+  transition-property: border, background;
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+.oph-input:not(:focus):not(:disabled):not(:-moz-read-only):not(.oph-input-has-error):hover {
+  border-color: #999;
+}
+.oph-input:not(:focus):not(:disabled):not(:read-only):not(.oph-input-has-error):hover {
+  border-color: #999;
+}
+.oph-input:focus {
+  outline: none;
+}
+.oph-input:not(:-moz-read-only):not(.oph-input-has-error):focus {
+  border-color: #159ecb;
+}
+.oph-input:not(:read-only):not(.oph-input-has-error):focus {
+  border-color: #159ecb;
+}
+/**
+* @styles 1-input-regular Required input
+*
+* @demo demos/forms/input-required.html
+*/
+.oph-field-is-required .oph-label:first-of-type:after,
+.oph-field-is-required .oph-legend:first-of-type:after {
+  content: " *"
+}
+/**
+* @styles 2-input-with-error Input with error
+*
+* @demo demos/forms/input-with-error.html
+*/
+.oph-input-has-error {
+  background-color: #ffe9e9;
+  border-color: #e09191;
+  box-shadow: 0 0 0;
+}
+.oph-input-has-error:hover,
+.oph-input-has-error:focus {
+  border-color: #e44e4e;
+}
+/**
+* @styles 3-disabled-or-read-only Disabled or read-only input
+*
+* @demo demos/forms/input-is-disabled-or-read-only.html
+*/
+.oph-input:disabled,
+.oph-input:-moz-read-only
+{
+  background-color: #f5f5f5;
+  color: #aeaeae;
+  box-shadow: 0 0 0;
+}
+.oph-input:disabled,
+.oph-input:read-only
+{
+  background-color: #f5f5f5;
+  color: #aeaeae;
+  box-shadow: 0 0 0;
+}
+/**
+* @styles 4-inline-label Inline label
+*
+* Styles for aligning inline inputs isn't provided.
+*
+* @demo demos/forms/inline-label.html
+*/
+.oph-field-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.oph-field-inline .oph-label:first-of-type {
+  margin-right: 32px;
+  margin-right: 2rem;
+  margin-bottom: 0;
+}
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.checkbox:hover,
+.checkbox-input:focus + .checkbox-text {
+  color: #00b5f0;
+  cursor: pointer;
+}
+.checkbox-input {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-right: 8px;
+  margin-right: .5rem;
+}
+.checkbox-text {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.checkbox-icon {
+  /* Align icon with text */
+  margin-top: 4px;
+}
+.checkbox-button-text:hover,
+.checkbox-button input:focus + .checkbox-button-text {
+  color: #00b5f0;
+  border-color: #00b5f0;
+  cursor: pointer;
+}
+.checkbox-button input:checked + .checkbox-button-text {
+  color: #fff;
+  border-color: #159ecb;
+  background-color: #159ecb;
+}
+.checkbox-button input:checked + .checkbox-button-text:hover,
+.checkbox-button input:checked:focus + .checkbox-button-text {
+  border-color: #00b5f0;
+  background-color: #00b5f0;
+}
+.checkbox-button input:checked:disabled + .checkbox-button-text,
+.checkbox-button input:disabled + .checkbox-button-text {
+  color: #ccc;
+  border-color: #ccc;
+  background-color: #fff;
+  pointer-events: none;
+}
+.radio-button-group {
+  display: block;
+  /*padding: var(--space-05);*/
+  /*border: var(--border-widen-1) solid var(--link-color);*/
+  /*border-radius: var(--border-radius);*/
+  background-color: #fff;
+
+  /*@media (--breakpoint-md) {*/
+    /*display: inline-block;*/
+  /*}*/
+}
+/* Display input only on screen readers */
+.radio-button-input {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.radio-button-text {
+  display: block;
+  padding: 8px 16px;
+  padding: .5rem 1rem;
+  /*border-radius: var(--border-radius);*/
+  color: #159ecb;
+
+  /*@media (--breakpoint-md) {*/
+    /*display: inline-block;*/
+  /*}*/
+}
+.radio-button-text:hover,
+.radio-button-input:focus + .radio-button-text {
+  color: #00b5f0;
+  cursor: pointer;
+}
+.radio-button-input:checked + .radio-button-text,
+.radio-button-input:checked + .radio-button-text:hover,
+.radio-button-input:checked:focus + .radio-button-text {
+  color: #fff;
+  background-color: #159ecb;
+  cursor: default;
+}
 /**
 * @stylesheet src/modules/modal.css Modal
 * @parent index
@@ -177,9 +484,22 @@
 /**
 * @styles 0-modal Modal
 *
-* Only styles are provided. Create opening/closing functionality and provide accessibility with JS.
+* Only styles are provided, create opening/closing functionality with JS. Set `overflow: hidden` on body to hide
+* the window's scroll bar while the modal is open.
 *
-* Z-indexes for *.oph-overlay* and *.oph-modal* may have to be adjusted depending on the app.
+* The [src/modules/overlay.css] component can be used to block the background while a modal is open.
+*
+* Z-indexes for `.oph-overlay` and `.oph-modal` may have to be adjusted depending on the app.
+*
+* **Accessibility**
+*
+* - `.oph-modal` is made focusable with tab by setting `tabindex=-1`, has a `role=dialog` attribute
+* and `aria-labelledby` linking to `.oph-modal-heading`
+*
+* - `.oph-modal-dialog` has a `role=document` attribute for screen reader users to browse the contents more easily
+*
+* - `.oph-modal-back-to-top-link` for setting focus back to `.oph-modal`. The link is initially visually hidden,
+* and displayed on focus.
 *
 * @demo demos/modal/modal.html
 */
@@ -199,6 +519,10 @@
   padding-left: 16px;
   padding-left: 1rem;
   z-index: 600;
+}
+/* Modal is made focusable with setting tabindex of -1, remove the outline */
+.oph-modal:focus {
+  outline: none;
 }
 .oph-modal-dialog {
   position: relative;
@@ -231,6 +555,28 @@
   font-weight: 600;
   margin-top: 0;
 }
+/*
+  Back to top link for accessibility
+  Link is visually hidden initially, visible when focused
+*/
+.oph-modal-back-to-top-link {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  right: 16px;
+  right: 1rem;
+  bottom: 8px;
+  bottom: .5rem;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.oph-modal-back-to-top-link:focus {
+  position: relative;
+  height: auto;
+  width: auto;
+  overflow: auto;
+  clip: auto;
+}
 /**
 * @styles 1-modal-big Big modal
 *
@@ -239,11 +585,29 @@
 .oph-modal-big .oph-modal-dialog {
   max-width: 100%;
 }
+/**
+* @stylesheet src/modules/overlay.css Overlay
+* @parent index
+*/
+/**
+* @styles 0-overlay Overlay
+*
+* Overlays can be used to block the app or parts of it, for example while a modal is open or during loading.
+*
+* Only styles are provided, create functionality with JS. See the JS tab for an example on how to
+* display/hide the overlay.
+*
+* The z-index may have to be adjusted depending on the app.
+*
+* @demo demos/overlay/overlay.html
+*/
 .oph-overlay {
   display: none;
   position: relative;
   overflow: auto;
-  background-color: rgba(0, 0, 0, .20);
+  background-color: transparent;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
 }
 .oph-overlay-is-visible {
   display: block;
@@ -253,6 +617,9 @@
   bottom: 0;
   left: 0;
   z-index: 500;
+}
+.oph-overlay-bg {
+  background-color: rgba(0, 0, 0, .20);
 }
 .oph-spinner {
   margin-right: auto;
@@ -281,10 +648,10 @@
 }
 .oph-spinner-in-button .oph-bounce {
   display: inline-block;
-  width: 14px;
-  width: .875rem;
-  height: 14px;
-  height: .875rem;
+  width: 12px;
+  width: .75rem;
+  height: 12px;
+  height: .75rem;
   background-color: #fff;
 }
 .oph-spinner .oph-bounce1 {
@@ -313,9 +680,9 @@
 * @parent index
 */
 /**
-* @styles 0-contextual-colors Application background
+* @styles 0-contextual-colors App background
 *
-* Set application's background color with *.oph-bg-app*.
+* Set your app's background color with `.oph-bg-app`
 */
 .oph-bg-app {
   background-color: #f6f4f0;
@@ -323,10 +690,10 @@
 /**
 * @styles 1-colors Color palette
 *
-* Use *.oph-bg-[color]* classes to set background color. Every color defined in the Sketch specs has
+* Use `.oph-bg-{color}` classes to set background color. Every color defined in the Sketch specs has
 * a corresponding class. Overrides default background color.
 *
-* @iframe demos/backgrounds/colors.html 630
+* @iframe demos/backgrounds/colors.html 690
 */
 .oph-bg-black { background-color: #2a2a2a; }
 .oph-bg-white { background-color: #fff; }
@@ -345,7 +712,7 @@
 .oph-bg-blue-lighten-3 { background-color: #a6dcee; }
 .oph-bg-blue-lighten-4 { background-color: #def2ff; }
 .oph-bg-blue-darken-1 { background-color: #00526c; }
-.oph-bg-green { background-color: #99d740; }
+.oph-bg-green { background-color: #4c7f00; }
 .oph-bg-green-lighten-1 { background-color: #e6ffc1; }
 .oph-bg-yellow { background-color: #ffd024; }
 .oph-bg-yellow-lighten-1 { background-color: #fff7bc; }
@@ -356,7 +723,7 @@
 /**
 * @styles 0-base-element Typography base
 *
-* Use *oph-typography* class in an element to set font family, size, color and line height.
+* Use `.oph-typography` in an element to set font family, size, color and line height.
 * Base font size is set to 95% of the browser's default font size.
 *
 * Set this as high in the element hierarchy as possible, preferably to the main element of your app.
@@ -375,7 +742,7 @@
 /**
 * @styles 1-type-scale Type scale
 *
-* Adjust elements' font size with *oph-h[1-6]* classes. Overrides default size.
+* Adjust elements' font size with `oph-h{1-6}`. Overrides default size.
 *
 * [Rem](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#Rems) units are used for sizing.
 * Combine the classes with fluidly sized elements for best results.
@@ -391,7 +758,7 @@
 /**
 * @styles 2-headings Headings (and bolded text)
 *
-* Use *.oph-bold* class with the font size classes to style headings. Font weight is set to 600.
+* Use `.oph-bold` with the font size classes to style headings. Font weight is set to 600.
 *
 * @demo demos/typography/headings.html
 */
@@ -416,6 +783,7 @@
 .oph-link:hover,
 .oph-link:focus {
   color: #00b5f0;
+  outline: none;
 }
 .oph-link-big {
   font-size: 20px;
@@ -432,7 +800,7 @@
 /**
 * @styles 5-colors Color palette
 *
-* Use *.oph-[color]* classes to set text color. Every color defined in the Sketch specs has
+* Use `.oph-{color}` to set text color. Every color defined in the Sketch specs has
 * a corresponding class. Overrides default color.
 *
 * @iframe demos/typography/colors.html 360
@@ -454,7 +822,7 @@
 .oph-blue-lighten-3 { color: #a6dcee; }
 .oph-blue-lighten-4 { color: #def2ff; }
 .oph-blue-darken-1 { color: #00526c; }
-.oph-green { color: #99d740; }
+.oph-green { color: #4c7f00; }
 .oph-green-lighten-1 { color: #e6ffc1; }
 .oph-yellow { color: #ffd024; }
 .oph-yellow-lighten-1 { color: #fff7bc; }
