@@ -33,6 +33,8 @@
 * @stylesheet src/modules/alerts.css Alerts
 * @parent index
 *
+* Only styles are provided, create displaying/closing functionality with JS.
+*
 * The content is wrapped in `.oph-alert-container` (centered and has a maximum width)
 * for full screen wide alerts.
 */
@@ -289,7 +291,14 @@
   color: #aeaeae;
 }
 /**
-* @styles 0-input-regular Regular input
+* @styles 0-input-regular Regular input (with help text)
+*
+* `.oph-field-text` is used to provide additional info about the field or the expected value.
+*
+* **Accessibility**
+*
+* - label has `aria-describedby` linking to `.oph-field-text`, which causes screen readers to announce the text
+* when user focuses or enters the input
 *
 * @demo demos/forms/input-regular.html
 */
@@ -301,7 +310,8 @@
   padding: .5rem;
   border: 1px solid #ccc;
   border-radius: 2px;
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2);
+  background-color: #fff;
+  box-shadow: inset 0 1px 4px #ccc;
   -webkit-transition-property: border, background;
   transition-property: border, background;
   -webkit-transition-duration: .15s;
@@ -309,23 +319,21 @@
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
 }
-.oph-input:not(:focus):not(:disabled):not(:-moz-read-only):not(.oph-input-has-error):hover {
-  border-color: #999;
-}
-.oph-input:not(:focus):not(:disabled):not(:read-only):not(.oph-input-has-error):hover {
+.oph-input:not(:focus):not([disabled]):not([readonly]):not(.oph-input-has-error):hover {
   border-color: #999;
 }
 .oph-input:focus {
   outline: none;
 }
-.oph-input:not(:-moz-read-only):not(.oph-input-has-error):focus {
-  border-color: #159ecb;
-}
-.oph-input:not(:read-only):not(.oph-input-has-error):focus {
+.oph-input:not(.oph-input-has-error):focus {
   border-color: #159ecb;
 }
 /**
 * @styles 1-input-regular Required input
+*
+* **Accessibility**
+*
+* - input has `aria-required` to identify it as required to screen reader users
 *
 * @demo demos/forms/input-required.html
 */
@@ -335,6 +343,10 @@
 }
 /**
 * @styles 2-input-with-error Input with error
+*
+* **Accessibility**
+*
+* - input has `aria-invalid` to indicate it as invalid or in need of attention to screen readers users
 *
 * @demo demos/forms/input-with-error.html
 */
@@ -348,23 +360,19 @@
   border-color: #e44e4e;
 }
 /**
-* @styles 3-disabled-or-read-only Disabled or read-only input
+* @styles 3-disabled-and-read-only Disabled and read-only input
 *
 * @demo demos/forms/input-is-disabled-or-read-only.html
 */
-.oph-input:disabled,
-.oph-input:-moz-read-only
+.oph-input[disabled],
+.oph-input[readonly]
 {
   background-color: #f5f5f5;
   color: #aeaeae;
   box-shadow: 0 0 0;
 }
-.oph-input:disabled,
-.oph-input:read-only
-{
-  background-color: #f5f5f5;
-  color: #aeaeae;
-  box-shadow: 0 0 0;
+.oph-input[disabled]:hover {
+  cursor: not-allowed;
 }
 /**
 * @styles 4-inline-label Inline label
@@ -386,96 +394,211 @@
   margin-right: 2rem;
   margin-bottom: 0;
 }
-.checkbox {
+/**
+* @styles 5-select Select menu
+*
+* @demo demos/forms/select.html
+*/
+/* Custom caret */
+.oph-select-container {
+  position: relative;
+}
+.oph-select-container:before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  top: 1rem;
+  right: 8px;
+  right: .5rem;
+  border-top: 8px solid #666;
+  border-top: .5rem solid #666;
+  border-right: 8px solid transparent;
+  border-right: .5rem solid transparent;
+  border-left: 8px solid transparent;
+  border-left: .5rem solid transparent;
+}
+.oph-select-container:after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  top: 1rem;
+  right: calc(.5rem + 1px);
+  border-top: calc(.5rem - 1px) solid #fff;
+  border-right: calc(.5rem - 1px) solid transparent;
+  border-left: calc(.5rem - 1px) solid transparent;
+}
+.oph-select {
+  padding-right: 32px;
+  padding-right: 2rem;
+  /* Remove default styling and arrows */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/**
+* @styles 6-select Checkboxes and radios
+*
+* @demo demos/forms/checkboxes-and-radios.html
+*/
+.oph-checkable {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 8px;
+  margin-bottom: .5rem;
 }
-.checkbox:hover,
-.checkbox-input:focus + .checkbox-text {
+.oph-checkable:not(.oph-checkable-is-disabled):hover,
+.oph-checkable-input:focus + .oph-checkable-text {
   color: #00b5f0;
   cursor: pointer;
 }
-.checkbox-input {
+.oph-checkable-is-disabled,
+.oph-checkable-is-disabled:hover {
+  color: #aeaeae;
+  cursor: not-allowed;
+}
+.oph-checkable-input {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   margin-right: 8px;
   margin-right: .5rem;
 }
-.checkbox-text {
+.oph-checkable-text {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
-.checkbox-icon {
-  /* Align icon with text */
-  margin-top: 4px;
+/**
+* @styles 7-checkbox-buttons Checkbox buttons
+*
+* @demo demos/forms/checkbox-buttons.html
+*/
+.oph-checkbox-button-input {
+  /* Hide checkbox visually */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
 }
-.checkbox-button-text:hover,
-.checkbox-button input:focus + .checkbox-button-text {
+.oph-checkbox-button-text {
+  display: inline-block;
+  margin-right: 8px;
+  margin-right: .5rem;
+  margin-bottom: 8px;
+  margin-bottom: .5rem;
+  padding: 8px;
+  padding: .5rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #159ecb;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #159ecb;
+  -webkit-transition-property: color, border, background;
+  transition-property: color, border, background;
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+.oph-checkbox-button-text:hover,
+.oph-checkbox-button-input:focus + .oph-checkbox-button-text {
   color: #00b5f0;
   border-color: #00b5f0;
   cursor: pointer;
 }
-.checkbox-button input:checked + .checkbox-button-text {
+.oph-checkbox-button-input:checked + .oph-checkbox-button-text {
   color: #fff;
-  border-color: #159ecb;
   background-color: #159ecb;
 }
-.checkbox-button input:checked + .checkbox-button-text:hover,
-.checkbox-button input:checked:focus + .checkbox-button-text {
+.oph-checkbox-button-input:checked + .oph-checkbox-button-text:before {
+  /* Add a check mark and an empty space before text on checked buttons */
+  content:  "\2713\00a0";
+}
+.oph-checkbox-button-input:checked + .oph-checkbox-button-text:hover,
+.oph-checkbox-button-input:checked:focus + .oph-checkbox-button-text {
+  color: #fff;
   border-color: #00b5f0;
   background-color: #00b5f0;
 }
-.checkbox-button input:checked:disabled + .checkbox-button-text,
-.checkbox-button input:disabled + .checkbox-button-text {
-  color: #ccc;
-  border-color: #ccc;
-  background-color: #fff;
-  pointer-events: none;
+.oph-checkbox-button-input[disabled] + .oph-checkbox-button-text,
+.oph-checkbox-button-input:checked[disabled] + .oph-checkbox-button-text {
+  color: #aeaeae;
+  border-color: #aeaeae;
+  background-color: #f6f4f0;
+  cursor: not-allowed;
 }
-.radio-button-group {
+/**
+* @styles 8-checkbox-buttons Radio button group
+*
+* @demo demos/forms/radio-button-group.html
+*/
+.oph-radio-button-group {
   display: block;
-  /*padding: var(--space-05);*/
-  /*border: var(--border-widen-1) solid var(--link-color);*/
-  /*border-radius: var(--border-radius);*/
+  padding: 4px;
+  padding: 0.25rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #159ecb;
+  border-radius: 2px;
   background-color: #fff;
-
-  /*@media (--breakpoint-md) {*/
-    /*display: inline-block;*/
-  /*}*/
 }
-/* Display input only on screen readers */
-.radio-button-input {
+@media (min-width: 52em) {
+  .oph-radio-button-group {
+    display: inline-block;
+  }
+}
+.oph-radio-button-input {
+  /* Hide radio input visually */
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-.radio-button-text {
+.oph-radio-button-text {
   display: block;
   padding: 8px 16px;
   padding: .5rem 1rem;
-  /*border-radius: var(--border-radius);*/
+  border-radius: 2px;
   color: #159ecb;
-
-  /*@media (--breakpoint-md) {*/
-    /*display: inline-block;*/
-  /*}*/
+  -webkit-transition-property: color, background;
+  transition-property: color, background;
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
-.radio-button-text:hover,
-.radio-button-input:focus + .radio-button-text {
+@media (min-width: 52em) {
+  .oph-radio-button-text {
+    display: inline-block;
+  }
+}
+.oph-radio-button-text:hover,
+.oph-radio-button-input:focus + .oph-radio-button-text {
+  background-color: #def2ff;
   color: #00b5f0;
   cursor: pointer;
 }
-.radio-button-input:checked + .radio-button-text,
-.radio-button-input:checked + .radio-button-text:hover,
-.radio-button-input:checked:focus + .radio-button-text {
-  color: #fff;
+.oph-radio-button-input:checked + .oph-radio-button-text,
+.oph-radio-button-input:checked + .oph-radio-button-text:hover,
+.oph-radio-button-input:checked:focus + .oph-radio-button-text {
   background-color: #159ecb;
+  color: #fff;
   cursor: default;
+}
+.oph-radio-button-input[disabled] + .oph-radio-button-text,
+.oph-radio-button-input:checked[disabled] + .oph-radio-button-text {
+  background-color: #fff;
+  color: #aeaeae;
+  cursor: not-allowed;
 }
 /**
 * @stylesheet src/modules/modal.css Modal
@@ -541,7 +664,7 @@
   padding-left: 0;
   border-radius: 2px;
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
 }
 .oph-modal-content {
   padding-right: 32px;
@@ -605,9 +728,10 @@
   display: none;
   position: relative;
   overflow: auto;
-  background-color: transparent;
-  -webkit-transition: background-color .3s ease;
-  transition: background-color .3s ease;
+  background-color: rgba(0, 0, 0, .20);
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
 }
 .oph-overlay-is-visible {
   display: block;
@@ -619,7 +743,7 @@
   z-index: 500;
 }
 .oph-overlay-bg {
-  background-color: rgba(0, 0, 0, .20);
+  opacity: 1;
 }
 .oph-spinner {
   margin-right: auto;
