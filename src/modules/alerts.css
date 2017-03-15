@@ -2,6 +2,8 @@
 * @stylesheet src/modules/alerts.css Alerts
 * @parent index
 *
+* Only styles are provided, create displaying/closing functionality with JS.
+*
 * The content is wrapped in `.oph-alert-container` (centered and has a maximum width)
 * for full screen wide alerts.
 */
@@ -97,7 +99,6 @@
 
 :root {
   --color-success:        var(--green);
-  --color-error:          var(--red);
 
   --bg-color-info:        var(--blue-lighten-4);
   --bg-color-success:     var(--green-lighten-1);

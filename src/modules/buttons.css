@@ -43,14 +43,14 @@
 */
 .oph-button-primary {
   color: var(--white);
-  border-color: var(--bg-color-primary);
-  background-color: var(--bg-color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
 }
 
 .oph-button-primary:hover,
 .oph-button-primary:focus {
-  border-color: var(--bg-color-primary-hover);
-  background-color: var(--bg-color-primary-hover);
+  border-color: var(--link-color-hover);
+  background-color: var(--link-color-hover);
 }
 
 /**
@@ -124,7 +124,7 @@
 
 .oph-button-close:hover,
 .oph-button-close:focus {
-  color: var(--bg-color-primary-hover);
+  color: var(--link-color-hover);
 }
 
 .oph-button-close:disabled,
@@ -142,9 +142,6 @@
 
 :root {
   --button-line-height: 1.125;
-
-  --bg-color-primary: var(--blue-lighten-1);
-  --bg-color-primary-hover: var(--blue-lighten-2);
 
   --bg-color-confirm: var(--red);
   --bg-color-confirm-hover: var(--red-lighten-1);

@@ -59,6 +59,8 @@
   --yellow:           #ffd024;
   --yellow-lighten-1: #fff7bc;
 
+  --color-primary: var(--blue-lighten-1);
+
   --font-color-base: var(--black);
   --color-muted: var(--gray-lighten-2);
   --color-error: var(--red);
@@ -83,8 +85,7 @@
   --transition-timing-function-base: ease;
 
   /* Box shadows */
-  --box-shadow-base: 0 1px 4px rgba(0, 0, 0, .2);
-  --box-shadow-inner: inset var(--box-shadow-base);
+  --box-shadow-base: 0 1px 3px rgba(0, 0, 0, .3);
 
   /* Media queries */
   @custom-media --breakpoint-small  (min-width: 40em);

@@ -19,7 +19,8 @@
   display: none;
   position: relative;
   overflow: auto;
-  background-color: transparent;
+  background-color: var(--overlay-bg);
+  opacity: 0;
   transition: var(--overlay-transition);
 }
 
@@ -34,10 +35,10 @@
 }
 
 .oph-overlay-bg {
-  background-color: var(--overlay-bg);
+  opacity: 1;
 }
 
 :root {
   --overlay-bg: rgba(0, 0, 0, .20);
-  --overlay-transition: background-color .3s ease;
+  --overlay-transition: opacity .3s ease;
 }

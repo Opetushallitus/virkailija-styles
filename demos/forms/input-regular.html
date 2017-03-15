@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Regular input</title>
+    <title>Demo</title>
     <link rel="stylesheet" href="../../oph-styles-min.css" />
     <link rel="stylesheet" href="../app.css" />
 </head>
@@ -11,7 +11,13 @@
 <body class="oph-typography">
 <form class="col-6">
     <div class="oph-field">
-        <label class="oph-label" for="regular-input">Field</label>
+        <label
+            class="oph-label"
+            for="regular-input"
+            aria-describedby="field-text">
+            Field
+        </label>
+
         <input
             id="regular-input"
             class="oph-input"
@@ -19,6 +25,8 @@
             value="Value"
             placeholder="Placeholder"
         >
+
+        <div id="#field-text" class="oph-field-text">Help text for the field</div>
     </div>
 </form>
 </body>
