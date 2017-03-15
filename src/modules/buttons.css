@@ -2,12 +2,12 @@
 * @stylesheet src/modules/buttons.css Buttons
 * @parent index
 *
-* Use with *a*, *button* or *input type="submit"* tag
+* Use `.oph-button-{variant}` with `a`, `button` and `input type="submit"` tags.
 */
 
 .oph-button {
-  font-family: var(--font-family-base);
-  font-size: var(--h4);
+  font-family: inherit;
+  font-size: inherit;
   font-weight: var(--font-weight-bold);
   line-height: var(--button-line-height);
   text-decoration: none;
@@ -137,9 +137,8 @@
 /**
 * @styles 5-loading-state Loading state
 *
-* @demo demos/buttons/loading-state.html
+* @demo demos/buttons/button-in-loading-state.html
 */
-
 
 :root {
   --button-line-height: 1.125;

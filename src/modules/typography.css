@@ -6,7 +6,7 @@
 /**
 * @styles 0-base-element Typography base
 *
-* Use *oph-typography* class in an element to set font family, size, color and line height.
+* Use `.oph-typography` in an element to set font family, size, color and line height.
 * Base font size is set to 95% of the browser's default font size.
 *
 * Set this as high in the element hierarchy as possible, preferably to the main element of your app.
@@ -24,7 +24,7 @@
 /**
 * @styles 1-type-scale Type scale
 *
-* Adjust elements' font size with *oph-h[1-6]* classes. Overrides default size.
+* Adjust elements' font size with `oph-h{1-6}`. Overrides default size.
 *
 * [Rem](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#Rems) units are used for sizing.
 * Combine the classes with fluidly sized elements for best results.
@@ -42,7 +42,7 @@
 /**
 * @styles 2-headings Headings (and bolded text)
 *
-* Use *.oph-bold* class with the font size classes to style headings. Font weight is set to 600.
+* Use `.oph-bold` with the font size classes to style headings. Font weight is set to 600.
 *
 * @demo demos/typography/headings.html
 */
@@ -66,6 +66,7 @@
 .oph-link:hover,
 .oph-link:focus {
   color: var(--link-color-hover);
+  outline: none;
 }
 
 .oph-link-big {
@@ -78,14 +79,14 @@
 *
 * @demo demos/typography/contextual-colors.html
 */
-.oph-muted { color: var(--font-color-muted); }
+.oph-muted { color: var(--color-muted); }
 
-.oph-error { color: var(--font-color-error); }
+.oph-error { color: var(--color-error); }
 
 /**
 * @styles 5-colors Color palette
 *
-* Use *.oph-[color]* classes to set text color. Every color defined in the Sketch specs has
+* Use `.oph-{color}` to set text color. Every color defined in the Sketch specs has
 * a corresponding class. Overrides default color.
 *
 * @iframe demos/typography/colors.html 360
@@ -117,12 +118,3 @@
 
 .oph-yellow { color: var(--yellow); }
 .oph-yellow-lighten-1 { color: var(--yellow-lighten-1); }
-
-:root {
-  --font-color-base: var(--black);
-  --font-color-muted: var(--gray-lighten-2);
-  --font-color-error: var(--red);
-
-  --link-color: var(--blue-lighten-1);
-  --link-color-hover: var(--blue-lighten-2)
-}

@@ -4,9 +4,9 @@
 */
 
 /**
-* @styles 0-contextual-colors Application background
+* @styles 0-contextual-colors App background
 *
-* Set application's background color with *.oph-bg-app*.
+* Set your app's background color with `.oph-bg-app`
 */
 .oph-bg-app {
   background-color: var(--bg-app);
@@ -15,10 +15,10 @@
 /**
 * @styles 1-colors Color palette
 *
-* Use *.oph-bg-[color]* classes to set background color. Every color defined in the Sketch specs has
+* Use `.oph-bg-{color}` classes to set background color. Every color defined in the Sketch specs has
 * a corresponding class. Overrides default background color.
 *
-* @iframe demos/backgrounds/colors.html 630
+* @iframe demos/backgrounds/colors.html 690
 */
 .oph-bg-black { background-color: var(--black); }
 

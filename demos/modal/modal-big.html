@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Big modal</title>
+    <title>Modal</title>
     <link rel="stylesheet" href="../../oph-styles-min.css" />
     <link rel="stylesheet" href="../app.css" />
 </head>
@@ -11,24 +11,35 @@
 <body class="demo-modal">
 
 <div class="oph-typography">
-    <div class="oph-overlay oph-overlay-is-visible">
-        <div class="oph-modal oph-modal-big">
-            <div
-                class="oph-modal-dialog"
-                role="dialog"
-            >
+    <div class="oph-overlay oph-overlay-bg oph-overlay-is-visible">
+        <div
+            id="#modal-dialog"
+            class="oph-modal oph-modal-big"
+            role="dialog"
+            tabindex="-1"
+            aria-labelledby="#modal-heading"
+        >
+            <div class="oph-modal-dialog">
                 <button
                     class="oph-button oph-button-close"
                     type="button"
-                    title="Sulje"
+                    title="Close"
+                    aria-title="Close"
                 >
-                    &times;
+                    <span aria-hidden>&times;</span>
                 </button>
 
                 <div class="oph-modal-content">
-                    <h1 class="oph-modal-heading">Big modal dialog</h1>
+                    <h1 id="modal-heading" class="oph-modal-heading">Big modal dialog</h1>
                     <p>Modal content</p>
                 </div>
+
+                <a
+                    class="oph-link oph-modal-back-to-top-link"
+                    href="#modal-dialog"
+                >
+                    Back to modal top
+                </a>
             </div>
         </div>
     </div>

@@ -27,8 +27,8 @@
 
 .oph-spinner-in-button .oph-bounce {
   display: inline-block;
-  width: var(--h5);
-  height: var(--h5);
+  width: var(--h6);
+  height: var(--h6);
   background-color: var(--white);
 }
 

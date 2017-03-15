@@ -1,8 +1,26 @@
+/**
+* @stylesheet src/modules/overlay.css Overlay
+* @parent index
+*/
+
+/**
+* @styles 0-overlay Overlay
+*
+* Overlays can be used to block the app or parts of it, for example while a modal is open or during loading.
+*
+* Only styles are provided, create functionality with JS. See the JS tab for an example on how to
+* display/hide the overlay.
+*
+* The z-index may have to be adjusted depending on the app.
+*
+* @demo demos/overlay/overlay.html
+*/
 .oph-overlay {
   display: none;
   position: relative;
   overflow: auto;
-  background-color: var(--overlay-bg);
+  background-color: transparent;
+  transition: var(--overlay-transition);
 }
 
 .oph-overlay-is-visible {
@@ -15,6 +33,11 @@
   z-index: var(--z5);
 }
 
+.oph-overlay-bg {
+  background-color: var(--overlay-bg);
+}
+
 :root {
   --overlay-bg: rgba(0, 0, 0, .20);
+  --overlay-transition: background-color .3s ease;
 }

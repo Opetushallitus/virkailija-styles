@@ -6,9 +6,22 @@
 /**
 * @styles 0-modal Modal
 *
-* Only styles are provided. Create opening/closing functionality and provide accessibility with JS.
+* Only styles are provided, create opening/closing functionality with JS. Set `overflow: hidden` on body to hide
+* the window's scroll bar while the modal is open.
 *
-* Z-indexes for *.oph-overlay* and *.oph-modal* may have to be adjusted depending on the app.
+* The [src/modules/overlay.css] component can be used to block the background while a modal is open.
+*
+* Z-indexes for `.oph-overlay` and `.oph-modal` may have to be adjusted depending on the app.
+*
+* **Accessibility**
+*
+* - `.oph-modal` is made focusable with tab by setting `tabindex=-1`, has a `role=dialog` attribute
+* and `aria-labelledby` linking to `.oph-modal-heading`
+*
+* - `.oph-modal-dialog` has a `role=document` attribute for screen reader users to browse the contents more easily
+*
+* - `.oph-modal-back-to-top-link` for setting focus back to `.oph-modal`. The link is initially visually hidden,
+* and displayed on focus.
 *
 * @demo demos/modal/modal.html
 */
@@ -25,6 +38,11 @@
   z-index: var(--z6);
 }
 
+/* Modal is made focusable with setting tabindex of -1, remove the outline */
+.oph-modal:focus {
+  outline: none;
+}
+
 .oph-modal-dialog {
   position: relative;
   width: 100%;
@@ -39,7 +57,7 @@
   padding-left: 0;
   border-radius: var(--border-radius-base);
   background-color: var(--white);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-base);
 }
 
 .oph-modal-content {
@@ -51,6 +69,28 @@
   font-size: var(--h2);
   font-weight: var(--font-weight-bold);
   margin-top: 0;
+}
+
+/*
+  Back to top link for accessibility
+  Link is visually hidden initially, visible when focused
+*/
+.oph-modal-back-to-top-link {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  right: var(--space-2);
+  bottom: var(--space-1);
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.oph-modal-back-to-top-link:focus {
+  position: relative;
+  height: auto;
+  width: auto;
+  overflow: auto;
+  clip: auto;
 }
 
 /**

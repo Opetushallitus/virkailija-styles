@@ -7,6 +7,14 @@
   text-align: center;
 }
 
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
 .flex {
   display: flex;
 }
@@ -17,7 +25,19 @@
 
 .col-2 {
   box-sizing: border-box;
-  width: 16.66667%
+  width: calc(2/12 * 100%);
+}
+
+.col-3 {
+  width: calc(3/12 * 100%);
+}
+
+.col-6 {
+  width: calc(6/12 * 100%);
+}
+
+.col-8 {
+  width: calc(8/12 * 100%);
 }
 
 .col-12 {
@@ -26,6 +46,10 @@
 
 .mt2 {
   margin-top: 1rem;
+}
+
+.mt4 {
+  margin-top: 4rem;
 }
 
 .mb2 {
@@ -50,6 +74,10 @@
   border-radius: 2px;
 }
 
+.z6 {
+  z-index: 600;
+}
+
 .demo-modal {
   height: 20em;
 }
@@ -58,3 +86,4 @@
   height: 2rem;
   border-radius: 2px;
 }
+

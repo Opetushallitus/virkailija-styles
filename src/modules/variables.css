@@ -42,24 +42,32 @@
   --gray-lighten-4:   #f6f4f0;
   --gray-lighten-5:   #f5f5f5;
 
-  --red:              #e44e4e;
-  --red-lighten-1:    #e09191;
-  --red-lighten-2:    #ffe9e9;
+  --red:            #e44e4e;
+  --red-lighten-1:  #e09191;
+  --red-lighten-2:  #ffe9e9;
 
-  --blue:             #0a789c;
-  --blue-lighten-1:   #159ecb;
-  --blue-lighten-2:   #00b5f0;
-  --blue-lighten-3:   #a6dcee;
-  --blue-lighten-4:   #def2ff;
-  --blue-darken-1:    #00526c;
+  --blue:           #0a789c;
+  --blue-lighten-1: #159ecb;
+  --blue-lighten-2: #00b5f0;
+  --blue-lighten-3: #a6dcee;
+  --blue-lighten-4: #def2ff;
+  --blue-darken-1:  #00526c;
 
-  --green:            #99d740;
+  --green:            #4c7f00;
   --green-lighten-1:  #e6ffc1;
 
   --yellow:           #ffd024;
   --yellow-lighten-1: #fff7bc;
 
+  --font-color-base: var(--black);
+  --color-muted: var(--gray-lighten-2);
+  --color-error: var(--red);
+
+  --link-color: var(--blue-lighten-1);
+  --link-color-hover: var(--blue-lighten-2);
+
   /* Borders */
+  --border-color-base: var(--gray-lighten-2);
   --border-radius-base: 2px;
 
   /* Z-index scale */
@@ -74,9 +82,9 @@
   --transition-duration-base: .15s;
   --transition-timing-function-base: ease;
 
-  /* Miscellaneous */
-  --box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
-  --box-shadow-inner: inset var(--box-shadow);
+  /* Box shadows */
+  --box-shadow-base: 0 1px 4px rgba(0, 0, 0, .2);
+  --box-shadow-inner: inset var(--box-shadow-base);
 
   /* Media queries */
   @custom-media --breakpoint-small  (min-width: 40em);

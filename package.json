@@ -1,18 +1,21 @@
 {
-  "name": "virkailija-style-guide",
-  "version": "0.3.0",
+  "name": "oph-virkailija-style-guide",
+  "version": "0.4.0",
   "description": "",
   "scripts": {
+    "watch": "watch 'npm run build' demos src",
     "build": "npm run build-css && npm run minify-css && npm run build-styleguide",
     "build-css": "node_modules/postcss-cli/bin/postcss -c postcss.json",
     "minify-css": "node_modules/.bin/cssnano --no-zindex oph-styles.css oph-styles-min.css",
     "build-styleguide": "node_modules/.bin/documentjs",
     "update-styleguide-theme": "node_modules/.bin/documentjs -f",
-    "copy-styleguide": "cp -a oph-styles.css oph-styles-min.css demos styleguide ../virkailija-styles/docs"
+    "watch-styleguide-theme": "watch 'update-styleguide-theme' theme",
+    "copy-styleguide": "cp -a oph-styles.css oph-styles-min.css demos styleguide ../virkailija-styles/docs",
+    "clean": "rm -r styleguide/*"
   },
   "keywords": [],
   "author": "",
-  "license": "",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Opetushallitus/virkailija-styles.git#styleguide"
@@ -24,6 +27,7 @@
     "postcss": "5.2.6",
     "postcss-cli": "2.6.0",
     "postcss-cssnext": "2.9.0",
-    "postcss-smart-import": "0.6.0"
+    "postcss-smart-import": "0.6.0",
+    "watch": "1.0.2"
   }
 }

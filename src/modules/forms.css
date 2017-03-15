@@ -1,0 +1,225 @@
+/**
+* @stylesheet src/modules/forms.css Forms
+* @parent index
+*/
+
+::placeholder {
+  color: var(--color-muted);
+}
+
+.oph-field {
+  margin-bottom: var(--space-2);
+}
+
+.oph-fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.oph-label,
+.oph-legend {
+  display: inline-block;
+  margin-bottom: var(--space-1);
+}
+
+.oph-field-text {
+  margin-top: var(--space-1);
+  color: var(--color-muted);
+}
+
+/**
+* @styles 0-input-regular Regular input
+*
+* @demo demos/forms/input-regular.html
+*/
+
+.oph-input {
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  padding: var(--space-1);
+  border: 1px solid var(--gray-lighten-3);
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--box-shadow-inner);
+  transition-property: border, background;
+  transition-duration: var(--transition-duration-base);
+  transition-timing-function: var(--transition-timing-function-base);
+}
+
+.oph-input:not(
+  :focus,
+  :disabled,
+  :read-only,
+  .oph-input-has-error
+  ):hover {
+  border-color: var(--gray-lighten-1);
+}
+
+.oph-input:focus {
+  outline: none;
+}
+
+.oph-input:not(
+  :read-only,
+  .oph-input-has-error
+  ):focus {
+  border-color: var(--blue-lighten-1);
+}
+
+/**
+* @styles 1-input-regular Required input
+*
+* @demo demos/forms/input-required.html
+*/
+
+.oph-field-is-required .oph-label:first-of-type:after,
+.oph-field-is-required .oph-legend:first-of-type:after {
+  content: " *"
+}
+
+/**
+* @styles 2-input-with-error Input with error
+*
+* @demo demos/forms/input-with-error.html
+*/
+
+.oph-input-has-error {
+  background-color: var(--red-lighten-2);
+  border-color: var(--red-lighten-1);
+  box-shadow: 0 0 0;
+}
+
+.oph-input-has-error:hover,
+.oph-input-has-error:focus {
+  border-color: var(--red);
+}
+
+/**
+* @styles 3-disabled-or-read-only Disabled or read-only input
+*
+* @demo demos/forms/input-is-disabled-or-read-only.html
+*/
+
+.oph-input:disabled,
+.oph-input:read-only
+{
+  background-color: var(--gray-lighten-5);
+  color: var(--color-muted);
+  box-shadow: 0 0 0;
+}
+
+/**
+* @styles 4-inline-label Inline label
+*
+* Styles for aligning inline inputs isn't provided.
+*
+* @demo demos/forms/inline-label.html
+*/
+
+.oph-field-inline {
+  display: flex;
+  align-items: center;
+}
+
+.oph-field-inline .oph-label:first-of-type {
+  margin-right: var(--space-3);
+  margin-bottom: 0;
+}
+
+.checkbox {
+  display: flex;
+}
+
+.checkbox:hover,
+.checkbox-input:focus + .checkbox-text {
+  color: var(--link-color-hover);
+  cursor: pointer;
+}
+
+.checkbox-input {
+  order: 1;
+  margin-right: var(--space-1);
+}
+
+.checkbox-text {
+  order: 2;
+}
+
+.checkbox-icon {
+  /* Align icon with text */
+  margin-top: 4px;
+}
+
+.checkbox-button-text:hover,
+.checkbox-button input:focus + .checkbox-button-text {
+  color: var(--link-color-hover);
+  border-color: var(--link-color-hover);
+  cursor: pointer;
+}
+
+.checkbox-button input:checked + .checkbox-button-text {
+  color: var(--white);
+  border-color: var(--link-color);
+  background-color: var(--link-color);
+}
+
+.checkbox-button input:checked + .checkbox-button-text:hover,
+.checkbox-button input:checked:focus + .checkbox-button-text {
+  border-color: var(--link-color-hover);
+  background-color: var(--link-color-hover);
+}
+
+.checkbox-button input:checked:disabled + .checkbox-button-text,
+.checkbox-button input:disabled + .checkbox-button-text {
+  color: var(--gray-lighten-3);
+  border-color: var(--gray-lighten-3);
+  background-color: var(--white);
+  pointer-events: none;
+}
+
+.radio-button-group {
+  display: block;
+  /*padding: var(--space-05);*/
+  /*border: var(--border-widen-1) solid var(--link-color);*/
+  /*border-radius: var(--border-radius);*/
+  background-color: var(--white);
+
+  /*@media (--breakpoint-md) {*/
+    /*display: inline-block;*/
+  /*}*/
+}
+
+/* Display input only on screen readers */
+.radio-button-input {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.radio-button-text {
+  display: block;
+  padding: var(--space-1) var(--space-2);
+  /*border-radius: var(--border-radius);*/
+  color: var(--link-color);
+
+  /*@media (--breakpoint-md) {*/
+    /*display: inline-block;*/
+  /*}*/
+}
+
+.radio-button-text:hover,
+.radio-button-input:focus + .radio-button-text {
+  color: var(--link-color-hover);
+  cursor: pointer;
+}
+
+.radio-button-input:checked + .radio-button-text,
+.radio-button-input:checked + .radio-button-text:hover,
+.radio-button-input:checked:focus + .radio-button-text {
+  color: var(--white);
+  background-color: var(--link-color);
+  cursor: default;
+}

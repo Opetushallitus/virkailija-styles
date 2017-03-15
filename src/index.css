@@ -3,7 +3,9 @@
 
 /* Modules */
 @import "modules/variables.css";
+@import "modules/alerts.css";
 @import "modules/buttons.css";
+@import "modules/forms.css";
 @import "modules/modal.css";
 @import "modules/overlay.css";
 @import "modules/spinner.css";
