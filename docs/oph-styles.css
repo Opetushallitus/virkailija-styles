@@ -29,6 +29,97 @@
 
   /* Media queries */
 }
+.oph-spinner {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100px;
+  text-align: center;
+}
+.oph-spinner-in-button {
+  display: inline-block;
+  width: auto;
+  margin-right: 8px;
+  margin-right: .5rem;
+}
+.oph-spinner .oph-bounce {
+  width: 18px;
+  height: 18px;
+  background-color: #159ecb;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.oph-spinner-in-button .oph-bounce {
+  display: inline-block;
+  width: 12px;
+  width: .75rem;
+  height: 12px;
+  height: .75rem;
+  background-color: #fff;
+}
+.oph-spinner .oph-bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.oph-spinner .oph-bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+}
+/**
+* @stylesheet src/modules/overlay.css Overlay
+* @parent index
+*/
+/**
+* @styles 0-overlay
+*
+* Overlays can be used to block the app or parts of it, for example while a modal is open or during loading.
+*
+* Only styles are provided, create functionality with JS. See the JS tab for an example on how to
+* display/hide the overlay.
+*
+* `.oph-overlay-is-visible` element's z-index may have to overridden depending on your app.
+*
+* @demo demos/overlay/overlay.html
+*/
+.oph-overlay {
+  display: none;
+  position: relative;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, .20);
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+.oph-overlay-is-visible {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+}
+.oph-overlay-bg {
+  opacity: 1;
+}
 /**
 * @stylesheet src/modules/alerts.css Alerts
 * @parent index
@@ -118,7 +209,7 @@
 * @stylesheet src/modules/buttons.css Buttons
 * @parent index
 *
-* Use `.oph-button-{variant}` with `a`, `button` and `input type="submit"` tags.
+* Use `.oph-button-{variant}` with `a`, `button` and `input type="{submit|button}"` tags.
 */
 .oph-button {
   font-family: inherit;
@@ -377,7 +468,7 @@
 /**
 * @styles 4-inline-label Inline label
 *
-* Styles for aligning inline inputs isn't provided.
+* Styles for aligning inline inputs aren't provided.
 *
 * @demo demos/forms/inline-label.html
 */
@@ -550,11 +641,6 @@
   border-radius: 2px;
   background-color: #fff;
 }
-@media (min-width: 52em) {
-  .oph-radio-button-group {
-    display: inline-block;
-  }
-}
 .oph-radio-button-input {
   /* Hide radio input visually */
   position: absolute !important;
@@ -576,11 +662,6 @@
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
 }
-@media (min-width: 52em) {
-  .oph-radio-button-text {
-    display: inline-block;
-  }
-}
 .oph-radio-button-text:hover,
 .oph-radio-button-input:focus + .oph-radio-button-text {
   background-color: #def2ff;
@@ -600,6 +681,15 @@
   color: #aeaeae;
   cursor: not-allowed;
 }
+@media (min-width: 52em) {
+  .oph-radio-button-group {
+    display: inline-block;
+  }
+
+  .oph-radio-button-text {
+    display: inline-block;
+  }
+}
 /**
 * @stylesheet src/modules/modal.css Modal
 * @parent index
@@ -607,16 +697,19 @@
 /**
 * @styles 0-modal Modal
 *
-* Only styles are provided, create opening/closing functionality with JS. Set `overflow: hidden` on body to hide
-* the window's scroll bar while the modal is open.
+* Only styles are provided, create opening/closing functionality with JS.
 *
 * The [src/modules/overlay.css] component can be used to block the background while a modal is open.
 *
-* Z-indexes for `.oph-overlay` and `.oph-modal` may have to be adjusted depending on the app.
+* `.oph-modal` and `.oph-overlay-is-visible` elements' z-indexes may have to overridden depending on your app.
+*
+* **Usage**
+*
+* Set `overflow: hidden` on body to hide the window's scroll bar while the modal is open.
 *
 * **Accessibility**
 *
-* - `.oph-modal` is made focusable with tab by setting `tabindex=-1`, has a `role=dialog` attribute
+* - `.oph-modal` is made focusable by setting `tabindex=-1`, has a `role=dialog` attribute
 * and `aria-labelledby` linking to `.oph-modal-heading`
 *
 * - `.oph-modal-dialog` has a `role=document` attribute for screen reader users to browse the contents more easily
@@ -709,95 +802,100 @@
   max-width: 100%;
 }
 /**
-* @stylesheet src/modules/overlay.css Overlay
+* @stylesheet src/modules/tabs.css Tabs
 * @parent index
+*
+* Only styles are provided, create functionality with JS.
+*
+* If your app's or component's background color is not `#fff`, override `background-color` and `border-bottom-color` in
+* `.oph-tab-item-is-active` with the background color to match the colors.
+*
+* **Usage**
+*
+* Toggle tabs by adding/removing `.oph-tab-item-is-active` class on `.oph-tab-item` elements
+* and `.oph-tab-pane-is-active` on `.oph-tab-pane` elements.
+* See JS tab for an example.
+*
 */
 /**
-* @styles 0-overlay Overlay
+* @styles 0-tabs
 *
-* Overlays can be used to block the app or parts of it, for example while a modal is open or during loading.
-*
-* Only styles are provided, create functionality with JS. See the JS tab for an example on how to
-* display/hide the overlay.
-*
-* The z-index may have to be adjusted depending on the app.
-*
-* @demo demos/overlay/overlay.html
+* @demo demos/tabs/tabs.html
 */
-.oph-overlay {
-  display: none;
+.oph-tabs {
   position: relative;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, .20);
-  opacity: 0;
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
+  width: 100%;
 }
-.oph-overlay-is-visible {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
+.oph-tabs:after {
+  position: absolute;
   bottom: 0;
+  right: 0;
   left: 0;
-  z-index: 500;
+  content: "";
+  border-bottom: 1px solid #aeaeae;
 }
-.oph-overlay-bg {
-  opacity: 1;
-}
-.oph-spinner {
-  margin-right: auto;
-  margin-left: auto;
-  width: 100px;
+.oph-tab-item {
+  font-weight: 600;
   text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 8px 32px;
+  padding: .5rem 2rem;
+  color: #159ecb;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
-.oph-spinner-in-button {
-  display: inline-block;
-  width: auto;
-  margin-right: 8px;
-  margin-right: .5rem;
+.oph-tab-item:hover,
+.oph-tab-item:focus {
+  color: #00b5f0;
+  outline: 0;
 }
-.oph-spinner .oph-bounce {
-  width: 18px;
-  height: 18px;
-  background-color: #159ecb;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
-  animation: bouncedelay 1.4s infinite ease-in-out;
-
-  /* Prevent first frame from flickering when animation starts */
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-.oph-spinner-in-button .oph-bounce {
-  display: inline-block;
-  width: 12px;
-  width: .75rem;
-  height: 12px;
-  height: .75rem;
+.oph-tab-item-is-active {
   background-color: #fff;
+  color: #2a2a2a;
+  outline: 0;
+  z-index: 200;
 }
-.oph-spinner .oph-bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
+.oph-tab-item-is-active:hover,
+.oph-tab-item-is-active:focus {
+  color: #2a2a2a;
+  cursor: default;
 }
-.oph-spinner .oph-bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+.oph-tab-pane {
+  display: none;
 }
-@-webkit-keyframes bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0.0) }
-  40% { -webkit-transform: scale(1.0) }
+.oph-tab-pane-is-active {
+  display: block;
+  padding: 32px 0;
+  padding: 2rem 0;
 }
-@keyframes bouncedelay {
-  0%, 80%, 100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 40% {
-      transform: scale(1.0);
-      -webkit-transform: scale(1.0);
-    }
+@media  (min-width: 40em) {
+  .oph-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 0;
+  }
+
+  .oph-tab-item {
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 2px;
+    border-bottom-color: #aeaeae;
+  }
+
+  .oph-tab-item-is-active {
+    border-top: 2px solid #159ecb;
+    border-right: 1px solid #aeaeae;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #aeaeae;
+  }
 }
 /**
 * @stylesheet src/modules/backgrounds.css Backgrounds
