@@ -137,6 +137,18 @@
 				
 				
 				<li class="search-container">
+					<a class="stylesheet" href="src__modules__tabs.css.html" data-search="Tabs">
+						Tabs
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
 					<a class="stylesheet" href="src__modules__typography.css.html" data-search="Typography">
 						Typography
 					</a>
@@ -202,8 +214,7 @@
 
 		
 		<section class="description">
-			<p>Only styles are provided, create opening/closing functionality with JS. Set <code>overflow: hidden</code> on body to hide
-the window's scroll bar while the modal is open.</p>
+			<p>Only styles are provided, create opening/closing functionality with JS.</p>
 
 		</section>
 		
@@ -218,10 +229,12 @@ the window's scroll bar while the modal is open.</p>
 		
 		<section class="comment">
 			<p>The <a href="src__modules__overlay.css.html">Overlay</a> component can be used to block the background while a modal is open.</p>
-<p>Z-indexes for <code>.oph-overlay</code> and <code>.oph-modal</code> may have to be adjusted depending on the app.</p>
+<p><code>.oph-modal</code> and <code>.oph-overlay-is-visible</code> elements' z-indexes may have to overridden depending on your app.</p>
+<p><strong>Usage</strong></p>
+<p>Set <code>overflow: hidden</code> on body to hide the window's scroll bar while the modal is open.</p>
 <p><strong>Accessibility</strong></p>
 <ul>
-<li><p><code>.oph-modal</code> is made focusable with tab by setting <code>tabindex=-1</code>, has a <code>role=dialog</code> attribute
+<li><p><code>.oph-modal</code> is made focusable by setting <code>tabindex=-1</code>, has a <code>role=dialog</code> attribute
 and <code>aria-labelledby</code> linking to <code>.oph-modal-heading</code></p></li>
 <li><p><code>.oph-modal-dialog</code> has a <code>role=document</code> attribute for screen reader users to browse the contents more easily</p></li>
 <li><p><code>.oph-modal-back-to-top-link</code> for setting focus back to <code>.oph-modal</code>. The link is initially visually hidden,
@@ -250,7 +263,7 @@ and displayed on focus.</p></li>
 
 
 <script type="text/javascript">
-    var docObject = {"src":"src/modules/modal.css","line":5,"codeLine":27,"type":"styles","description":"Only styles are provided, create opening/closing functionality with JS. Set `overflow: hidden` on body to hide\nthe window's scroll bar while the modal is open.","name":"0-modal","title":"Modal","parent":"src/modules/modal.css","hideInParentMenu":true,"static":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/static","templates":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/templates","glob":{"pattern":"{pages,src/modules}/*.{css,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide"},"dest":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+    var docObject = {"src":"src/modules/modal.css","line":5,"codeLine":30,"type":"styles","description":"Only styles are provided, create opening/closing functionality with JS.","name":"0-modal","title":"Modal","parent":"src/modules/modal.css","hideInParentMenu":true,"static":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/static","templates":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/templates","glob":{"pattern":"{pages,src/modules}/*.{css,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide"},"dest":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 </script>
 
 

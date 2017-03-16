@@ -6,16 +6,19 @@
 /**
 * @styles 0-modal Modal
 *
-* Only styles are provided, create opening/closing functionality with JS. Set `overflow: hidden` on body to hide
-* the window's scroll bar while the modal is open.
+* Only styles are provided, create opening/closing functionality with JS.
 *
 * The [src/modules/overlay.css] component can be used to block the background while a modal is open.
 *
-* Z-indexes for `.oph-overlay` and `.oph-modal` may have to be adjusted depending on the app.
+* `.oph-modal` and `.oph-overlay-is-visible` elements' z-indexes may have to overridden depending on your app.
+*
+* **Usage**
+*
+* Set `overflow: hidden` on body to hide the window's scroll bar while the modal is open.
 *
 * **Accessibility**
 *
-* - `.oph-modal` is made focusable with tab by setting `tabindex=-1`, has a `role=dialog` attribute
+* - `.oph-modal` is made focusable by setting `tabindex=-1`, has a `role=dialog` attribute
 * and `aria-labelledby` linking to `.oph-modal-heading`
 *
 * - `.oph-modal-dialog` has a `role=document` attribute for screen reader users to browse the contents more easily

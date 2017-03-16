@@ -4,14 +4,14 @@
 */
 
 /**
-* @styles 0-overlay Overlay
+* @styles 0-overlay
 *
 * Overlays can be used to block the app or parts of it, for example while a modal is open or during loading.
 *
 * Only styles are provided, create functionality with JS. See the JS tab for an example on how to
 * display/hide the overlay.
 *
-* The z-index may have to be adjusted depending on the app.
+* `.oph-overlay-is-visible` element's z-index may have to overridden depending on your app.
 *
 * @demo demos/overlay/overlay.html
 */

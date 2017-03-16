@@ -2,7 +2,7 @@
 * @stylesheet src/modules/buttons.css Buttons
 * @parent index
 *
-* Use `.oph-button-{variant}` with `a`, `button` and `input type="submit"` tags.
+* Use `.oph-button-{variant}` with `a`, `button` and `input type="{submit|button}"` tags.
 */
 
 .oph-button {

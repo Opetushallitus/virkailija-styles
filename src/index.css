@@ -3,11 +3,12 @@
 
 /* Modules */
 @import "modules/variables.css";
+@import "modules/spinner.css";
+@import "modules/overlay.css";
 @import "modules/alerts.css";
 @import "modules/buttons.css";
 @import "modules/forms.css";
 @import "modules/modal.css";
-@import "modules/overlay.css";
-@import "modules/spinner.css";
+@import "modules/tabs.css";
 @import "modules/backgrounds.css";
 @import "modules/typography.css";

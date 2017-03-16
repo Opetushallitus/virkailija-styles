@@ -1,0 +1,103 @@
+/**
+* @stylesheet src/modules/tabs.css Tabs
+* @parent index
+*
+* Only styles are provided, create functionality with JS.
+*
+* If your app's or component's background color is not `#fff`, override `background-color` and `border-bottom-color` in
+* `.oph-tab-item-is-active` with the background color to match the colors.
+*
+* **Usage**
+*
+* Toggle tabs by adding/removing `.oph-tab-item-is-active` class on `.oph-tab-item` elements
+* and `.oph-tab-pane-is-active` on `.oph-tab-pane` elements.
+* See JS tab for an example.
+*
+*/
+
+/**
+* @styles 0-tabs
+*
+* @demo demos/tabs/tabs.html
+*/
+
+.oph-tabs {
+  position: relative;
+  width: 100%;
+}
+
+.oph-tabs:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: "";
+  border-bottom: 1px solid var(--border-color-base);
+}
+
+.oph-tab-item {
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: var(--space-1) var(--space-3);
+  color: var(--link-color);
+  transition-property: color;
+  transition-duration: var(--transition-duration-base);
+  transition-timing-function: var(--transition-timing-function-base);
+}
+
+.oph-tab-item:hover,
+.oph-tab-item:focus {
+  color: var(--link-color-hover);
+  outline: 0;
+}
+
+.oph-tab-item-is-active {
+  background-color: var(--white);
+  color: var(--font-color-base);
+  outline: 0;
+  z-index: var(--z2);
+}
+
+.oph-tab-item-is-active:hover,
+.oph-tab-item-is-active:focus {
+  color: var(--font-color-base);
+  cursor: default;
+}
+
+.oph-tab-pane {
+  display: none;
+}
+
+.oph-tab-pane-is-active {
+  display: block;
+  padding: var(--space-3) 0;
+}
+
+@media (--breakpoint-small) {
+  .oph-tabs {
+    display: flex;
+    padding-bottom: 0;
+  }
+
+  .oph-tab-item {
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: var(--tab-item-border-width);
+    border-bottom-color: var(--border-color-base);
+  }
+
+  .oph-tab-item-is-active {
+    border-top: var(--tab-item-border-width) solid var(--link-color);
+    border-right: 1px solid var(--border-color-base);
+    border-bottom: 1px solid var(--white);
+    border-left: 1px solid var(--border-color-base);
+  }
+}
+
+:root {
+  --tab-item-border-width: 2px;
+}

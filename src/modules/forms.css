@@ -129,7 +129,7 @@
 /**
 * @styles 4-inline-label Inline label
 *
-* Styles for aligning inline inputs isn't provided.
+* Styles for aligning inline inputs aren't provided.
 *
 * @demo demos/forms/inline-label.html
 */
@@ -296,12 +296,6 @@
   background-color: var(--white);
 }
 
-@media (--breakpoint-medium) {
-  .oph-radio-button-group {
-    display: inline-block;
-  }
-}
-
 .oph-radio-button-input {
   /* Hide radio input visually */
   position: absolute !important;
@@ -319,12 +313,6 @@
   transition-property: color, background;
   transition-duration: var(--transition-duration-base);
   transition-timing-function: var(--transition-timing-function-base);
-}
-
-@media (--breakpoint-medium) {
-  .oph-radio-button-text {
-    display: inline-block;
-  }
 }
 
 .oph-radio-button-text:hover,
@@ -347,6 +335,16 @@
   background-color: var(--white);
   color: var(--color-muted);
   cursor: not-allowed;
+}
+
+@media (--breakpoint-medium) {
+  .oph-radio-button-group {
+    display: inline-block;
+  }
+
+  .oph-radio-button-text {
+    display: inline-block;
+  }
 }
 
 :root {
