@@ -1,0 +1,18 @@
+<ul class="api cascading primary-grouping">
+    {{#getActiveAndParents}}
+        {{#each parents}}
+            <li class="search-container active parent">
+                {{#if ../active.hideChildrenInMenu}}
+                    {{> active-menu.mustache}}
+                {{/if}}
+            </li>
+        {{/each}}
+        {{#active}}
+            {{^if hideChildrenInMenu}}
+                <li class="search-container active">
+                    {{> active-menu.mustache}}
+                </li>
+            {{/if}}
+        {{/active}}
+    {{/getActiveAndParents}}
+</ul>

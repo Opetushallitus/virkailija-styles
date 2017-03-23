@@ -24,12 +24,65 @@ header {
 
 header {
   .container {
-    position: relative;
+    display: flex;
     height: @headerHeight;
     text-align: left;
   }
 }
 
+.nav-menu,
+.nav-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu {
+  flex: auto;
+  margin-left: @space2;
+}
+
+.nav-menu li {
+  list-style: none;
+  display: inline-block;
+
+  .active .active a {
+    color: @blueLighten2;
+  }
+}
+
+.nav-menu a {
+  font-size: @h5;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  display: inline-block;
+  padding: @space2;
+  color: @black;
+  transition: color @transition;
+
+  &:hover,
+  &:focus {
+    color: @blueLighten2;
+  }
+}
+
+.nav-menu .parent + .active,
+.nav-menu .parent + .parent {
+  display: none;
+}
+
+.nav-item {
+  font-size: @h5;
+  text-decoration: none;
+  padding: @space2;
+  color: @black;
+  transition: color @transition;
+
+  &:hover,
+  &:focus {
+    color: @blueLighten2;
+  }
+}
 
 /**
 * @styles header-nav Header Nav

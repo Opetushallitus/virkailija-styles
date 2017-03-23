@@ -4,7 +4,7 @@
     "templates": "theme/templates"
   },
   "sites": {
-    "styles": {
+    "styleguide": {
       "glob": "{pages,src/modules}/*.{css,md}",
       "parent": "index",
       "dest": "styleguide"

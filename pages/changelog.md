@@ -1,5 +1,4 @@
 @page change-log Change log
-@parent index
 
 All notable changes to this style guide will be documented on this page.
 

@@ -1,17 +1,23 @@
 /**
 * @stylesheet src/modules/overlay.css Overlay
-* @parent index
+* @parent components
 */
 
 /**
 * @styles 0-overlay
 *
-* Overlays can be used to block the app or parts of it, for example while a modal is open or during loading.
+* Overlays can be used to block the app or parts of it, for example while a modal is open or during an AJAX request.
 *
-* Only styles are provided, create functionality with JS. See the JS tab for an example on how to
-* display/hide the overlay.
+* Only styles are provided, create functionality with JS.
 *
-* `.oph-overlay-is-visible` element's z-index may have to overridden depending on your app.
+* **Usage**
+*
+* - The overlay's visibility is controlled by toggling `.oph-overlay-is-visible` and `.oph-overlay-bg`
+* classes. See JS tab for an example.
+*
+* - Add elements to be displayed on top of the overlay as `.oph-overlay`'s children
+*
+* - `.oph-overlay-is-visible`'s z-index may have to overridden depending on your app.
 *
 * @demo demos/overlay/overlay.html
 */
@@ -19,13 +25,15 @@
   display: none;
   position: relative;
   overflow: auto;
-  background-color: var(--overlay-bg);
+  background-color: rgba(0, 0, 0, .20);
   opacity: 0;
-  transition: var(--overlay-transition);
+  transition: opacity .3s ease;
 }
 
 .oph-overlay-is-visible {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   position: fixed;
   top: 0;
   right: 0;
@@ -38,7 +46,6 @@
   opacity: 1;
 }
 
-:root {
-  --overlay-bg: rgba(0, 0, 0, .20);
-  --overlay-transition: opacity .3s ease;
+.oph-overlay:focus {
+  outline: none;
 }

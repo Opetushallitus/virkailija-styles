@@ -23,23 +23,34 @@ const overlay = document.querySelector('.oph-overlay');
 const isVisibleClass = 'oph-overlay-is-visible';
 const bgClass = 'oph-overlay-bg';
 
+// Set the fade-in animation's duration for timeout
+const animationDuration = 300;
+
+function display () {
+  // Remove the background first when closing the overlay
+  overlay.classList.remove(bgClass);
+
+  // Hide the overlay after the animation is done
+  setTimeout(() => {
+    overlay.classList.remove(isVisibleClass);
+  }, animationDuration);
+}
+
+function hide () {
+  // Display the overlay first
+  overlay.classList.add(isVisibleClass);
+
+  // Set background after timeout for the animation to run properly
+  setTimeout(() => {
+    overlay.classList.add(bgClass);
+  }, 0);
+}
+
 function animate () {
     if (overlay.classList.contains(isVisibleClass)) {
-        // Remove the background first when closing the overlay
-        overlay.classList.remove(bgClass);
-
-        // Hide the overlay after the animation is done
-        setTimeout(() => {
-            overlay.classList.remove(isVisibleClass);
-        }, 300)
+        display();
     } else {
-        // Display the overlay first
-        overlay.classList.add(isVisibleClass);
-
-        // Set the background after timeout for the animation to run properly
-        setTimeout(() => {
-            overlay.classList.add(bgClass);
-        }, 0);
+        hide();
     }
 }
 

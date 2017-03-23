@@ -1,18 +1,16 @@
 /**
 * @stylesheet src/modules/tabs.css Tabs
-* @parent index
+* @parent components
 *
 * Only styles are provided, create functionality with JS.
 *
-* If your app's or component's background color is not `#fff`, override `background-color` and `border-bottom-color` in
-* `.oph-tab-item-is-active` with the background color to match the colors.
-*
 * **Usage**
 *
-* Toggle tabs by adding/removing `.oph-tab-item-is-active` class on `.oph-tab-item` elements
-* and `.oph-tab-pane-is-active` on `.oph-tab-pane` elements.
-* See JS tab for an example.
+* - Toggle the active tab with `.oph-tab-item-is-active` class on `.oph-tab-item` element
+* and `.oph-tab-pane-is-active` on `.oph-tab-pane` element. See the JS tab for an example.
 *
+* - If your app's or component's background color is not `#fff`, override `background-color` and `border-bottom-color`
+* in `.oph-tab-item-is-active`
 */
 
 /**

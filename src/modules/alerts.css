@@ -1,11 +1,11 @@
 /**
-* @stylesheet src/modules/alerts.css Alerts
-* @parent index
+* @stylesheet src/modules/alerts.css Alert messages
+* @parent components
 *
-* Only styles are provided, create displaying/closing functionality with JS.
+* Only styles are provided, create functionality with JS.
 *
 * The content is wrapped in `.oph-alert-container` (centered and has a maximum width)
-* for full screen wide alerts.
+* for better positioning in full viewport wide alerts.
 */
 
 .oph-alert {
@@ -37,6 +37,10 @@
 
 .oph-alert-info {
   background-color: var(--bg-color-info);
+}
+
+.oph-alert-info .oph-alert-title {
+  color: var(--color-info);
 }
 
 /**
@@ -97,7 +101,13 @@
   font-weight: 400;
 }
 
+.oph-alert-help .oph-alert-text {
+  text-align: left;
+}
+
+
 :root {
+  --color-info:        var(--blue);
   --color-success:        var(--green);
 
   --bg-color-info:        var(--blue-lighten-4);

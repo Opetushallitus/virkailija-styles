@@ -1,6 +1,6 @@
 /**
-* @stylesheet src/modules/forms.css Forms
-* @parent index
+* @stylesheet src/modules/forms.css Form controls
+* @parent components
 */
 
 ::placeholder {
@@ -41,9 +41,14 @@
 * @demo demos/forms/input-regular.html
 */
 
+.oph-input-container {
+  width: 100%;
+}
+
 .oph-input {
   font-family: inherit;
   font-size: inherit;
+  box-sizing: border-box;
   width: 100%;
   padding: var(--space-1);
   border: 1px solid var(--gray-lighten-3);
@@ -156,7 +161,7 @@
 }
 
 .oph-select-container:before {
-  content: '';
+  content: "";
   position: absolute;
   top: var(--space-2);
   right: var(--space-1);
@@ -166,7 +171,7 @@
 }
 
 .oph-select-container:after {
-  content: '';
+  content: "";
   position: absolute;
   top: var(--space-2);
   right: calc(var(--space-1) + 1px);

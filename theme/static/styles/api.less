@@ -6,6 +6,14 @@
 * Styles the docs and overwrites some of the theme default styles.
 **/
 
+code {
+  white-space: nowrap;
+  background-color: @white;
+}
+
+pre.prettyprint {
+  white-space: pre-wrap;
+}
 
 /**
 * @styles simple-tag Simple Tag
@@ -26,6 +34,7 @@
   font-size: 12px;
   margin-left: 5px;
   padding: 2px 8px;
+  letter-spacing: .1em;
 }
 
 
@@ -41,7 +50,7 @@
 .docs {
   .title {
     display: block;
-    border-bottom: 1px solid @fog;
+    border-bottom: 1px solid @grayLighten3;
     .heading {
       position: relative;
       margin: 0;
@@ -172,6 +181,13 @@
 
     .demo ul {
       margin-left: 0;
+    }
+  }
+  .content.docs .contents a {
+    font-weight: @fontWeightBold;
+
+    &:empty {
+      display: none;
     }
   }
   .contents li {
@@ -457,21 +473,23 @@
       display: block;
       float: left;
       padding: 0.25em 0.5em;
-      border-radius: 4px 4px 0 0;
+      border-radius: 2px 2px 0 0;
       cursor: pointer;
-      transition: background-color 50ms ease;
+      transition: background-color, color .3s ease;
       &:first-of-type {
         margin-left: 5px;
       }
       &:hover, &:focus {
-        background-color: #f8f8f8;
+        color: @blueLighten1;
       }
     }
     li.tab.active {
-      color: @clear;
-      font-weight: bold;
-      background-color: @nigthRain;
-      .text-shadow;
+      font-weight: @fontWeightBold;
+      background-color: @blueLighten3;
+
+      &:hover, &:focus {
+        color: @black;
+      }
     }
     div.tab-content {
       clear: both;

@@ -1,12 +1,12 @@
 /**
 * @stylesheet src/modules/typography.css Typography
-* @parent index
+* @parent components
 */
 
 /**
 * @styles 0-base-element Typography base
 *
-* Use `.oph-typography` in an element to set font family, size, color and line height.
+* Use `.oph-typography` to set font family, size, color and line height.
 * Base font size is set to 95% of the browser's default font size.
 *
 * Set this as high in the element hierarchy as possible, preferably to the main element of your app.
@@ -82,39 +82,3 @@
 .oph-muted { color: var(--color-muted); }
 
 .oph-error { color: var(--color-error); }
-
-/**
-* @styles 5-colors Color palette
-*
-* Use `.oph-{color}` to set text color. Every color defined in the Sketch specs has
-* a corresponding class. Overrides default color.
-*
-* @iframe demos/typography/colors.html 360
-*/
-.oph-black { color: var(--black); }
-
-.oph-white { color: var(--white); }
-
-.oph-gray { color: var(--gray); }
-.oph-gray-lighten-1 { color: var(--gray-lighten-1); }
-.oph-gray-lighten-2 { color: var(--gray-lighten-2); }
-.oph-gray-lighten-3 { color: var(--gray-lighten-3); }
-.oph-gray-lighten-4 { color: var(--gray-lighten-4); }
-.oph-gray-lighten-5 { color: var(--gray-lighten-5); }
-
-.oph-red { color: var(--red); }
-.oph-red-lighten-1 { color: var(--red-lighten-1); }
-.oph-red-lighten-2 { color: var(--red-lighten-2); }
-
-.oph-blue { color: var(--blue); }
-.oph-blue-lighten-1 { color: var(--blue-lighten-1); }
-.oph-blue-lighten-2 { color: var(--blue-lighten-2); }
-.oph-blue-lighten-3 { color: var(--blue-lighten-3); }
-.oph-blue-lighten-4 { color: var(--blue-lighten-4); }
-.oph-blue-darken-1 { color: var(--blue-darken-1); }
-
-.oph-green { color: var(--green); }
-.oph-green-lighten-1 { color: var(--green-lighten-1); }
-
-.oph-yellow { color: var(--yellow); }
-.oph-yellow-lighten-1 { color: var(--yellow-lighten-1); }

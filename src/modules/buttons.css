@@ -1,6 +1,6 @@
 /**
 * @stylesheet src/modules/buttons.css Buttons
-* @parent index
+* @parent components
 *
 * Use `.oph-button-{variant}` with `a`, `button` and `input type="{submit|button}"` tags.
 */
@@ -71,9 +71,26 @@
 }
 
 /**
-* @styles 2-disabled-button Disabled button
+* @styles 2-confirm-button Cancel button
 *
-* Use *disabled* attribute instead of *.oph-button-is-disabled* class with *button* and *input* tag.
+* @demo demos/buttons/button-cancel.html
+*/
+.oph-button-cancel {
+  color: var(--white);
+  border-color: var(--gray);
+  background-color: var(--gray);
+}
+
+.oph-button-cancel:hover,
+.oph-button-cancel:focus {
+  border-color: var(--gray-lighten-1);
+  background-color: var(--gray-lighten-1);
+}
+
+/**
+* @styles 3-disabled-button Disabled button
+*
+* Use `disabled` attribute instead of `.oph-button-is-disabled` class in `button` and `input` tags.
 *
 * Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events),
 * and may need JS to be completely blocked.
@@ -93,7 +110,7 @@
 }
 
 /**
-* @styles 3-big-button Big button
+* @styles 4-big-button Big button
 *
 * @demo demos/buttons/button-big.html
 */
@@ -105,9 +122,9 @@
 }
 
 /**
-* @styles 4-big-button Close button
+* @styles 5-big-button Close button
 *
-* Close button is absolutely positioned, so it needs a *position: relative* declaration in its' container
+* Close button is absolutely positioned, so it needs a `position: relative` declaration in its' container
 * for proper positioning.
 *
 * @demo demos/buttons/button-close.html
@@ -135,7 +152,9 @@
 }
 
 /**
-* @styles 5-loading-state Loading state
+* @styles 6-loading-state Loading state
+*
+* Use the [src/modules/spinner.css] component to indicate loading.
 *
 * @demo demos/buttons/button-in-loading-state.html
 */

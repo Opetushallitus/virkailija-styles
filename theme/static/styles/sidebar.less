@@ -65,6 +65,14 @@
 **/
 .sidebar {
   .api {
+    > .active {
+      display: none;
+    }
+
+    > .parent + .active {
+      display: block;
+    }
+
     .heading span {
       text-transform: uppercase;
       color: @darkSkies;
@@ -81,7 +89,7 @@
         display: block;
         padding: @space1 @space2;
         border-radius: @borderRadius;
-        transition: background @transition;
+        transition: color @transition;
       }
     }
     ul ul li a:hover {
@@ -122,7 +130,7 @@
     }
     a:hover,
     a:focus {
-      background-color: @haze;
+      color: @blueLighten2;
     }
     li.active  {
       z-index: 20;
@@ -166,6 +174,8 @@
       display : block;
       height:25px;
       background-color: @blueLighten3;
+      font-weight: @fontWeightBold;
+      color: @darkSkies;
     }
   } // api ends
 } // sidebar ends

@@ -1,6 +1,6 @@
 /**
-* @stylesheet src/modules/backgrounds.css Backgrounds
-* @parent index
+* @stylesheet src/modules/colors.css Colors
+* @parent components
 */
 
 /**
@@ -15,11 +15,16 @@
 /**
 * @styles 1-colors Color palette
 *
-* Use `.oph-bg-{color}` classes to set background color. Every color defined in the Sketch specs has
-* a corresponding class. Overrides default background color.
+* Set background color with `.oph-bg-{color}` and text color with `.oph-{color}`.
+* Every color defined in the Sketch specs has a corresponding class.
 *
-* @iframe demos/backgrounds/colors.html 690
+* Classes override the default colors of other components.
+*
+* @iframe demos/colors/colors.html 610
 */
+
+/* Background colors */
+
 .oph-bg-black { background-color: var(--black); }
 
 .oph-bg-white { background-color: var(--white); }
@@ -47,6 +52,35 @@
 
 .oph-bg-yellow { background-color: var(--yellow); }
 .oph-bg-yellow-lighten-1 { background-color: var(--yellow-lighten-1); }
+
+/* Text colors */
+
+.oph-black { color: var(--black); }
+.oph-white { color: var(--white); }
+
+.oph-gray { color: var(--gray); }
+.oph-gray-lighten-1 { color: var(--gray-lighten-1); }
+.oph-gray-lighten-2 { color: var(--gray-lighten-2); }
+.oph-gray-lighten-3 { color: var(--gray-lighten-3); }
+.oph-gray-lighten-4 { color: var(--gray-lighten-4); }
+.oph-gray-lighten-5 { color: var(--gray-lighten-5); }
+
+.oph-red { color: var(--red); }
+.oph-red-lighten-1 { color: var(--red-lighten-1); }
+.oph-red-lighten-2 { color: var(--red-lighten-2); }
+
+.oph-blue { color: var(--blue); }
+.oph-blue-lighten-1 { color: var(--blue-lighten-1); }
+.oph-blue-lighten-2 { color: var(--blue-lighten-2); }
+.oph-blue-lighten-3 { color: var(--blue-lighten-3); }
+.oph-blue-lighten-4 { color: var(--blue-lighten-4); }
+.oph-blue-darken-1 { color: var(--blue-darken-1); }
+
+.oph-green { color: var(--green); }
+.oph-green-lighten-1 { color: var(--green-lighten-1); }
+
+.oph-yellow { color: var(--yellow); }
+.oph-yellow-lighten-1 { color: var(--yellow-lighten-1); }
 
 :root {
   --bg-app: var(--gray-lighten-4);

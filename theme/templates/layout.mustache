@@ -22,7 +22,33 @@
             <div class="logo-menu">
                 <a class="brand" href="./index.html">{{makeParentTitle}}</a>
             </div>
+
+            <ul class="nav-menu">
+                <li>
+                    <a class="home" href="./index.html">
+                        Home
+                    </a>
+                </li>
+
+                {{#getActiveAndParents}}
+                    {{#each parents}}
+                        <li class="parent">
+                            {{> active-menu.mustache}}
+                        </li>
+                    {{/each}}
+                    {{#active}}
+                        {{^if hideChildrenInMenu}}
+                            <li class="active">
+                                {{> active-menu.mustache}}
+                            </li>
+                        {{/if}}
+                    {{/active}}
+                {{/getActiveAndParents}}
+            </ul>
+
+            <a class="nav-item" href="./change-log.html">Change log</a>
         </nav>
+
     </header>
 {{/unless}}
 
