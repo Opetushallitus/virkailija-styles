@@ -9,20 +9,31 @@
 </head>
 
 <body class="oph-typography">
-<form class="col-8">
+<form class="demo-form-wide">
     <div class="oph-field oph-field-inline">
-        <label class="oph-label" for="inline-label">Field</label>
-        <input
-            id="inline-label"
-            class="oph-input"
-            type="text"
-            value="Value"
-            placeholder="Placeholder"
+        <label
+            class="oph-label"
+            for="inline-label"
+            aria-describedby="field-text"
         >
+            Field
+        </label>
+
+        <div class="oph-input-container">
+            <input
+                id="inline-label"
+                class="oph-input"
+                type="text"
+                value="Value"
+                placeholder="Placeholder"
+            >
+
+            <div id="field-text" class="oph-field-text">Help text</div>
+        </div>
     </div>
 
     <div class="oph-field oph-field-inline">
-        <label class="oph-label col-3" for="inline-long-label">Another field</label>
+        <label class="oph-label demo-label-inline" for="inline-long-label">Another field</label>
         <input
             id="inline-long-label"
             class="oph-input"

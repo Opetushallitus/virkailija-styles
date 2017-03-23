@@ -3,6 +3,10 @@
   font-size: .875rem;
 }
 
+.h6 {
+  font-size: .75rem;
+}
+
 .center {
   text-align: center;
 }
@@ -26,18 +30,6 @@
 .col-2 {
   box-sizing: border-box;
   width: calc(2/12 * 100%);
-}
-
-.col-3 {
-  width: calc(3/12 * 100%);
-}
-
-.col-6 {
-  width: calc(6/12 * 100%);
-}
-
-.col-8 {
-  width: calc(8/12 * 100%);
 }
 
 .col-12 {
@@ -79,7 +71,47 @@
 }
 
 .demo-modal {
-  height: 20em;
+  height: 20rem;
+}
+
+.demo-form {
+  width: 50%;
+}
+
+.demo-form-wide {
+  width: 75%;
+}
+
+.demo-label-inline {
+  width: 25%;
+}
+
+.demo-popup-container {
+  position: relative;
+  height: 8rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.demo-popup-container:first-of-type {
+  height: 12rem;
+  margin-top: 0;
+}
+
+.demo-popup-container:last-of-type {
+  border-bottom: none;
+}
+
+.demo-popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+  animation: none;
+}
+
+.demo-popup-is-visible {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .color-swatch {
@@ -87,3 +119,9 @@
   border-radius: 2px;
 }
 
+.color-swatch-text {
+  font-size: .875rem;
+  text-align: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
