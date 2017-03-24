@@ -6,8 +6,8 @@
 *
 * **Usage**
 *
-* - Use `.oph-popup-{top|right|bottom|left}` classes to set the pointer arrow's position and
-* `.oph-popup-{default|info|success|warning|error}` to set the colors
+* - Set the pointer arrow's position with `.oph-popup-{top|right|bottom|left}` classes and
+* the colors with `.oph-popup-{default|info|success|warning|error}`
 *
 * - Create & remove the popups and calculate top/right/bottom/left position with JS
 *
@@ -15,16 +15,6 @@
 *
 * - `.oph-popup`'s z-index may have to overridden depending on your app
 */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 /**
 * @styles 0-default-popup Default popup

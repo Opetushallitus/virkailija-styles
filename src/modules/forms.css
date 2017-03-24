@@ -31,7 +31,7 @@
 /**
 * @styles 0-input-regular Regular input (with help text)
 *
-* `.oph-field-text` is used to provide additional info about the field or the expected value.
+* Provide additional info about the field or the expected value with `.oph-field-text`.
 *
 * **Accessibility**
 *
@@ -136,7 +136,7 @@
 *
 * Styles for aligning inline inputs aren't provided.
 *
-* @demo demos/forms/inline-label.html
+* @demo demos/forms/label-inline.html
 */
 
 .oph-field-inline {

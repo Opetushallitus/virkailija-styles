@@ -6,14 +6,14 @@
 /**
 * @styles 0-overlay
 *
-* Overlays can be used to block the app or parts of it, for example while a modal is open or during an AJAX request.
+* Block your app or parts of it temporarily, for example when a modal is open or during loading.
 *
 * Only styles are provided, create functionality with JS.
 *
 * **Usage**
 *
-* - The overlay's visibility is controlled by toggling `.oph-overlay-is-visible` and `.oph-overlay-bg`
-* classes. See JS tab for an example.
+* - Toggle `.oph-overlay-is-visible` and `.oph-overlay-bg` classes set the overlay's visibility.
+* See JS tab for an example.
 *
 * - Add elements to be displayed on top of the overlay as `.oph-overlay`'s children
 *

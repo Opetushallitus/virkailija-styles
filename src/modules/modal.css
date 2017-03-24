@@ -4,7 +4,7 @@
 *
 * Only styles are provided, create functionality with JS.
 *
-* The [src/modules/overlay.css] component is used to block the background while a modal is open.
+* Block the background with the [src/modules/overlay.css] component while a modal is open.
 *
 * **Usage**
 *
@@ -26,18 +26,6 @@
 * and displayed on focus.
 *
 */
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale3d(.75, .75, .75);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-}
 
 /**
 * @styles 0-modal Default modal

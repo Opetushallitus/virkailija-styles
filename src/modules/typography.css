@@ -6,10 +6,10 @@
 /**
 * @styles 0-base-element Typography base
 *
-* Use `.oph-typography` to set font family, size, color and line height.
+* Set your app's or component's font family, size, color and line height with `.oph-typography`.
 * Base font size is set to 95% of the browser's default font size.
 *
-* Set this as high in the element hierarchy as possible, preferably to the main element of your app.
+* Add the class as high in the element hierarchy as possible, preferably to `html` or the main element of your app.
 *
 * @demo demos/typography/base.html
 */
@@ -42,7 +42,7 @@
 /**
 * @styles 2-headings Headings (and bolded text)
 *
-* Use `.oph-bold` with the font size classes to style headings. Font weight is set to 600.
+* Style heading with `.oph-bold` and the font size classes. Font weight is set to 600.
 *
 * @demo demos/typography/headings.html
 */

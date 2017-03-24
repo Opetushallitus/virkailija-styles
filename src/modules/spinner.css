@@ -3,20 +3,10 @@
 * @parent components
 */
 
-@keyframes bounceDelay {
-  0%, 80%, 100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 40% {
-      transform: scale(1.0);
-      -webkit-transform: scale(1.0);
-    }
-}
-
 /**
 * @styles 0-spinner
 *
-* Use `.oph-spinner` to indicate loading.
+* Indicate loading with `.oph-spinner`.
 *
 * @demo demos/spinner/spinner.html
 */
