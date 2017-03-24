@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Demo</title>
+    <link rel="stylesheet" href="../../oph-styles-min.css" />
+    <link rel="stylesheet" href="../app.css" />
+</head>
+
+<body class="demo-modal">
+
+<div class="oph-typography">
+    <button class="oph-button oph-button-primary" type="button">Action</button>
+
+    <div
+        id="modal"
+        class="oph-overlay oph-overlay-bg oph-overlay-is-visible"
+        role="dialog"
+        tabindex="-1"
+        aria-labelledby="#modal-title"
+    >
+        <div class="oph-modal oph-modal-with-arrow" role="document" style="top: 65px; left: 9px">
+            <div class="oph-modal-arrow"></div>
+
+            <button
+                class="oph-button oph-button-close"
+                type="button"
+                title="Close"
+                aria-label="Close"
+            >
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <div class="oph-modal-content">
+                <h1 id="modal-title" class="oph-modal-title">Modal dialog</h1>
+                <p>Modal content</p>
+            </div>
+
+            <a
+                class="oph-link oph-modal-back-to-top-link"
+                href="#modal"
+            >
+                Back to modal top
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
