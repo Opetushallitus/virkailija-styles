@@ -850,6 +850,38 @@
   margin-top: 0;
 }
 /**
+* @styles 1-modal-with-pointer-arrow Modal with a pointer arrow
+*
+* **Usage**
+*
+* - Calculate positioning with JS
+*
+* - May need custom CSS/JS for positioning on small screens depending on your app and modal usage
+*
+* @demo demos/modal/modal-with-pointer-arrow.html
+*/
+/* Reset margin for proper custom positioning by setting top/right/bottom/left position with JS */
+.oph-modal-with-arrow {
+  position: absolute;
+  margin: 0;
+}
+.oph-modal-arrow {
+  position: absolute;
+  top: -12px;
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+  content: "";
+  border-style: solid;
+  border-width: 12px;
+  border-width: .75rem;
+  border-top-width: 0;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #fff;
+  border-left-color: transparent;
+}
+/**
 * @styles 2-modal-big Big modal
 *
 * @demo demos/modal/modal-big.html
@@ -890,9 +922,9 @@
 * - Use `.oph-popup-{top|right|bottom|left}` classes to set the pointer arrow's position and
 * `.oph-popup-{default|info|success|warning|error}` to set the colors
 *
-* - Create & remove the popups and calculate placement with JS
+* - Create & remove the popups and calculate top/right/bottom/left position with JS
 *
-* - May need custom CSS/JS for placement on small screens depending on your app and popup usage
+* - May need custom CSS/JS for positioning on small screens depending on your app and popup usage
 *
 * - `.oph-popup`'s z-index may have to overridden depending on your app
 */
@@ -1207,7 +1239,7 @@
 /**
 * @styles 0-contextual-colors App background
 *
-* Set your app's background color with `.oph-bg-app`
+* Set your app's background color with `.oph-bg-app`.
 */
 .oph-bg-app {
   background-color: #f6f4f0;

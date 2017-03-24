@@ -6,7 +6,7 @@
 /**
 * @styles 0-contextual-colors App background
 *
-* Set your app's background color with `.oph-bg-app`
+* Set your app's background color with `.oph-bg-app`.
 */
 .oph-bg-app {
   background-color: var(--bg-app);

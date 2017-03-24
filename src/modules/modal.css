@@ -76,6 +76,40 @@
 }
 
 /**
+* @styles 1-modal-with-pointer-arrow Modal with a pointer arrow
+*
+* **Usage**
+*
+* - Calculate positioning with JS
+*
+* - May need custom CSS/JS for positioning on small screens depending on your app and modal usage
+*
+* @demo demos/modal/modal-with-pointer-arrow.html
+*/
+
+/* Reset margin for proper custom positioning by setting top/right/bottom/left position with JS */
+.oph-modal-with-arrow {
+  position: absolute;
+  margin: 0;
+}
+
+.oph-modal-arrow {
+  position: absolute;
+  top: -12px;
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+  content: "";
+  border-style: solid;
+  border-width: var(--h6);
+  border-top-width: 0;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: var(--white);
+  border-left-color: transparent;
+}
+
+/**
 * @styles 2-modal-big Big modal
 *
 * @demo demos/modal/modal-big.html

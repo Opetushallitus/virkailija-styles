@@ -9,9 +9,9 @@
 * - Use `.oph-popup-{top|right|bottom|left}` classes to set the pointer arrow's position and
 * `.oph-popup-{default|info|success|warning|error}` to set the colors
 *
-* - Create & remove the popups and calculate placement with JS
+* - Create & remove the popups and calculate top/right/bottom/left position with JS
 *
-* - May need custom CSS/JS for placement on small screens depending on your app and popup usage
+* - May need custom CSS/JS for positioning on small screens depending on your app and popup usage
 *
 * - `.oph-popup`'s z-index may have to overridden depending on your app
 */
