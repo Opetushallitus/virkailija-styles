@@ -7,8 +7,8 @@
   color: var(--color-muted);
 }
 
-.oph-field {
-  margin-bottom: var(--space-2);
+.oph-field + .oph-field {
+  margin-top: var(--space-2);
 }
 
 .oph-fieldset {

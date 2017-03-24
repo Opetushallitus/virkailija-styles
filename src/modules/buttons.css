@@ -152,7 +152,7 @@
 * @styles 6-big-button Close button
 *
 * Set `position: relative` declaration for the button's container for proper positioning (the button is absolutely
-* positioned)
+* positioned).
 *
 * @demo demos/buttons/button-close.html
 */
