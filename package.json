@@ -1,6 +1,6 @@
 {
   "name": "oph-virkailija-style-guide",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "",
   "scripts": {
     "watch": "watch 'npm run build' demos src",

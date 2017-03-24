@@ -26,7 +26,7 @@
   text-align: center;
   word-break: break-all;
   position: absolute;
-  max-width: 24rem;
+  width: 20rem;
   padding: var(--space-2) var(--space-3);
   border-radius: var(--border-radius-base);
   z-index: var(--z6);
@@ -83,12 +83,12 @@
 }
 
 .oph-popup-arrow {
-  border-width: var(--h6);
+  border-width: 12px;
 }
 
 .oph-popup-arrow:after {
   content: "";
-  border-width: calc(var(--h6) - 1px);
+  border-width: 11px;
 }
 
 .oph-popup-top .oph-popup-arrow {
