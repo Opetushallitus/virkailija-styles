@@ -488,22 +488,19 @@
 				
 			
 				<section class="comment">
-					<h2>Disabled button</h2>
+					<h2>Ghost button</h2>
 				</section>
 				
 				
 				<section class="description">
-					<p>Use <code>disabled</code> attribute instead of <code>.oph-button-is-disabled</code> class in <code>button</code> and <code>input</code> tags.</p>
+					<div class='demo_wrapper' data-demo-src='demos/buttons/button-ghost.html'></div>
 
 				</section>
 				
 
 				
 					<section class="comment">
-						<p>Links are only disabled with <a href="http://caniuse.com/#feat=pointer-events"><em>pointer-events: none</em> declaration</a>,
-and may need JS to be completely blocked.</p>
-<div class='demo_wrapper' data-demo-src='demos/buttons/button-disabled.html'></div>
-
+						
 					</section>
 					
 				
@@ -527,13 +524,34 @@ and may need JS to be completely blocked.</p>
 				
 			
 				<section class="comment">
+					<h2>Disabled button</h2>
+				</section>
+				
+				
+				<section class="description">
+					<p>Use <code>disabled</code> attribute instead of <code>.oph-button-is-disabled</code> class in <code>button</code> and <code>input</code> tags.</p>
+
+				</section>
+				
+
+				
+					<section class="comment">
+						<p>Links are only disabled with <a href="http://caniuse.com/#feat=pointer-events"><em>pointer-events: none</em> declaration</a>,
+and may need JS to be completely blocked.</p>
+<div class='demo_wrapper' data-demo-src='demos/buttons/button-disabled.html'></div>
+
+					</section>
+					
+				
+			
+				<section class="comment">
 					<h2>Close button</h2>
 				</section>
 				
 				
 				<section class="description">
-					<p>Close button is absolutely positioned, so it needs a <code>position: relative</code> declaration in its' container
-for proper positioning.</p>
+					<p>Set <code>position: relative</code> declaration for the button's container for proper positioning (the button is absolutely
+positioned)</p>
 
 				</section>
 				
@@ -552,7 +570,7 @@ for proper positioning.</p>
 				
 				
 				<section class="description">
-					<p>Use the <a href="src__modules__spinner.css.html">Spinner</a> component to indicate loading.</p>
+					<p>Indicate loading with the <a href="src__modules__spinner.css.html">Spinner</a> component.</p>
 
 				</section>
 				
@@ -560,6 +578,30 @@ for proper positioning.</p>
 				
 					<section class="comment">
 						<div class='demo_wrapper' data-demo-src='demos/buttons/button-in-loading-state.html'></div>
+
+					</section>
+					
+				
+			
+				<section class="comment">
+					<h2>Selected item button</h2>
+				</section>
+				
+				
+				<section class="description">
+					<p>List the selected items of a custom select component with <code>.oph-button-selected</code>.</p>
+
+				</section>
+				
+
+				
+					<section class="comment">
+						<p><strong>Usage</strong></p>
+<ul>
+<li><p>Create and add event to remove the button by clicking it with JS</p></li>
+<li><p>Set the buttons to same width with custom CSS</p></li>
+</ul>
+<div class='demo_wrapper' data-demo-src='demos/buttons/button-selected-item.html'></div>
 
 					</section>
 					

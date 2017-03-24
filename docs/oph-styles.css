@@ -6,6 +6,72 @@
   Variables
   Naming: property-modifier
 */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.75, .75, .75);
+            transform: scale3d(.75, .75, .75);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.75, .75, .75);
+            transform: scale3d(.75, .75, .75);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes bounceDelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  }
+
+  40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+@keyframes bounceDelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  }
+
+  40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
 :root {
 
   /*
@@ -33,28 +99,10 @@
 * @stylesheet src/modules/spinner.css Spinner
 * @parent components
 */
-@-webkit-keyframes bounceDelay {
-  0%, 80%, 100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 40% {
-      transform: scale(1.0);
-      -webkit-transform: scale(1.0);
-    }
-}
-@keyframes bounceDelay {
-  0%, 80%, 100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 40% {
-      transform: scale(1.0);
-      -webkit-transform: scale(1.0);
-    }
-}
 /**
 * @styles 0-spinner
 *
-* Use `.oph-spinner` to indicate loading.
+* Indicate loading with `.oph-spinner`.
 *
 * @demo demos/spinner/spinner.html
 */
@@ -106,14 +154,14 @@
 /**
 * @styles 0-overlay
 *
-* Overlays can be used to block the app or parts of it, for example while a modal is open or during an AJAX request.
+* Block your app or parts of it temporarily, for example when a modal is open or during loading.
 *
 * Only styles are provided, create functionality with JS.
 *
 * **Usage**
 *
-* - The overlay's visibility is controlled by toggling `.oph-overlay-is-visible` and `.oph-overlay-bg`
-* classes. See JS tab for an example.
+* - Toggle `.oph-overlay-is-visible` and `.oph-overlay-bg` classes set the overlay's visibility.
+* See JS tab for an example.
 *
 * - Add elements to be displayed on top of the overlay as `.oph-overlay`'s children
 *
@@ -270,8 +318,8 @@
   border-color: transparent;
   border-radius: 2px;
   background-color: transparent;
-  -webkit-transition-property: background, color;
-  transition-property: background, color;
+  -webkit-transition-property: border, background, color;
+  transition-property: border, background, color;
   -webkit-transition-duration: .15s;
           transition-duration: .15s;
   -webkit-transition-timing-function: ease;
@@ -291,9 +339,9 @@
 * @demo demos/buttons/button-primary.html
 */
 .oph-button-primary {
-  color: #fff;
-  border-color: #159ecb;
   background-color: #159ecb;
+  border-color: #159ecb;
+  color: #fff;
 }
 .oph-button-primary:hover,
 .oph-button-primary:focus {
@@ -306,9 +354,9 @@
 * @demo demos/buttons/button-confirm.html
 */
 .oph-button-confirm {
-  color: #fff;
   border-color: #e44e4e;
   background-color: #e44e4e;
+  color: #fff;
 }
 .oph-button-confirm:hover,
 .oph-button-confirm:focus {
@@ -321,9 +369,9 @@
 * @demo demos/buttons/button-cancel.html
 */
 .oph-button-cancel {
-  color: #fff;
   border-color: #666;
   background-color: #666;
+  color: #fff;
 }
 .oph-button-cancel:hover,
 .oph-button-cancel:focus {
@@ -331,25 +379,22 @@
   background-color: #999;
 }
 /**
-* @styles 3-disabled-button Disabled button
+* @styles 3-ghost-button Ghost button
 *
-* Use `disabled` attribute instead of `.oph-button-is-disabled` class in `button` and `input` tags.
-*
-* Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events),
-* and may need JS to be completely blocked.
-*
-* @demo demos/buttons/button-disabled.html
+* @demo demos/buttons/button-ghost.html
 */
-.oph-button-is-disabled,
-.oph-button:disabled,
-.oph-button-is-disabled:hover,
-.oph-button:disabled:hover,
-.oph-button-is-disabled:focus,
-.oph-button:disabled:focus {
-  color: #fff;
-  border-color: #ccc;
-  background-color: #ccc;
-  pointer-events: none;
+.oph-button-ghost {
+  color: #159ecb;
+}
+.oph-button-ghost:hover,
+.oph-button-ghost:focus {
+  color: #00b5f0;
+}
+.oph-button-ghost[disabled],
+.oph-button-ghost.oph-button-is-disabled {
+  border-color: transparent;
+  background-color: transparent;
+  color: #aeaeae;
 }
 /**
 * @styles 4-big-button Big button
@@ -367,10 +412,31 @@
   padding-left: 4rem;
 }
 /**
-* @styles 5-big-button Close button
+* @styles 5-disabled-button Disabled button
 *
-* Close button is absolutely positioned, so it needs a `position: relative` declaration in its' container
-* for proper positioning.
+* Use `disabled` attribute instead of `.oph-button-is-disabled` class in `button` and `input` tags.
+*
+* Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events),
+* and may need JS to be completely blocked.
+*
+* @demo demos/buttons/button-disabled.html
+*/
+.oph-button-is-disabled,
+.oph-button[disabled],
+.oph-button-is-disabled:hover,
+.oph-button[disabled]:hover,
+.oph-button-is-disabled:focus,
+.oph-button[disabled]:focus {
+  border-color: #ccc;
+  background-color: #ccc;
+  color: #fff;
+  pointer-events: none;
+}
+/**
+* @styles 6-big-button Close button
+*
+* Set `position: relative` declaration for the button's container for proper positioning (the button is absolutely
+* positioned)
 *
 * @demo demos/buttons/button-close.html
 */
@@ -390,17 +456,78 @@
 }
 .oph-button-close:disabled,
 .oph-button-close.oph-button-is-disabled {
-  color: #ccc;
   border-color: transparent;
   background-color: transparent;
+  color: #ccc;
 }
 /**
-* @styles 6-loading-state Loading state
+* @styles 7-loading-state Loading state
 *
-* Use the [src/modules/spinner.css] component to indicate loading.
+* Indicate loading with the [src/modules/spinner.css] component.
 *
 * @demo demos/buttons/button-in-loading-state.html
 */
+/**
+* @styles 8-button-selected-item Selected item button
+*
+* List the selected items of a custom select component with `.oph-button-selected`.
+*
+* **Usage**
+*
+* - Create and add event to remove the button by clicking it with JS
+*
+* - Set the buttons to same width with custom CSS
+*
+* @demo demos/buttons/button-selected-item.html
+*/
+.oph-button-selected {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-color: #a6dcee;
+  background-color: #def2ff;
+  color: #2a2a2a;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+.oph-button-selected + .oph-button-selected {
+  margin-top: 8px;
+  margin-top: .5rem;
+}
+.oph-button-selected:hover,
+.oph-button-selected:focus {
+  border-color: #00b5f0;
+  background-color: #00b5f0;
+  color: #fff;
+}
+.oph-button-selected[disabled],
+.oph-button-selected.oph-button-is-disabled {
+  border-color: #aeaeae;
+  background-color: #f6f4f0;
+  color: #aeaeae;
+}
+.oph-button-selected-text {
+  font-weight: 400;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  padding-right: 8px;
+  padding-right: .5rem;
+}
+.oph-button-selected-icon {
+  font-size: 20px;
+  font-size: 1.25rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
 /**
 * @stylesheet src/modules/forms.css Form controls
 * @parent components
@@ -440,7 +567,7 @@
 /**
 * @styles 0-input-regular Regular input (with help text)
 *
-* `.oph-field-text` is used to provide additional info about the field or the expected value.
+* Provide additional info about the field or the expected value with `.oph-field-text`.
 *
 * **Accessibility**
 *
@@ -530,7 +657,7 @@
 *
 * Styles for aligning inline inputs aren't provided.
 *
-* @demo demos/forms/inline-label.html
+* @demo demos/forms/label-inline.html
 */
 .oph-field-inline {
   display: -webkit-box;
@@ -756,7 +883,7 @@
 *
 * Only styles are provided, create functionality with JS.
 *
-* The [src/modules/overlay.css] component is used to block the background while a modal is open.
+* Block the background with the [src/modules/overlay.css] component while a modal is open.
 *
 * **Usage**
 *
@@ -778,32 +905,6 @@
 * and displayed on focus.
 *
 */
-@-webkit-keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.75, .75, .75);
-            transform: scale3d(.75, .75, .75);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-}
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.75, .75, .75);
-            transform: scale3d(.75, .75, .75);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-}
 /**
 * @styles 0-modal Default modal
 *
@@ -919,8 +1020,8 @@
 *
 * **Usage**
 *
-* - Use `.oph-popup-{top|right|bottom|left}` classes to set the pointer arrow's position and
-* `.oph-popup-{default|info|success|warning|error}` to set the colors
+* - Set the pointer arrow's position with `.oph-popup-{top|right|bottom|left}` classes and
+* the colors with `.oph-popup-{default|info|success|warning|error}`
 *
 * - Create & remove the popups and calculate top/right/bottom/left position with JS
 *
@@ -928,24 +1029,6 @@
 *
 * - `.oph-popup`'s z-index may have to overridden depending on your app
 */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 /**
 * @styles 0-default-popup Default popup
 *
@@ -1305,10 +1388,10 @@
 /**
 * @styles 0-base-element Typography base
 *
-* Use `.oph-typography` to set font family, size, color and line height.
+* Set your app's or component's font family, size, color and line height with `.oph-typography`.
 * Base font size is set to 95% of the browser's default font size.
 *
-* Set this as high in the element hierarchy as possible, preferably to the main element of your app.
+* Add the class as high in the element hierarchy as possible, preferably to `html` or the main element of your app.
 *
 * @demo demos/typography/base.html
 */
@@ -1340,7 +1423,7 @@
 /**
 * @styles 2-headings Headings (and bolded text)
 *
-* Use `.oph-bold` with the font size classes to style headings. Font weight is set to 600.
+* Style heading with `.oph-bold` and the font size classes. Font weight is set to 600.
 *
 * @demo demos/typography/headings.html
 */
