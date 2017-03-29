@@ -1,1 +1,1 @@
-See [/pages/index.md](https://github.com/Opetushallitus/virkailija-styles/blob/styleguide/pages/index.md).
+See [GitHub pages](https://opetushallitus.github.io/virkailija-styles/styleguide/).
