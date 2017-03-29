@@ -130,8 +130,8 @@
 *
 * Use `disabled` attribute instead of `.oph-button-is-disabled` class in `button` and `input` tags.
 *
-* Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events),
-* and may need JS to be completely blocked.
+* Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events).
+* Block keyboard events with custom JS.
 *
 * @demo demos/buttons/button-disabled.html
 */

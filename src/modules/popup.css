@@ -24,13 +24,12 @@
 
 .oph-popup {
   text-align: center;
-  word-break: break-all;
   position: absolute;
-  width: 20rem;
+  width: 10rem;
   padding: var(--space-2) var(--space-3);
   border-radius: var(--border-radius-base);
   z-index: var(--z6);
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-fill-mode: both;
   animation-name: fadeIn;
 }
@@ -41,6 +40,7 @@
 
 .oph-popup-content {
   margin-top: var(--space-2);
+  word-break: break-all;
 }
 
 /* Add horizontal space between buttons */

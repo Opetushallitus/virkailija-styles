@@ -52,6 +52,10 @@
   animation-name: zoomIn;
 }
 
+.oph-modal:focus {
+  outline: none;
+}
+
 .oph-modal-content {
   padding-right: var(--space-3);
   padding-left: var(--space-3);
@@ -103,7 +107,7 @@
 * @demo demos/modal/modal-big.html
 */
 .oph-modal-big {
-  width: 100%;
+  width: var(--container-width);
 }
 
 /*
