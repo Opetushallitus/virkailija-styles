@@ -1,11 +1,16 @@
+const variables = fs.readFile("dist/variables.json");
+
 module.exports = {
-  plugins: [
-    require('postcss-smart-import'),
-    require('postcss-cssnext'),
-    require('cssnano')({
-      zindex: false
-    })
+  use: [
+    'postcss-cssnext',
+    'cssnano'
   ],
+  "cssnano": {
+    zindex: false
+  },
+  "postcss-cssnext": {
+    variables
+  },
   input: 'src/modules/*.css',
   dir: 'dist'
 };

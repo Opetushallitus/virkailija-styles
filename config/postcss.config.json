@@ -1,9 +1,0 @@
-{
-  "use": [
-    "postcss-smart-import",
-    "postcss-cssnext"
-  ],
-  "input": "src/index.css",
-  "output": "oph-styles.css",
-  "local-plugins": true
-}
