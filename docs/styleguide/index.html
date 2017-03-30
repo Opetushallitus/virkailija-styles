@@ -64,6 +64,7 @@
                 
             </ul>
 
+            <a class="nav-item" href="./development.html">Development</a>
             <a class="nav-item" href="./change-log.html">Change log</a>
         </nav>
 
@@ -152,9 +153,8 @@
 
 		
 		<section class="description">
-			<p>Based on <a href="https://opetushallitus.github.io/virkailija-styles/">Sketch specs</a>
-&middot; Generated with <a href="http://documentcss.com/">DocumentCSS</a>
-&middot; View in <a href="https://github.com/Opetushallitus/virkailija-styles/tree/styleguide">GitHub</a></p>
+			<p>A collection of component styles (documented in <a href="components.html">Components</a>) based on
+<a href="https://opetushallitus.github.io/virkailija-styles/">Sketch specs</a>.</p>
 
 		</section>
 		
@@ -168,22 +168,33 @@
 
 		
 		<section class="comment">
-			<h2>Getting started</h2>
+			<p>Generated with <a href="http://documentcss.com/">DocumentCSS</a>
+&middot; View in <a href="https://github.com/Opetushallitus/virkailija-styles/tree/styleguide">GitHub</a></p>
+<h2>Getting started</h2>
 <p>Install <a href="nodejs.org">Node.js</a>, then:</p>
 <pre><code>npm install --save Opetushallitus/virkailija-styles#styleguide
 </code></pre>
 <h4>a. Importing</h4>
 <p>Import the compiled stylesheet in your CSS file:</p>
-<pre><code>@import &quot;virkailija-style-guide/oph-styles.css&quot;
+<pre><code>@import &quot;oph-virkailija-style-guide/oph-styles.css&quot;
 </code></pre>
 <p>A pre- or postprocessor should be used to include the stylesheet's content to your compiled CSS.
 For example, this style guide uses
 <a href="https://www.npmjs.com/package/postcss-smart-import">postcss-smart-import</a>
 with <a href="http://postcss.org">PostCSS</a>.</p>
+<p>For individual component stylesheets, import from the <code>dist</code> folder:</p>
+<pre><code>@import &quot;oph-virkailija-style-guide/dist/alerts.css&quot;
+</code></pre>
+<p>Source order is important; import <a href="src__modules__typography.css.html">Typography</a> (dist/typography.css)
+and <a href="src__modules__colors.css.html">Colors</a> (dist/colors.css) last if you want to use them to override other
+components' styles.</p>
 <h4>b. Link tag</h4>
-<p>Copy the minified stylesheet to your static resources folder and
+<p>Copy the minified stylesheet from <code>node_modules/oph-virkailija-style-guide</code> root to your static resources folder and
 add a link tag:</p>
 <pre><code>&lt;link href=&quot;{path/to/resources}/oph-styles-min.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre>
+<p>For individual component stylesheets, copy from the <code>dist</code> folder and add link tags:</p>
+<pre><code>&lt;link href=&quot;{path/to/resources}/alerts.css&quot; rel=&quot;stylesheet&quot;&gt;
 </code></pre>
 
 		</section>
@@ -207,7 +218,7 @@ add a link tag:</p>
 
 
 <script type="text/javascript">
-    var docObject = {"type":"page","name":"index","src":"pages/index.md","description":"Based on [Sketch specs](https://opetushallitus.github.io/virkailija-styles/) \n&middot; Generated with [DocumentCSS](http://documentcss.com/)\n&middot; View in [GitHub](https://github.com/Opetushallitus/virkailija-styles/tree/styleguide)","title":"OPH Virkailija Style Guide","static":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/static","templates":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/templates","glob":{"pattern":"{pages,src/modules}/*.{css,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide"},"dest":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+    var docObject = {"type":"page","name":"index","src":"pages/index.md","description":"A collection of component styles (documented in [components]) based on \n[Sketch specs](https://opetushallitus.github.io/virkailija-styles/).","title":"OPH Virkailija Style Guide","static":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/static","templates":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/templates","glob":{"pattern":"{pages,src/modules}/*.{css,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide"},"dest":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 </script>
 
 
