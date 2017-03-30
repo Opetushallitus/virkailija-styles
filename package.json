@@ -1,20 +1,19 @@
 {
   "name": "oph-virkailija-style-guide",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "A collection of component styles based on Sketch specs",
   "scripts": {
-    "start": "watch 'npm run build' src demos pages & ./node_modules/.bin/browser-sync start --config config/browser-sync.config.js",
-
+    "start": "parallelshell \"npm run watch\" \"npm run serve\"",
+    "watch": "watch \"npm run build\" src demos pages",
+    "serve": "browser-sync start --config config/browser-sync.config.js",
     "build": "npm run build-css && npm run minify-css && npm run build-styleguide",
-    "build-css": "node_modules/postcss-cli/bin/postcss -c config/postcss.config.js && node_modules/postcss-cli/bin/postcss -c config/postcss.config.modules.js",
-    "minify-css": "node_modules/.bin/cssnano --no-zindex oph-styles.css oph-styles-min.css",
-
-    "build-styleguide": "node_modules/.bin/documentjs",
-    "update-theme": "node_modules/.bin/documentjs -f",
+    "build-css": "postcss -c config/postcss.config.js && postcss -c config/postcss.config.modules.js",
+    "minify-css": "cssnano --no-zindex oph-styles.css oph-styles-min.css",
+    "build-styleguide": "documentjs",
+    "update-theme": "documentjs -f",
     "watch-theme": "watch 'update-theme' theme",
-
     "copy": "cp -a oph-styles-min.css demos styleguide ../virkailija-styles/docs",
-    "clean": "node_modules/.bin/rimraf styleguide/* dist/* oph-styles.css oph-styles-min.css"
+    "clean": "rimraf styleguide/* dist/* oph-styles.css oph-styles-min.css"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +27,7 @@
     "cssnano": "3.10.0",
     "cssnano-cli": "1.0.5",
     "documentjs": "0.4.4",
+    "parallelshell": "2.0.0",
     "postcss": "5.2.6",
     "postcss-cli": "2.6.0",
     "postcss-cssnext": "2.9.0",

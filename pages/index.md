@@ -8,7 +8,7 @@ Generated with [DocumentCSS](http://documentcss.com/)
 
 ## Getting started
 
-Install [Node.js](nodejs.org), then: 
+Install [Node.js](https://nodejs.org) and [Git](https://git-scm.com), then: 
 
 ```
 npm install --save Opetushallitus/virkailija-styles#styleguide
