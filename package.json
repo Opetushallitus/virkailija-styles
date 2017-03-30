@@ -3,15 +3,14 @@
   "version": "0.10.0",
   "description": "",
   "scripts": {
-    "watch": "watch 'npm run build' demos src & ./node_modules/.bin/browser-sync start --config config/browser-sync.config.js",
-    "build": "npm run build-css && npm run minify-css && npm run build-styleguide",
-    "build-css": "node_modules/postcss-cli/bin/postcss -c config/postcss.config.js",
-    "minify-css": "node_modules/.bin/cssnano --no-zindex oph-styles.css oph-styles-min.css",
+    "start": "watch 'npm run build' src demos pages & ./node_modules/.bin/browser-sync start --config config/browser-sync.config.js",
+    "build": "npm run build-css && npm run build-styleguide",
+    "build-css": "node_modules/postcss-cli/bin/postcss -c config/postcss.config.js && node_modules/postcss-cli/bin/postcss -c config/postcss.config.modules.js",
     "build-styleguide": "node_modules/.bin/documentjs",
-    "update-styleguide-theme": "node_modules/.bin/documentjs -f",
-    "watch-styleguide-theme": "watch 'update-styleguide-theme' theme",
+    "update-theme": "node_modules/.bin/documentjs -f",
+    "watch-theme": "watch 'update-theme' theme",
     "copy": "cp -a oph-styles-min.css demos styleguide ../virkailija-styles/docs",
-    "clean": "node_modules/.bin/rimraf styleguide/*"
+    "clean": "node_modules/.bin/rimraf styleguide/* dist/* oph-styles.css oph-styles-min.css"
   },
   "keywords": [],
   "author": "",
@@ -20,10 +19,9 @@
     "type": "git",
     "url": "git+https://github.com/Opetushallitus/virkailija-styles.git#styleguide"
   },
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "2.18.8",
     "cssnano": "3.10.0",
-    "cssnano-cli": "1.0.5",
     "documentjs": "0.4.4",
     "postcss": "5.2.6",
     "postcss-cli": "2.6.0",

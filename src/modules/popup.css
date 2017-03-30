@@ -1,3 +1,5 @@
+@import "variables.css";
+
 /**
 * @stylesheet src/modules/popup.css Popup
 * @parent components
@@ -233,15 +235,4 @@
 
 .oph-popup-error .oph-popup-title {
   color: var(--color-error);
-}
-
-:root {
-  --color-info:           var(--blue);
-  --color-success:        var(--green);
-  --color-error:          var(--red);
-
-  --bg-color-info:        var(--blue-lighten-4);
-  --bg-color-success:     var(--green-lighten-1);
-  --bg-color-warning:     var(--yellow-lighten-1);
-  --bg-color-error:       var(--red-lighten-2);
 }

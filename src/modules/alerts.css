@@ -1,3 +1,5 @@
+@import "variables.css";
+
 /**
 * @stylesheet src/modules/alerts.css Alert messages
 * @parent components
@@ -103,15 +105,4 @@
 
 .oph-alert-help .oph-alert-text {
   text-align: left;
-}
-
-
-:root {
-  --color-info:        var(--blue);
-  --color-success:        var(--green);
-
-  --bg-color-info:        var(--blue-lighten-4);
-  --bg-color-success:     var(--green-lighten-1);
-  --bg-color-warning:     var(--yellow-lighten-1);
-  --bg-color-error:       var(--red-lighten-2);
 }

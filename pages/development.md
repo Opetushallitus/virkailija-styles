@@ -1,5 +1,4 @@
 @page development Development
-@parent index
 
 ## Code guidelines
 

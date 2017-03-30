@@ -1,3 +1,5 @@
+@import "variables.css";
+
 /**
 * @stylesheet src/modules/buttons.css Buttons
 * @parent components
@@ -61,15 +63,15 @@
 */
 
 .oph-button-confirm {
-  border-color: var(--bg-color-confirm);
-  background-color: var(--bg-color-confirm);
+  border-color: var(--red);
+  background-color: var(--red);
   color: var(--white);
 }
 
 .oph-button-confirm:hover,
 .oph-button-confirm:focus {
-  border-color: var(--bg-color-confirm-hover);
-  background-color: var(--bg-color-confirm-hover);
+  border-color: var(--red-lighten-1);
+  background-color: var(--red-lighten-1);
 }
 
 /**
@@ -142,8 +144,8 @@
 .oph-button[disabled]:hover,
 .oph-button-is-disabled:focus,
 .oph-button[disabled]:focus {
-  border-color: var(--bg-color-disabled);
-  background-color: var(--bg-color-disabled);
+  border-color: var(--gray-lighten-3);
+  background-color: var(--gray-lighten-3);
   color: var(--white);
   pointer-events: none;
 }
@@ -240,12 +242,4 @@
 .oph-button-selected-icon {
   font-size: var(--h3);
   align-self: flex-end;
-}
-
-:root {
-  --bg-color-confirm: var(--red);
-  --bg-color-confirm-hover: var(--red-lighten-1);
-
-  --color-disabled: var(--white);
-  --bg-color-disabled: var(--gray-lighten-3);
 }

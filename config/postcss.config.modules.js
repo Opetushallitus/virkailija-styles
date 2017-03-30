@@ -1,15 +1,12 @@
-const variables = fs.readFile("dist/variables.json");
-
 module.exports = {
   use: [
+    'postcss-smart-import',
     'postcss-cssnext',
-    'cssnano'
+    'cssnano',
   ],
   "cssnano": {
+    autoprefixer: false,
     zindex: false
-  },
-  "postcss-cssnext": {
-    variables
   },
   input: 'src/modules/*.css',
   dir: 'dist'
