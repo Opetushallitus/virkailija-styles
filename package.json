@@ -1,10 +1,11 @@
 {
   "name": "oph-virkailija-style-guide",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "description": "A collection of component styles based on Sketch specs",
   "scripts": {
-    "start": "npm run watch",
+    "start": "parallelshell \"npm run watch\" \"npm run serve\"",
     "watch": "watch \"npm run build\" src demos pages",
+    "serve": "browser-sync start --config config/browser-sync.config.js",
     "build": "npm run build-css && npm run minify-css && npm run build-styleguide",
     "build-css": "postcss -c config/postcss.config.js && postcss -c config/postcss.config.modules.js",
     "minify-css": "cssnano --no-zindex oph-styles.css oph-styles-min.css",
@@ -22,6 +23,7 @@
     "url": "git+https://github.com/Opetushallitus/virkailija-styles.git#styleguide"
   },
   "dependencies": {
+    "browser-sync": "2.18.8",
     "cssnano": "3.10.0",
     "cssnano-cli": "1.0.5",
     "documentjs": "0.4.4",
