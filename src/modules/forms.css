@@ -25,6 +25,10 @@
   margin-bottom: var(--space-1);
 }
 
+.oph-legend {
+  padding-left: 0;
+}
+
 .oph-field-text {
   margin-top: var(--space-1);
   color: var(--color-muted);
