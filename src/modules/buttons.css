@@ -92,6 +92,30 @@
   background-color: var(--gray-lighten-1);
 }
 
+
+/**
+* @styles 5-disabled-button Disabled state
+*
+* Use `disabled` attribute instead of `.oph-button-is-disabled` class in `button` and `input` tags.
+*
+* Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events).
+* Block keyboard events with custom JS.
+*
+* @demo demos/buttons/button-disabled.html
+*/
+
+.oph-button-is-disabled,
+.oph-button[disabled],
+.oph-button-is-disabled:hover,
+.oph-button[disabled]:hover,
+.oph-button-is-disabled:focus,
+.oph-button[disabled]:focus {
+  border-color: var(--gray-lighten-3);
+  background-color: var(--gray-lighten-3);
+  color: var(--white);
+  pointer-events: none;
+}
+
 /**
 * @styles 3-ghost-button Ghost button
 *
@@ -115,9 +139,9 @@
 }
 
 /**
-* @styles 4-big-button Big button
+* @styles 4-sizes Sizes
 *
-* @demo demos/buttons/button-big.html
+* @demo demos/buttons/button-sizes.html
 */
 
 .oph-button-big {
@@ -127,31 +151,21 @@
   padding-left: var(--space-4);
 }
 
-/**
-* @styles 5-disabled-button Disabled button
-*
-* Use `disabled` attribute instead of `.oph-button-is-disabled` class in `button` and `input` tags.
-*
-* Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events).
-* Block keyboard events with custom JS.
-*
-* @demo demos/buttons/button-disabled.html
-*/
-
-.oph-button-is-disabled,
-.oph-button[disabled],
-.oph-button-is-disabled:hover,
-.oph-button[disabled]:hover,
-.oph-button-is-disabled:focus,
-.oph-button[disabled]:focus {
-  border-color: var(--gray-lighten-3);
-  background-color: var(--gray-lighten-3);
-  color: var(--white);
-  pointer-events: none;
+.oph-button-small {
+  padding-left: var(--space-1);
+  padding-right: var(--space-1);
 }
 
 /**
-* @styles 6-big-button Close button
+* @styles 6-loading-state Loading state
+*
+* Indicate loading with the [src/modules/spinner.css] component.
+*
+* @demo demos/buttons/button-in-loading-state.html
+*/
+
+/**
+* @styles 7-big-button Close button
 *
 * Set `position: relative` declaration for the button's container for proper positioning (the button is absolutely
 * positioned).
@@ -182,23 +196,15 @@
 }
 
 /**
-* @styles 7-loading-state Loading state
-*
-* Indicate loading with the [src/modules/spinner.css] component.
-*
-* @demo demos/buttons/button-in-loading-state.html
-*/
-
-/**
 * @styles 8-button-selected-item Selected item button
 *
 * List the selected items of a custom select component with `.oph-button-selected`.
 *
 * **Usage**
 *
-* - Create and add event to remove the button by clicking it with JS
+* - Create the buttons and add event to remove them by clicking with JS
 *
-* - Set the buttons to same width with custom CSS
+* - Set width for the button's container
 *
 * @demo demos/buttons/button-selected-item.html
 */
@@ -207,6 +213,7 @@
   text-align: left;
   display: flex;
   align-items: center;
+  width: 100%;
   border-color: var(--blue-lighten-3);
   background-color: var(--blue-lighten-4);
   color: var(--black);

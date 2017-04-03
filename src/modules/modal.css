@@ -37,7 +37,7 @@
 
 .oph-modal {
   position: relative;
-  width: var(--modal-width);
+  width: calc(var(--container-width) / 2);
   margin-top: var(--space-3);
   margin-right: var(--space-2);
   margin-bottom: var(--space-3);
@@ -116,6 +116,7 @@
   Back to top link for accessibility
   Link is visually hidden initially, visible when focused
 */
+
 .oph-modal-back-to-top-link {
   position: absolute !important;
   height: 1px;
@@ -132,8 +133,4 @@
   width: auto;
   overflow: auto;
   clip: auto;
-}
-
-:root {
-  --modal-width: calc(var(--container-width) / 2);
 }

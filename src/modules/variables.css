@@ -127,6 +127,9 @@
   --transition-duration-base: .15s;
   --transition-timing-function-base: ease;
 
+  /* Animations */
+  --animation-duration-base: .5s;
+
   /* Box shadows */
   --box-shadow-base: 0 1px 3px rgba(0, 0, 0, .3);
 

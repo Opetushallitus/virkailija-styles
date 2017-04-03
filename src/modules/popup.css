@@ -31,7 +31,7 @@
   padding: var(--space-2) var(--space-3);
   border-radius: var(--border-radius-base);
   z-index: var(--z6);
-  animation-duration: .5s;
+  animation-duration: var(--animation-duration-base);
   animation-fill-mode: both;
   animation-name: fadeIn;
 }

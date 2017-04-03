@@ -1,6 +1,6 @@
 {
   "name": "oph-virkailija-style-guide",
-  "version": "0.13.0",
+  "version": "0.15.0",
   "description": "A collection of component styles based on Sketch specs",
   "scripts": {
     "start": "parallelshell \"npm run watch\" \"npm run serve\"",
@@ -11,7 +11,7 @@
     "minify-css": "cssnano --no-zindex oph-styles.css oph-styles-min.css",
     "build-styleguide": "documentjs",
     "update-theme": "documentjs -f",
-    "watch-theme": "watch 'update-theme' theme",
+    "watch-theme": "watch \"update-theme\" theme",
     "copy": "cp -a oph-styles-min.css demos styleguide ../virkailija-styles/docs",
     "clean": "rimraf styleguide/* dist/* oph-styles.css oph-styles-min.css"
   },

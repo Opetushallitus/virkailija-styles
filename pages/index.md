@@ -16,7 +16,7 @@ npm install --save Opetushallitus/virkailija-styles#styleguide
 
 #### a. Importing
 
-Import the compiled stylesheet in your CSS file: 
+Import the compiled stylesheet in one of your CSS files: 
  
 ```
 @@import "oph-virkailija-style-guide/oph-styles.css"
@@ -26,16 +26,6 @@ A pre- or postprocessor should be used to include the stylesheet's content to yo
 For example, this style guide uses 
 [postcss-smart-import](https://www.npmjs.com/package/postcss-smart-import) 
 with [PostCSS](http://postcss.org).
-
-For individual component stylesheets, import from the `dist` folder:
-
-```
-@@import "oph-virkailija-style-guide/dist/alerts.css"
-```
-
-Source order is important; import [src/modules/typography.css] (dist/typography.css) 
-and [src/modules/colors.css] (dist/colors.css) last if you want to use them to override other
-components' styles.
  
 #### b. Link tag
 
@@ -44,10 +34,4 @@ add a link tag:
 
 ```
 <link href="{path/to/resources}/oph-styles-min.css" rel="stylesheet">
-```
-
-For individual component stylesheets, copy from the `dist` folder and add link tags:
-
-```
-<link href="{path/to/resources}/alerts.css" rel="stylesheet">
 ```
