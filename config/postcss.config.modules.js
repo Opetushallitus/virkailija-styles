@@ -3,6 +3,7 @@ module.exports = {
     'postcss-smart-import',
     'postcss-cssnext',
     'cssnano',
+    'postcss-inline-svg'
   ],
   "cssnano": {
     autoprefixer: false,
