@@ -116,6 +116,18 @@
 				
 				
 				<li class="search-container">
+					<a class="stylesheet" href="src__modules__icons.css.html" data-search="Icons">
+						Icons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
 					<a class="stylesheet" href="src__modules__modal.css.html" data-search="Modal">
 						Modal
 					</a>
@@ -270,6 +282,18 @@
 				
 				
 				<li class="search-container">
+					<a class="stylesheet" href="src__modules__icons.css.html" data-search="Icons">
+						Icons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
 					<a class="stylesheet" href="src__modules__modal.css.html" data-search="Modal">
 						Modal
 					</a>
@@ -392,6 +416,11 @@
 		
 
 		
+		<section class="description">
+			<h2>Usage</h2>
+
+		</section>
+		
 
 		
 			
@@ -402,7 +431,21 @@
 
 		
 		<section class="comment">
-			
+			<p>For individual component stylesheets, import from the <code>dist</code> folder:</p>
+<pre><code>@import &quot;oph-virkailija-style-guide/dist/alerts.css&quot;
+</code></pre>
+<p>Source order is important; import <a href="src__modules__typography.css.html">Typography</a> (dist/typography.css)
+and <a href="src__modules__colors.css.html">Colors</a> (dist/colors.css) last if you want to use them to override other
+components' styles.</p>
+<p>Import <code>src/modules/variables.css</code> if you want to use the defined
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">CSS variables</a> in your
+CSS files.</p>
+<p>For individual component stylesheets, copy from the <code>dist</code> folder and add link tags:</p>
+<pre><code>&lt;link href=&quot;{path/to/resources}/alerts.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre>
+<h2>Live examples</h2>
+<p>See <a href="https://itest-virkailija.oph.ware.fi/virkailijan-tyopoyta">Virkailijan työpöytä</a>.</p>
+
 		</section>
 		
 		
@@ -424,7 +467,7 @@
 
 
 <script type="text/javascript">
-    var docObject = {"type":"page","name":"components","src":"pages/components.md","description":"","title":"Components","parent":"index","static":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/static","templates":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/templates","glob":{"pattern":"{pages,src/modules}/*.{css,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide"},"dest":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+    var docObject = {"type":"page","name":"components","src":"pages/components.md","description":"## Usage","title":"Components","parent":"index","static":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/static","templates":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/theme/templates","glob":{"pattern":"{pages,src/modules}/*.{css,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide"},"dest":"/Users/EsaTaskinen/Dev/Projects/oph-virkailija-style-guide/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 </script>
 
 
