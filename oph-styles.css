@@ -574,6 +574,9 @@
   margin-bottom: 8px;
   margin-bottom: .5rem;
 }
+.oph-legend {
+  padding-left: 0;
+}
 .oph-field-text {
   margin-top: 8px;
   margin-top: .5rem;
