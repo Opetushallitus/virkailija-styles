@@ -1,6 +1,6 @@
 {
   "name": "oph-virkailija-style-guide",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "description": "A collection of component styles based on Sketch specs",
   "scripts": {
     "start": "parallelshell \"npm run watch\" \"npm run serve\"",
