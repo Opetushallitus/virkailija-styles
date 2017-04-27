@@ -29,13 +29,12 @@
 .oph-spinner .oph-bounce {
   width: 18px;
   height: 18px;
-  background-color: var(--spinner-bg-color);
+  background-color: var(--color-primary);
   border-radius: 100%;
   display: inline-block;
   animation: bounceDelay 1.4s infinite ease-in-out;
 
   /* Prevent first frame from flickering when animation starts */
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
@@ -47,15 +46,9 @@
 }
 
 .oph-spinner .oph-bounce1 {
-  -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
 
 .oph-spinner .oph-bounce2 {
-  -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
-}
-
-:root {
-  --spinner-bg-color: var(--color-primary);
 }

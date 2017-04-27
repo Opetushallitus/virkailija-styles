@@ -67,11 +67,11 @@
 }
 
 .oph-input:not(
-  :focus,
-  [disabled],
-  [readonly],
-  .oph-input-has-error
-  ):hover {
+:focus,
+[disabled],
+[readonly],
+.oph-input-has-error
+):hover {
   border-color: var(--gray-lighten-1);
 }
 
@@ -95,7 +95,7 @@
 
 .oph-field-is-required .oph-label:first-of-type:after,
 .oph-field-is-required .oph-legend:first-of-type:after {
-  content: " *"
+  content: " *";
 }
 
 /**
@@ -126,8 +126,7 @@
 */
 
 .oph-input[disabled],
-.oph-input[readonly]
-{
+.oph-input[readonly] {
   background-color: var(--gray-lighten-5);
   color: var(--color-muted);
   box-shadow: 0 0 0;
@@ -189,8 +188,7 @@
 .oph-select {
   padding-right: var(--space-3);
   /* Remove default styling and arrows */
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none;
 }
 
 /**
@@ -273,7 +271,7 @@
 
 .oph-checkbox-button-input:checked + .oph-checkbox-button-text:before {
   /* Add a check mark and an empty space before text on checked buttons */
-  content:  "\2713\00a0";
+  content: "\2713\00a0";
 }
 
 .oph-checkbox-button-input:checked + .oph-checkbox-button-text:hover,

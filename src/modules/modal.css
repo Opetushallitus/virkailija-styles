@@ -49,7 +49,7 @@
   box-shadow: var(--box-shadow-base);
   z-index: var(--z6);
   /* Animate modal displaying */
-  animation-duration: .75s;
+  animation-duration: 0.75s;
   animation-fill-mode: both;
   animation-name: zoomIn;
 }

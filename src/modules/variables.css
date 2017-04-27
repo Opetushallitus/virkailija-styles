@@ -16,7 +16,7 @@
 @keyframes zoomIn {
   from {
     opacity: 0;
-    transform: scale3d(.75, .75, .75);
+    transform: scale3d(0.75, 0.75, 0.75);
   }
 
   to {
@@ -26,14 +26,14 @@
 }
 
 @keyframes bounceDelay {
-  0%, 80%, 100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
   }
 
   40% {
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+    transform: scale(1);
   }
 }
 
@@ -54,11 +54,11 @@
   --h2: 1.5rem;
   --h3: 1.25rem;
   --h4: 1rem;
-  --h5: .875rem;
-  --h6: .75rem;
+  --h5: 0.875rem;
+  --h6: 0.75rem;
 
   /* Spacing scale for margins & paddings */
-  --space-1: .5rem;
+  --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 2rem;
   --space-4: 4rem;
@@ -70,46 +70,46 @@
 
   --white: #fff;
 
-  --gray:           #666;
+  --gray: #666;
   --gray-lighten-1: #999;
   --gray-lighten-2: #aeaeae;
   --gray-lighten-3: #ccc;
   --gray-lighten-4: #f6f4f0;
   --gray-lighten-5: #f5f5f5;
 
-  --red:            #e44e4e;
-  --red-lighten-1:  #e09191;
-  --red-lighten-2:  #ffe9e9;
+  --red: #e44e4e;
+  --red-lighten-1: #e09191;
+  --red-lighten-2: #ffe9e9;
 
-  --blue:           #0a789c;
+  --blue: #0a789c;
   --blue-lighten-1: #159ecb;
   --blue-lighten-2: #00b5f0;
   --blue-lighten-3: #a6dcee;
   --blue-lighten-4: #def2ff;
-  --blue-darken-1:  #00526c;
+  --blue-darken-1: #00526c;
 
-  --green:            #4c7f00;
-  --green-lighten-1:  #e6ffc1;
+  --green: #4c7f00;
+  --green-lighten-1: #e6ffc1;
 
-  --yellow:           #ffd024;
+  --yellow: #ffd024;
   --yellow-lighten-1: #fff7bc;
 
   /* Contextual colors */
   --color-primary: var(--blue-lighten-1);
 
-  --font-color-base:  var(--black);
-  --color-muted:      var(--gray-lighten-2);
-  --color-info:       var(--blue);
-  --color-success:    var(--green);
-  --color-error:      var(--red);
+  --font-color-base: var(--black);
+  --color-muted: var(--gray-lighten-2);
+  --color-info: var(--blue);
+  --color-success: var(--green);
+  --color-error: var(--red);
 
-  --link-color:       var(--blue-lighten-1);
+  --link-color: var(--blue-lighten-1);
   --link-color-hover: var(--blue-lighten-2);
 
-  --bg-color-info:    var(--blue-lighten-4);
+  --bg-color-info: var(--blue-lighten-4);
   --bg-color-success: var(--green-lighten-1);
   --bg-color-warning: var(--yellow-lighten-1);
-  --bg-color-error:   var(--red-lighten-2);
+  --bg-color-error: var(--red-lighten-2);
 
   /* Borders */
   --border-radius-base: 2px;
@@ -124,14 +124,14 @@
   --z6: 600;
 
   /* Transitions */
-  --transition-duration-base: .15s;
+  --transition-duration-base: 0.15s;
   --transition-timing-function-base: ease;
 
   /* Animations */
-  --animation-duration-base: .5s;
+  --animation-duration-base: 0.5s;
 
   /* Box shadows */
-  --box-shadow-base: 0 1px 3px rgba(0, 0, 0, .3);
+  --box-shadow-base: 0 1px 3px rgba(0, 0, 0, 0.3);
 
   /* Media queries */
   @custom-media --breakpoint-small  (min-width: 40em);
