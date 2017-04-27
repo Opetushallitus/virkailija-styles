@@ -3,12 +3,18 @@ module.exports = {
     'postcss-smart-import',
     'postcss-cssnext',
     'cssnano',
-    'postcss-inline-svg'
+    'postcss-inline-svg',
+    'postcss-reporter'
   ],
-  "cssnano": {
+  'cssnano': {
+    // postcss-cssnext already generates vendor-prefixed declarations
     autoprefixer: false,
+    // Preserve z-index values
     zindex: false
+  },
+  'postcss-reporter': {
+    clearMessages: true
   },
   input: 'src/modules/*.css',
   dir: 'dist'
-};
+}

@@ -102,4 +102,4 @@ module.exports = {
         "gif": "img",
         "js": "script"
     }
-};
+}

@@ -1,13 +1,14 @@
 {
   "name": "oph-virkailija-style-guide",
-  "version": "0.19.0",
+  "version": "0.21.0",
   "description": "A collection of component styles based on Sketch specs",
   "scripts": {
     "start": "parallelshell \"npm run watch\" \"npm run serve\"",
     "watch": "watch \"npm run build\" src demos pages",
     "serve": "browser-sync start --config config/browser-sync.config.js",
-    "build": "npm run build-css && npm run minify-css && npm run build-styleguide",
-    "build-css": "postcss -c config/postcss.config.js && postcss -c config/postcss.config.modules.js",
+    "build": "parallelshell \"npm run build-css\" \"npm run minify-css\" \"npm run build-styleguide\"",
+    "build-css": "parallelshell \"postcss -c config/postcss.config.js\" \"postcss -c config/postcss.config.modules.js\"",
+    "lint-css": "stylelint --config config/stylelint.config.js \"src/modules/**/*.css\"",
     "minify-css": "cssnano --no-zindex oph-styles.css oph-styles-min.css",
     "build-styleguide": "documentjs",
     "update-theme": "documentjs -f",
@@ -31,9 +32,11 @@
     "postcss": "5.2.6",
     "postcss-cli": "2.6.0",
     "postcss-cssnext": "2.9.0",
-    "postcss-smart-import": "0.6.0",
     "postcss-inline-svg": "2.3.0",
+    "postcss-reporter": "3.0.0",
+    "postcss-smart-import": "0.6.0",
     "rimraf": "2.6.1",
+    "stylelint": "7.10.1",
     "watch": "1.0.2"
   }
 }

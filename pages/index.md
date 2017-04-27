@@ -35,3 +35,7 @@ add a link tag:
 ```
 <link href="{path/to/resources}/oph-styles-min.css" rel="stylesheet">
 ```
+
+## Contributing
+
+See guidelines in [contributing].

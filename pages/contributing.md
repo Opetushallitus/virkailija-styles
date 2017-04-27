@@ -1,13 +1,12 @@
-@page development Development
+@page contributing Contributing
 
-? Component variables: [component]-[property]-[modifier] for each
-or use base variables and add instructions for new variables
+## Code style
 
-! Contributing
-Please read through our contributing guidelines. Included are directions for opening issues, coding standards, and notes on development.
+Follow the pre-existing code style when writing CSS. Linting
+is done with [Stylelint](https://stylelint.io/) and validation errors break the 
+build.
 
-## Code guidelines
+See the current rules in `config/stylelint.config.js`.
 
-## BrowserSync
-
-BrowserSync injects a script tag, whose content is visible in the demos' JS tab.
+Consider removing any existing type selectors and turning on `selector-no-type` rule
+on.
