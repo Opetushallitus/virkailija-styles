@@ -1,4 +1,7 @@
 module.exports = {
+  plugins: [
+    'stylelint-order'
+  ],
   // See rule documentation in https://stylelint.io/user-guide/rules/
   rules: {
     // Color
@@ -19,7 +22,7 @@ module.exports = {
     'number-leading-zero': 'always',
     'number-no-trailing-zeros': true,
 
-    // String:
+    // String
     'string-quotes': 'double',
     'string-no-newline': true,
 
@@ -46,6 +49,17 @@ module.exports = {
     'property-case': 'lower',
     'property-no-unknown': true,
     'property-no-vendor-prefix': true,
+    'order/order': ['declarations'],
+    'order/properties-order': [
+      // Typography
+      'font',
+      // Layout
+      'position, display, float, clear',
+      // Box model
+      'width', 'height', 'margin', 'padding',
+      // Visual
+      'border', 'background', 'color'
+    ],
 
     // Keyframe declaration
     'keyframe-declaration-no-important': true,
@@ -126,6 +140,9 @@ module.exports = {
 
     // General
     'indentation': 2,
-    'max-empty-lines': 1
+    'max-empty-lines': 1,
+    'max-line-length': 120,
+    'max-nesting-depth': 1,
+    'no-duplicate-selectors': true
   }
 }

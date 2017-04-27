@@ -10,6 +10,3 @@ node_modules
 
 # IDE
 .idea
-
-# Built styleguide
-styleguide

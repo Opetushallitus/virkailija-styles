@@ -1,20 +1,20 @@
 {
   "name": "oph-virkailija-style-guide",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "A collection of component styles based on Sketch specs",
   "scripts": {
     "start": "parallelshell \"npm run watch\" \"npm run serve\"",
     "watch": "watch \"npm run build\" src demos pages",
     "serve": "browser-sync start --config config/browser-sync.config.js",
-    "build": "parallelshell \"npm run build-css\" \"npm run minify-css\" \"npm run build-styleguide\"",
+    "build": "npm run lint-css && npm run build-css && npm run minify-css && npm run build-styleguide && npm run copy-sketch",
     "build-css": "parallelshell \"postcss -c config/postcss.config.js\" \"postcss -c config/postcss.config.modules.js\"",
     "lint-css": "stylelint --config config/stylelint.config.js \"src/modules/**/*.css\"",
     "minify-css": "cssnano --no-zindex oph-styles.css oph-styles-min.css",
     "build-styleguide": "documentjs",
     "update-theme": "documentjs -f",
     "watch-theme": "watch \"update-theme\" theme",
-    "copy": "cp -a oph-styles-min.css demos styleguide ../virkailija-styles/docs",
-    "clean": "rimraf styleguide/* dist/* oph-styles.css oph-styles-min.css"
+    "copy-sketch": "copyfiles -u 1 \"src/sketch/**\" docs",
+    "clean": "rimraf docs/* dist/* oph-styles.css oph-styles-min.css"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "browser-sync": "2.18.8",
+    "copyfiles": "1.2.0",
     "cssnano": "3.10.0",
     "cssnano-cli": "1.0.5",
     "documentjs": "0.4.4",
@@ -37,6 +38,7 @@
     "postcss-smart-import": "0.6.0",
     "rimraf": "2.6.1",
     "stylelint": "7.10.1",
+    "stylelint-order": "0.4.3",
     "watch": "1.0.2"
   }
 }

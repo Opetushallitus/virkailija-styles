@@ -62,7 +62,7 @@ module.exports = {
     "reloadThrottle": 0,
     "plugins": [],
     "injectChanges": true,
-    "startPath": "/styleguide",
+    "startPath": "/docs",
     "minify": true,
     "host": null,
     "localOnly": false,

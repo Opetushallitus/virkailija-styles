@@ -7,7 +7,7 @@
     "styleguide": {
       "glob": "{pages,src/modules}/*.{css,md}",
       "parent": "index",
-      "dest": "styleguide"
+      "dest": "docs"
     }
   }
 }

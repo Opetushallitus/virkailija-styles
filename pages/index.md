@@ -1,7 +1,7 @@
 @page index OPH Virkailija Style Guide
 
 A collection of component styles (documented in [components]) based on 
-[Sketch specs](https://opetushallitus.github.io/virkailija-styles/).
+[Sketch specs](../src/sketch).
 
 Generated with [DocumentCSS](http://documentcss.com/)
 &middot; View in [GitHub](https://github.com/Opetushallitus/virkailija-styles/tree/styleguide)
