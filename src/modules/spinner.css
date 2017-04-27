@@ -14,9 +14,9 @@
 */
 
 .oph-spinner {
+  width: 100px;
   margin-right: auto;
   margin-left: auto;
-  width: 100px;
   text-align: center;
 }
 
@@ -29,8 +29,8 @@
 .oph-spinner .oph-bounce {
   width: 18px;
   height: 18px;
-  background-color: var(--color-primary);
   border-radius: 100%;
+  background-color: var(--color-primary);
   display: inline-block;
   animation: bounceDelay 1.4s infinite ease-in-out;
 

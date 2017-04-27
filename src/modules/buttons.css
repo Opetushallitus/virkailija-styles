@@ -34,8 +34,8 @@
 }
 
 ::-moz-focus-inner {
-  border: 0;
   padding: 0;
+  border: 0;
 }
 
 /**
@@ -45,8 +45,8 @@
 */
 
 .oph-button-primary {
-  background-color: var(--color-primary);
   border-color: var(--color-primary);
+  background-color: var(--color-primary);
   color: var(--white);
 }
 

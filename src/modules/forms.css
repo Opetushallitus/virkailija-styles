@@ -14,9 +14,9 @@
 }
 
 .oph-fieldset {
-  border: none;
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 .oph-label,
@@ -109,8 +109,8 @@
 */
 
 .oph-input-has-error {
-  background-color: var(--red-lighten-2);
   border-color: var(--red-lighten-1);
+  background-color: var(--red-lighten-2);
   box-shadow: 0 0 0;
 }
 
@@ -235,8 +235,8 @@
 .oph-checkbox-button-input {
   /* Hide checkbox visually */
   position: absolute !important;
-  height: 1px;
   width: 1px;
+  height: 1px;
   overflow: hidden;
   clip: rect(1px,1px,1px,1px);
 }
@@ -259,14 +259,14 @@
 
 .oph-checkbox-button-text:hover,
 .oph-checkbox-button-input:focus + .oph-checkbox-button-text {
-  color: var(--link-color-hover);
   border-color: var(--link-color-hover);
+  color: var(--link-color-hover);
   cursor: pointer;
 }
 
 .oph-checkbox-button-input:checked + .oph-checkbox-button-text {
-  color: var(--white);
   background-color: var(--color-primary);
+  color: var(--white);
 }
 
 .oph-checkbox-button-input:checked + .oph-checkbox-button-text:before {
@@ -276,16 +276,16 @@
 
 .oph-checkbox-button-input:checked + .oph-checkbox-button-text:hover,
 .oph-checkbox-button-input:checked:focus + .oph-checkbox-button-text {
-  color: var(--white);
   border-color: var(--link-color-hover);
   background-color: var(--link-color-hover);
+  color: var(--white);
 }
 
 .oph-checkbox-button-input[disabled] + .oph-checkbox-button-text,
 .oph-checkbox-button-input:checked[disabled] + .oph-checkbox-button-text {
-  color: var(--color-muted);
   border-color: var(--border-color-base);
   background-color: var(--gray-lighten-4);
+  color: var(--color-muted);
   cursor: not-allowed;
 }
 
@@ -308,8 +308,8 @@
 .oph-radio-button-input {
   /* Hide radio input visually */
   position: absolute !important;
-  height: 1px;
   width: 1px;
+  height: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }

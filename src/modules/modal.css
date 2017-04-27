@@ -24,8 +24,8 @@
 *
 * - `.oph-modal` has a `role=document` attribute for screen reader users to browse the contents more easily
 *
-* - `.oph-modal-back-to-top-link` for setting focus back to `.oph-modal-container`. The link is initially visually hidden,
-* and displayed on focus.
+* - `.oph-modal-back-to-top-link` for setting focus back to `.oph-modal-container`. The link is initially visually
+* hidden, and displayed on focus.
 *
 */
 
@@ -119,8 +119,8 @@
 
 .oph-modal-back-to-top-link {
   position: absolute !important;
-  height: 1px;
   width: 1px;
+  height: 1px;
   right: var(--space-2);
   bottom: var(--space-1);
   overflow: hidden;
@@ -129,8 +129,8 @@
 
 .oph-modal-back-to-top-link:focus {
   position: relative;
-  height: auto;
   width: auto;
+  height: auto;
   overflow: auto;
   clip: auto;
 }
