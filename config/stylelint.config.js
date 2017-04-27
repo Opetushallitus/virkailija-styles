@@ -76,57 +76,56 @@ module.exports = {
     'block-opening-brace-space-before': 'always',
 
     // Selector
-    "selector-attribute-brackets-space-inside": "never",
-    "selector-attribute-operator-space-after": "never",
-    "selector-attribute-operator-space-before": "never",
+    'selector-attribute-brackets-space-inside': 'never',
+    'selector-attribute-operator-space-after': 'never',
+    'selector-attribute-operator-space-before': 'never',
     'selector-attribute-quotes': 'always',
-    "selector-combinator-space-after": "always",
-    "selector-combinator-space-before": "always",
-    "selector-descendant-combinator-no-non-space": true,
-    "selector-max-empty-lines": 0,
-    "selector-pseudo-class-case": "lower",
-    "selector-pseudo-class-no-unknown": true,
-    "selector-pseudo-class-parentheses-space-inside": "never",
-    "selector-pseudo-element-case": "lower",
-    "selector-pseudo-element-colon-notation": "single",
-    "selector-pseudo-element-no-unknown": true,
-    "selector-type-case": "lower",
-    "selector-type-no-unknown": true,
-    "selector-no-id": true,
+    'selector-combinator-space-after': 'always',
+    'selector-combinator-space-before': 'always',
+    'selector-descendant-combinator-no-non-space': true,
+    'selector-max-empty-lines': 0,
+    'selector-pseudo-class-case': 'lower',
+    'selector-pseudo-class-no-unknown': true,
+    'selector-pseudo-class-parentheses-space-inside': 'never',
+    'selector-pseudo-element-case': 'lower',
+    'selector-pseudo-element-colon-notation': 'single',
+    'selector-pseudo-element-no-unknown': true,
+    'selector-type-case': 'lower',
+    'selector-type-no-unknown': true,
+    'selector-no-id': true,
     'selector-no-universal': true,
     'selector-no-qualifying-type': true,
     'selector-no-vendor-prefix': true,
     'selector-max-compound-selectors': 3,
 
     // Selector list
-    "selector-list-comma-newline-after": "always",
-    "selector-list-comma-space-before": "never",
+    'selector-list-comma-newline-after': 'always',
+    'selector-list-comma-space-before': 'never',
 
     // Media feature
-    "media-feature-colon-space-after": "always",
-    "media-feature-colon-space-before": "never",
-    "media-feature-name-case": "lower",
-    "media-feature-name-no-unknown": true,
-    "media-feature-parentheses-space-inside": "never",
-    "media-feature-range-operator-space-after": "always",
-    "media-feature-range-operator-space-before": "always",
+    'media-feature-colon-space-after': 'always',
+    'media-feature-colon-space-before': 'never',
+    'media-feature-name-case': 'lower',
+    'media-feature-name-no-unknown': true,
+    'media-feature-parentheses-space-inside': 'never',
+    'media-feature-range-operator-space-after': 'always',
+    'media-feature-range-operator-space-before': 'always',
 
     // Media query list
-    "media-query-list-comma-newline-after": "always-multi-line",
-    "media-query-list-comma-space-after": "always-single-line",
-    "media-query-list-comma-space-before": "never",
+    'media-query-list-comma-newline-after': 'always-multi-line',
+    'media-query-list-comma-space-after': 'always-single-line',
+    'media-query-list-comma-space-before': 'never',
 
     // At rule
-    "at-rule-name-case": "lower",
-    "at-rule-name-space-after": "always-single-line",
-    "at-rule-semicolon-newline-after": "always",
+    'at-rule-name-case': 'lower',
+    'at-rule-name-space-after': 'always-single-line',
+    'at-rule-semicolon-newline-after': 'always',
 
     // Comment
-    "comment-no-empty": true,
+    'comment-no-empty': true,
 
     // General
     'indentation': 2,
-    "max-empty-lines": 1,
-
+    'max-empty-lines': 1
   }
 }
