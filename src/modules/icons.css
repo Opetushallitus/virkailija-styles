@@ -32,18 +32,18 @@
 
 .oph-sort-asc-gray {
     margin-bottom: -100%;
-    background: svg-load('../img/sort-asc.svg',fill: #CCCCCC, stroke: #fff) no-repeat top left;
+    background: svg-load('../img/sort-asc.svg', fill: var(--gray-lighten-3), stroke: var(--white)) no-repeat top left;
 }
 
 .oph-sort-asc-blue {
     margin-bottom: -100%;
-    background: svg-load('../img/sort-asc.svg',fill: #159ECB, stroke: #fff) no-repeat top left;
+    background: svg-load('../img/sort-asc.svg', fill: var(--blue-lighten-1), stroke: var(--white)) no-repeat top left;
 }
 
 .oph-sort-desc-blue {
-    background: svg-load('../img/sort-desc.svg',fill: #159ECB, stroke: #fff) no-repeat top left;
+    background: svg-load('../img/sort-desc.svg', fill: var(--blue-lighten-1), stroke: var(--white)) no-repeat top left;
 }
 
 .oph-sort-desc-gray {
-    background: svg-load('../img/sort-desc.svg',fill: #CCCCCC, stroke: #fff) no-repeat top left;
+    background: svg-load('../img/sort-desc.svg', fill: var(--gray-lighten-3), stroke: var(--white)) no-repeat top left;
 }
