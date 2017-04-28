@@ -1,0 +1,361 @@
+@import "variables.css";
+
+/**
+* @stylesheet src/modules/forms.css Form controls
+* @parent components
+*/
+
+::placeholder {
+  color: var(--color-muted);
+}
+
+.oph-field + .oph-field {
+  margin-top: var(--space-2);
+}
+
+.oph-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.oph-label,
+.oph-legend {
+  display: inline-block;
+  margin-bottom: var(--space-1);
+}
+
+.oph-legend {
+  padding-left: 0;
+}
+
+.oph-field-text {
+  margin-top: var(--space-1);
+  color: var(--color-muted);
+}
+
+/**
+* @styles 0-input-regular Regular input (with help text)
+*
+* Provide additional info about the field or the expected value with `.oph-field-text`.
+*
+* **Accessibility**
+*
+* - label has `aria-describedby` linking to `.oph-field-text`, which causes screen readers to announce the text
+* when user focuses or enters the input
+*
+* @demo demos/forms/input-regular.html
+*/
+
+.oph-input-container {
+  width: 100%;
+}
+
+.oph-input {
+  font-family: inherit;
+  font-size: inherit;
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--space-1);
+  border: 1px solid var(--border-color-base);
+  border-radius: var(--border-radius-base);
+  background-color: var(--white);
+  box-shadow: inset 0 1px 4px var(--gray-lighten-3);
+  transition-property: border, background;
+  transition-duration: var(--transition-duration-base);
+  transition-timing-function: var(--transition-timing-function-base);
+}
+
+.oph-input:not(
+:focus,
+[disabled],
+[readonly],
+.oph-input-has-error
+):hover {
+  border-color: var(--gray-lighten-1);
+}
+
+.oph-input:focus {
+  outline: none;
+}
+
+.oph-input:not(.oph-input-has-error):focus {
+  border-color: var(--blue-lighten-1);
+}
+
+/**
+* @styles 1-input-regular Required input
+*
+* **Accessibility**
+*
+* - input has `aria-required` to identify it as required to screen reader users
+*
+* @demo demos/forms/input-required.html
+*/
+
+.oph-field-is-required .oph-label:first-of-type:after,
+.oph-field-is-required .oph-legend:first-of-type:after {
+  content: " *";
+}
+
+/**
+* @styles 2-input-with-error Input with error
+*
+* **Accessibility**
+*
+* - input has `aria-invalid` to indicate it as invalid or in need of attention to screen readers users
+*
+* @demo demos/forms/input-with-error.html
+*/
+
+.oph-input-has-error {
+  border-color: var(--red-lighten-1);
+  background-color: var(--red-lighten-2);
+  box-shadow: 0 0 0;
+}
+
+.oph-input-has-error:hover,
+.oph-input-has-error:focus {
+  border-color: var(--red);
+}
+
+/**
+* @styles 3-disabled-and-read-only Disabled and read-only input
+*
+* @demo demos/forms/input-is-disabled-or-read-only.html
+*/
+
+.oph-input[disabled],
+.oph-input[readonly] {
+  background-color: var(--gray-lighten-5);
+  color: var(--color-muted);
+  box-shadow: 0 0 0;
+}
+
+.oph-input[disabled]:hover {
+  cursor: not-allowed;
+}
+
+/**
+* @styles 4-inline-label Inline label
+*
+* Styles for aligning inline inputs aren't provided.
+*
+* @demo demos/forms/label-inline.html
+*/
+
+.oph-field-inline {
+  display: flex;
+  align-items: center;
+}
+
+.oph-field-inline .oph-label:first-of-type {
+  margin-right: var(--space-3);
+  margin-bottom: 0;
+}
+
+/**
+* @styles 5-select Select menu
+*
+* @demo demos/forms/select.html
+*/
+
+/* Custom caret */
+.oph-select-container {
+  position: relative;
+}
+
+.oph-select-container:before {
+  content: "";
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-1);
+  border-top: var(--space-1) solid var(--gray);
+  border-right: var(--space-1) solid transparent;
+  border-left: var(--space-1) solid transparent;
+}
+
+.oph-select-container:after {
+  content: "";
+  position: absolute;
+  top: var(--space-2);
+  right: calc(var(--space-1) + 1px);
+  border-top: calc(var(--space-1) - 1px) solid var(--white);
+  border-right: calc(var(--space-1) - 1px) solid transparent;
+  border-left: calc(var(--space-1) - 1px) solid transparent;
+}
+
+.oph-select {
+  padding-right: var(--space-3);
+  /* Remove default styling and arrows */
+  appearance: none;
+}
+
+/**
+* @styles 6-select Checkboxes and radios
+*
+* @demo demos/forms/checkboxes-and-radios.html
+*/
+
+.oph-checkable {
+  display: flex;
+  margin-bottom: var(--space-1);
+}
+
+.oph-checkable:not(.oph-checkable-is-disabled):hover,
+.oph-checkable-input:focus + .oph-checkable-text {
+  color: var(--link-color-hover);
+  cursor: pointer;
+}
+
+.oph-checkable-is-disabled,
+.oph-checkable-is-disabled:hover {
+  color: var(--color-muted);
+  cursor: not-allowed;
+}
+
+.oph-checkable-input {
+  order: 1;
+  margin-right: var(--space-1);
+}
+
+.oph-checkable-text {
+  order: 2;
+  transition-property: color;
+  transition-duration: var(--transition-duration-base);
+  transition-timing-function: var(--transition-timing-function-base);
+}
+
+/**
+* @styles 7-checkbox-buttons Checkbox buttons
+*
+* @demo demos/forms/checkbox-buttons.html
+*/
+
+.oph-checkbox-button-input {
+  /* Hide checkbox visually */
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+}
+
+.oph-checkbox-button-text {
+  display: inline-block;
+  margin-right: var(--space-1);
+  margin-bottom: var(--space-1);
+  padding: var(--space-1);
+  border-width: var(--border-width-input-button);
+  border-style: solid;
+  border-color: var(--color-primary);
+  border-radius: var(--border-radius-base);
+  background-color: var(--white);
+  color: var(--color-primary);
+  transition-property: color, border, background;
+  transition-duration: var(--transition-duration-base);
+  transition-timing-function: var(--transition-timing-function-base);
+}
+
+.oph-checkbox-button-text:hover,
+.oph-checkbox-button-input:focus + .oph-checkbox-button-text {
+  border-color: var(--link-color-hover);
+  color: var(--link-color-hover);
+  cursor: pointer;
+}
+
+.oph-checkbox-button-input:checked + .oph-checkbox-button-text {
+  background-color: var(--color-primary);
+  color: var(--white);
+}
+
+.oph-checkbox-button-input:checked + .oph-checkbox-button-text:before {
+  /* Add a check mark and an empty space before text on checked buttons */
+  content: "\2713\00a0";
+}
+
+.oph-checkbox-button-input:checked + .oph-checkbox-button-text:hover,
+.oph-checkbox-button-input:checked:focus + .oph-checkbox-button-text {
+  border-color: var(--link-color-hover);
+  background-color: var(--link-color-hover);
+  color: var(--white);
+}
+
+.oph-checkbox-button-input[disabled] + .oph-checkbox-button-text,
+.oph-checkbox-button-input:checked[disabled] + .oph-checkbox-button-text {
+  border-color: var(--border-color-base);
+  background-color: var(--gray-lighten-4);
+  color: var(--color-muted);
+  cursor: not-allowed;
+}
+
+/**
+* @styles 8-checkbox-buttons Radio button group
+*
+* @demo demos/forms/radio-button-group.html
+*/
+
+.oph-radio-button-group {
+  display: block;
+  padding: calc(var(--space-1) / 2);
+  border-width: var(--border-width-input-button);
+  border-style: solid;
+  border-color: var(--color-primary);
+  border-radius: var(--border-radius-base);
+  background-color: var(--white);
+}
+
+.oph-radio-button-input {
+  /* Hide radio input visually */
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.oph-radio-button-text {
+  display: block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--border-radius-base);
+  color: var(--color-primary);
+  transition-property: color, background;
+  transition-duration: var(--transition-duration-base);
+  transition-timing-function: var(--transition-timing-function-base);
+}
+
+.oph-radio-button-text:hover,
+.oph-radio-button-input:focus + .oph-radio-button-text {
+  background-color: var(--blue-lighten-4);
+  color: var(--link-color-hover);
+  cursor: pointer;
+}
+
+.oph-radio-button-input:checked + .oph-radio-button-text,
+.oph-radio-button-input:checked + .oph-radio-button-text:hover,
+.oph-radio-button-input:checked:focus + .oph-radio-button-text {
+  background-color: var(--color-primary);
+  color: var(--white);
+  cursor: default;
+}
+
+.oph-radio-button-input[disabled] + .oph-radio-button-text,
+.oph-radio-button-input:checked[disabled] + .oph-radio-button-text {
+  background-color: var(--white);
+  color: var(--color-muted);
+  cursor: not-allowed;
+}
+
+@media (--breakpoint-medium) {
+  .oph-radio-button-group {
+    display: inline-block;
+  }
+
+  .oph-radio-button-text {
+    display: inline-block;
+  }
+}
+
+:root {
+  --border-width-input-button: 2px;
+}

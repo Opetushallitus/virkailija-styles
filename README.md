@@ -1,11 +1,9 @@
-# virkailija-styles
+# OPH Virkailija Style Guide
 
-Valmiiksi käytettävät tyylit ovat tiedossa styles/styles.css
+See documentation and change log in 
+[GitHub pages](https://opetushallitus.github.io/virkailija-styles).
 
-Tyylit voidaan ottaa käyttöön lisäämällä npm-riippuvuus:
-"Opetushallitus/virkailija-styles"
+## Legacy virkailija-styles
 
-Tyylit voidaan lisätä projektiin esim:
-import 'virkailija-styles/styles/styles.css';
-
-SCSS-tiedostoista voidaan myös tuottaa tyylit sassilla kääntämällä tiedosto styles/main.scss
+Previous `virkailija-styles`  has been moved to `legacy` branch. Update
+your `package.json` accordingly.

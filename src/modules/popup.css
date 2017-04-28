@@ -1,0 +1,238 @@
+@import "variables.css";
+
+/**
+* @stylesheet src/modules/popup.css Popup
+* @parent components
+*
+* Only styles are provided, create functionality with JS.
+*
+* **Usage**
+*
+* - Set the pointer arrow's position with `.oph-popup-{top|right|bottom|left}` classes and
+* the colors with `.oph-popup-{default|info|success|warning|error}`
+*
+* - Create & remove the popups and calculate top/right/bottom/left position with JS
+*
+* - May need custom CSS/JS for positioning on small screens depending on your app and popup usage
+*
+* - `.oph-popup`'s z-index may have to overridden depending on your app
+*/
+
+/**
+* @styles 0-default-popup Default popup
+*
+* @demo demos/popup/popup-default.html
+*/
+
+.oph-popup {
+  text-align: center;
+  position: absolute;
+  width: 10rem;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--border-radius-base);
+  z-index: var(--z6);
+  animation-duration: var(--animation-duration-base);
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.oph-popup-title {
+  font-weight: var(--font-weight-bold);
+}
+
+.oph-popup-content {
+  margin-top: var(--space-2);
+  word-break: break-all;
+}
+
+/* Add horizontal space between buttons */
+.oph-popup-content .oph-button + .oph-button {
+  margin-left: var(--space-2);
+}
+
+/**
+* @styles 1-positioning-and-color Positioning and colors
+*
+* @demo demos/popup/popup-positioning-and-colors.html
+*/
+
+/* Positioning */
+.oph-popup-top {
+  margin-bottom: var(--space-2);
+}
+
+.oph-popup-right {
+  margin-left: var(--space-2);
+}
+
+.oph-popup-bottom {
+  margin-top: var(--space-2);
+}
+
+.oph-popup-left {
+  margin-right: var(--space-2);
+}
+
+/* Pointer arrows */
+.oph-popup-arrow,
+.oph-popup-arrow:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.oph-popup-arrow {
+  border-width: 12px;
+}
+
+.oph-popup-arrow:after {
+  content: "";
+  border-width: 11px;
+}
+
+.oph-popup-top .oph-popup-arrow {
+  bottom: -12px;
+  margin-left: -20px;
+  border-bottom-width: 0;
+}
+
+.oph-popup-top .oph-popup-arrow:after {
+  top: -12px;
+  left: -11px;
+  content: " ";
+  border-bottom-width: 0;
+}
+
+.oph-popup-right .oph-popup-arrow {
+  left: -12px;
+  margin-top: -10px;
+  border-left-width: 0;
+}
+
+.oph-popup-right .oph-popup-arrow:after {
+  bottom: -11px;
+  left: 1px;
+  content: " ";
+  border-left-width: 0;
+}
+
+.oph-popup-bottom .oph-popup-arrow {
+  top: -12px;
+  margin-left: -20px;
+  border-top-width: 0;
+}
+
+.oph-popup-bottom .oph-popup-arrow:after {
+  bottom: -12px;
+  left: -11px;
+  content: " ";
+  border-top-width: 0;
+}
+
+.oph-popup-left .oph-popup-arrow {
+  right: -12px;
+  margin-top: -10px;
+  border-right-width: 0;
+}
+
+.oph-popup-left .oph-popup-arrow:after {
+  bottom: -11px;
+  right: 1px;
+  content: " ";
+  border-right-width: 0;
+}
+
+/* Variant border colors */
+.oph-popup-default .oph-popup-arrow {
+  border-color: var(--border-color-base);
+}
+
+.oph-popup-default .oph-popup-arrow:after {
+  border-color: var(--white);
+}
+
+.oph-popup-info .oph-popup-arrow,
+.oph-popup-info .oph-popup-arrow:after {
+  border-color: var(--bg-color-info);
+}
+
+.oph-popup-success .oph-popup-arrow,
+.oph-popup-success .oph-popup-arrow:after {
+  border-color: var(--bg-color-success);
+}
+
+.oph-popup-warning .oph-popup-arrow,
+.oph-popup-warning .oph-popup-arrow:after {
+  border-color: var(--bg-color-warning);
+}
+
+.oph-popup-error .oph-popup-arrow,
+.oph-popup-error .oph-popup-arrow:after {
+  border-color: var(--bg-color-error);
+}
+
+/* Set other border colors as transparent to shape the arrows */
+.oph-popup-top .oph-popup-arrow,
+.oph-popup-top .oph-popup-arrow:after {
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.oph-popup-right .oph-popup-arrow,
+.oph-popup-right .oph-popup-arrow:after {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.oph-popup-bottom .oph-popup-arrow,
+.oph-popup-bottom .oph-popup-arrow:after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.oph-popup-left .oph-popup-arrow,
+.oph-popup-left .oph-popup-arrow:after {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+
+/* Border, background and text colors */
+.oph-popup-default {
+  border: 1px solid var(--border-color-base);
+  background-color: var(--white);
+}
+
+.oph-popup-info {
+  background-color: var(--bg-color-info);
+}
+
+.oph-popup-info .oph-popup-title {
+  color: var(--color-info);
+}
+
+.oph-popup-success {
+  background-color: var(--bg-color-success);
+}
+
+.oph-popup-success .oph-popup-title {
+  color: var(--color-success);
+}
+
+.oph-popup-warning {
+  background-color: var(--bg-color-warning);
+}
+
+.oph-popup-error {
+  background-color: var(--bg-color-error);
+}
+
+.oph-popup-error .oph-popup-title {
+  color: var(--color-error);
+}

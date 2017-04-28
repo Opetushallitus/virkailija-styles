@@ -1,0 +1,54 @@
+@import "variables.css";
+
+/**
+* @stylesheet src/modules/spinner.css Spinner
+* @parent components
+*/
+
+/**
+* @styles 0-spinner
+*
+* Indicate loading with `.oph-spinner`.
+*
+* @demo demos/spinner/spinner.html
+*/
+
+.oph-spinner {
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.oph-spinner-in-button {
+  display: inline-block;
+  width: auto;
+  margin-right: var(--space-1);
+}
+
+.oph-spinner .oph-bounce {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: var(--color-primary);
+  display: inline-block;
+  animation: bounceDelay 1.4s infinite ease-in-out;
+
+  /* Prevent first frame from flickering when animation starts */
+  animation-fill-mode: both;
+}
+
+.oph-spinner-in-button .oph-bounce {
+  display: inline-block;
+  width: var(--h6);
+  height: var(--h6);
+  background-color: var(--white);
+}
+
+.oph-spinner .oph-bounce1 {
+  animation-delay: -0.32s;
+}
+
+.oph-spinner .oph-bounce2 {
+  animation-delay: -0.16s;
+}

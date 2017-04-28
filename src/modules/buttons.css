@@ -1,0 +1,251 @@
+@import "variables.css";
+
+/**
+* @stylesheet src/modules/buttons.css Buttons
+* @parent components
+*
+* Use `.oph-button-{variant}` with `a`, `button` and `input type="{submit|button}"` tags.
+*/
+
+.oph-button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.125;
+  text-decoration: none;
+  display: inline-block;
+  padding-top: var(--space-1);
+  padding-right: var(--space-2);
+  padding-bottom: var(--space-1);
+  padding-left: var(--space-2);
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: var(--border-radius-base);
+  background-color: transparent;
+  transition-property: border, background, color;
+  transition-duration: var(--transition-duration-base);
+  transition-timing-function: var(--transition-timing-function-base);
+  cursor: pointer;
+}
+
+.oph-button:focus {
+  outline: 0;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/**
+* @styles 0-primary-button Primary button
+*
+* @demo demos/buttons/button-primary.html
+*/
+
+.oph-button-primary {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--white);
+}
+
+.oph-button-primary:hover,
+.oph-button-primary:focus {
+  border-color: var(--link-color-hover);
+  background-color: var(--link-color-hover);
+}
+
+/**
+* @styles 1-disabled-button Disabled state
+*
+* Use `disabled` attribute instead of `.oph-button-is-disabled` class in `button` and `input` tags.
+*
+* Links are only disabled with [*pointer-events: none* declaration](http://caniuse.com/#feat=pointer-events).
+* Block keyboard events with custom JS.
+*
+* @demo demos/buttons/button-disabled.html
+*/
+
+.oph-button-is-disabled,
+.oph-button[disabled],
+.oph-button-is-disabled:hover,
+.oph-button[disabled]:hover,
+.oph-button-is-disabled:focus,
+.oph-button[disabled]:focus {
+  border-color: var(--gray-lighten-3);
+  background-color: var(--gray-lighten-3);
+  color: var(--white);
+  pointer-events: none;
+}
+
+/**
+* @styles 2-loading-state Loading state
+*
+* Indicate loading with the [src/modules/spinner.css] component.
+*
+* @demo demos/buttons/button-in-loading-state.html
+*/
+
+/**
+* @styles 3-confirm-button Confirm button
+*
+* @demo demos/buttons/button-confirm.html
+*/
+
+.oph-button-confirm {
+  border-color: var(--red);
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.oph-button-confirm:hover,
+.oph-button-confirm:focus {
+  border-color: var(--red-lighten-1);
+  background-color: var(--red-lighten-1);
+}
+
+/**
+* @styles 4-confirm-button Cancel button
+*
+* @demo demos/buttons/button-cancel.html
+*/
+
+.oph-button-cancel {
+  border-color: var(--gray);
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+.oph-button-cancel:hover,
+.oph-button-cancel:focus {
+  border-color: var(--gray-lighten-1);
+  background-color: var(--gray-lighten-1);
+}
+
+/**
+* @styles 5-ghost-button Ghost button
+*
+* @demo demos/buttons/button-ghost.html
+*/
+
+.oph-button-ghost {
+  color: var(--link-color);
+}
+
+.oph-button-ghost:hover,
+.oph-button-ghost:focus {
+  color: var(--link-color-hover);
+}
+
+.oph-button-ghost[disabled],
+.oph-button-ghost.oph-button-is-disabled {
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--color-muted);
+}
+
+/**
+* @styles 6-sizes Sizes
+*
+* @demo demos/buttons/button-sizes.html
+*/
+
+.oph-button-big {
+  padding-top: var(--space-2);
+  padding-right: var(--space-4);
+  padding-bottom: var(--space-2);
+  padding-left: var(--space-4);
+}
+
+.oph-button-small {
+  padding-left: var(--space-1);
+  padding-right: var(--space-1);
+}
+
+/**
+* @styles 7-big-button Close button
+*
+* Set `position: relative` declaration for the button's container for proper positioning (the button is absolutely
+* positioned).
+*
+* @demo demos/buttons/button-close.html
+*/
+
+.oph-button-close {
+  font-size: var(--h1);
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--gray-lighten-1);
+  z-index: var(--z2);
+}
+
+.oph-button-close:hover,
+.oph-button-close:focus {
+  color: var(--link-color-hover);
+}
+
+.oph-button-close:disabled,
+.oph-button-close.oph-button-is-disabled {
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--gray-lighten-3);
+}
+
+/**
+* @styles 8-button-selected-item Selected item button
+*
+* List the selected items of a custom select component with `.oph-button-selected`.
+*
+* **Usage**
+*
+* - Create the buttons and add event to remove them by clicking with JS
+*
+* - Set width for the button's container
+*
+* @demo demos/buttons/button-selected-item.html
+*/
+
+.oph-button-selected {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-color: var(--blue-lighten-3);
+  background-color: var(--blue-lighten-4);
+  color: var(--black);
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.oph-button-selected + .oph-button-selected {
+  margin-top: var(--space-1);
+}
+
+.oph-button-selected:hover,
+.oph-button-selected:focus {
+  border-color: var(--link-color-hover);
+  background-color: var(--link-color-hover);
+  color: var(--white);
+}
+
+.oph-button-selected[disabled],
+.oph-button-selected.oph-button-is-disabled {
+  border-color: var(--border-color-base);
+  background-color: var(--gray-lighten-4);
+  color: var(--color-muted);
+}
+
+.oph-button-selected-text {
+  font-weight: 400;
+  flex: auto;
+  padding-right: var(--space-1);
+}
+
+.oph-button-selected-icon {
+  font-size: var(--h3);
+  align-self: flex-end;
+}

@@ -1,0 +1,112 @@
+@import "variables.css";
+
+/**
+* @stylesheet src/modules/alerts.css Alert messages
+* @parent components
+*
+* Only styles are provided, create functionality with JS.
+*
+* The content is wrapped in `.oph-alert-container` (centered and has a maximum width)
+* for better positioning in full viewport wide alerts.
+*/
+
+.oph-alert {
+  text-align: center;
+  display: block;
+  color: var(--black);
+  /* Animate alert displaying */
+  animation-duration: var(--animation-duration-base);
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.oph-alert-container {
+  position: relative;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-4);
+}
+
+.oph-alert-title {
+  font-weight: var(--font-weight-bold);
+}
+
+.oph-alert-text {
+  margin-top: var(--space-1);
+}
+
+/**
+* @styles 0-info Info
+*
+* @demo demos/alerts/alert-info.html
+*/
+
+.oph-alert-info {
+  background-color: var(--bg-color-info);
+}
+
+.oph-alert-info .oph-alert-title {
+  color: var(--color-info);
+}
+
+/**
+* @styles 1-success Success
+*
+* @demo demos/alerts/alert-success.html
+*/
+
+.oph-alert-success {
+  background-color: var(--bg-color-success);
+}
+
+.oph-alert-success .oph-alert-title {
+  color: var(--color-success);
+}
+
+/**
+* @styles 2-warning Warning
+*
+* @demo demos/alerts/alert-warning.html
+*/
+
+.oph-alert-warning {
+  background-color: var(--bg-color-warning);
+}
+
+/**
+* @styles 3-error Error
+*
+* @demo demos/alerts/alert-error.html
+*/
+
+.oph-alert-error {
+  background-color: var(--bg-color-error);
+}
+
+.oph-alert-error .oph-alert-title {
+  color: var(--color-error);
+}
+
+/**
+* @styles 4-help-text Help text
+*
+* @demo demos/alerts/alert-help.html
+*/
+
+.oph-alert-help {
+  font-size: var(--h5);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-color-base);
+  border-radius: var(--border-radius-base);
+  background-color: var(--gray-lighten-4);
+  color: var(--gray);
+}
+
+.oph-alert-help .oph-alert-title {
+  font-weight: 400;
+}
+
+.oph-alert-help .oph-alert-text {
+  text-align: left;
+}

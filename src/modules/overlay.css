@@ -1,0 +1,53 @@
+@import "variables.css";
+
+/**
+* @stylesheet src/modules/overlay.css Overlay
+* @parent components
+*/
+
+/**
+* @styles 0-overlay
+*
+* Block your app or parts of it temporarily, for example when a modal is open or during loading.
+*
+* Only styles are provided, create functionality with JS.
+*
+* **Usage**
+*
+* - Toggle `.oph-overlay-is-visible` and `.oph-overlay-bg` classes set the overlay's visibility.
+* See JS tab for an example.
+*
+* - Add elements to be displayed on top of the overlay as `.oph-overlay`'s children
+*
+* - `.oph-overlay-is-visible`'s z-index may have to overridden depending on your app.
+*
+* @demo demos/overlay/overlay.html
+*/
+.oph-overlay {
+  display: none;
+  position: relative;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.oph-overlay-is-visible {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z5);
+}
+
+.oph-overlay-bg {
+  opacity: 1;
+}
+
+.oph-overlay:focus {
+  outline: none;
+}

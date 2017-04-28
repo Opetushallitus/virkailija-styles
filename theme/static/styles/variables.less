@@ -1,0 +1,168 @@
+/**
+* @stylesheet variables.less Variables
+* @parent Styles.theme 0
+*
+* @description
+* Variables hold all sorts of site-wide visual configurations. This site has color palettes, logo images, and font declarations set, which are demo'd throughout this live style guide.
+**/
+
+// OPH variables, use these when updating the style guide's theme
+
+@fontFamilyBase: "Open Sans", "Helvetica", sans-sefif;
+@defaultFontWeight: 400;
+
+@fontWeightBold: 600;
+@lineHeightBase: 1.45;
+
+@h1: 2rem;
+@h2: 1.5rem;
+@h3: 1.25rem;
+@h4: 1rem;
+@h5: 0.875rem;
+@h6: 0.75rem;
+
+@space1: 0.5rem;
+@space2: 1rem;
+@space3: 2rem;
+@space4: 4rem;
+
+@containerWidth: 90rem;
+
+@black: #2a2a2a;
+@white: #fff;
+
+@gray: #666;
+@grayLighten1: #999;
+@grayLighten2: #aeaeae;
+@grayLighten3: #ccc;
+@grayLighten4: #f6f4f0;
+@grayLighten5: #f5f5f5;
+
+@red: #e44e4e;
+@redLighten1: #e09191;
+@redLighten2: #ffe9e9;
+
+@blue: #0a789c;
+@blueLighten1: #159ecb;
+@blueLighten2: #00b5f0;
+@blueLighten3: #a6dcee;
+@blueLighten4: #def2ff;
+@blueDarken1: #00526c;
+
+@green: #4c7f00;
+@greenLighten1: #e6ffc1;
+
+@yellow: #ffd024;
+@yellowLighten1: #fff7bc;
+
+@colorPrimary: var(--blue-lighten-1);
+
+@fontColorBase: var(--black);
+@colorMuted: var(--gray-lighten-2);
+@colorInfo: var(--blue);
+@colorSuccess: var(--green);
+@colorError: var(--red);
+
+@linkColor: var(--blue-lighten-1);
+@linkColorHover: var(--blue-lighten-2);
+
+@bgColorInfo: var(--blue-lighten-4);
+@bgColorSuccess: var(--green-lighten-1);
+@bgColorWarning: var(--yellow-lighten-1);
+@bgColorError: var(--red-lighten-2);
+
+@borderRadiusBase: 2px;
+@borderColorBase: var(--gray-lighten-2);
+
+@z1: 100;
+@z2: 200;
+@z3: 300;
+@z4: 400;
+@z5: 500;
+@z6: 600;
+
+@transition: .15s ease;
+
+@box-shadow-base: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+/**
+* @styles color-palette Color Palette
+*
+* @description
+* Variables used to define the site's color palette.
+* @iframe demos/color-palette.html 630
+**/
+@night: #000000;
+@darkSkies: #2a2a2a;
+@thunderStorm: #706f70;
+@cloud: #999999;
+@haze: #ccc;
+@fog: #eae9e9;
+@clear: #ffffff;
+@nigthRain: #165489;
+@rain: #1f54c6;
+@sunrise: #f7f8c3;
+@sunset: #d9534f;
+
+
+// Variables used to define color on text elements.
+
+@colorHeader: #fff;
+@colorLinks: @rain;
+@colorCode: @sunrise;
+@colorNav: @darkSkies;
+@colorSignature: @darkSkies;
+@fontColorParamsReturns: @fog;
+
+
+// Variables used to set the color on containers and other elements.
+
+@pageBackground: #f6f4f0;
+@sidebarBackground: #f6f4f0;
+@colorTags: @darkSkies;
+@footerHeight: 80px;
+@headerHeight: 54px;
+@colorParamsReturns: @darkSkies;
+
+
+// Variables used to set the color on code syntax.
+
+@pp-bg: @fog;
+
+@str-color: #dd1144;
+@kwd-color: #333333;
+@com-color: #999988;
+@type-color: #445588;
+@lit-color: #445588;
+@pun-color: #333333;
+@opn-color: #333333;
+@clo-color: #333333;
+@tag-color: #navy;
+@atn-color: #teal;
+@atv-color: #dd1144;
+@dec-color: #333333;
+@var-color: #teal;
+@fun-color: #990000;
+
+
+// Variables used to set the color on elements when printed or projected.
+
+@str-color-pp: #006600;
+@kwd-color-pp: #006;
+@com-color-pp: #600;
+@typ-color-pp: #404;
+@lit-color-pp: #004444;
+@pun-color-pp: #444400;
+@opn-color-pp: #444400;
+@clo-color-pp: #444400;
+@tag-color-pp: #006;
+@atn-color-pp:  #440044;
+@atv-color-pp: #006600;
+
+
+// Variables used to set a logo on the header and on the footer
+
+@logo: "../img/logo.svg";
+@logoFooter: "../img/logo-grey.svg";
+@logoWidth: 170px;
+

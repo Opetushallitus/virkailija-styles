@@ -1,0 +1,85 @@
+@import "variables.css";
+
+/**
+* @stylesheet src/modules/typography.css Typography
+* @parent components
+*/
+
+/**
+* @styles 0-base-element Typography base
+*
+* Set your app's or component's font family, size, color and line height with `.oph-typography`.
+* Base font size is set to 95% of the browser's default font size.
+*
+* Add the class as high in the element hierarchy as possible, preferably to `html` or the main element of your app.
+*
+* @demo demos/typography/base.html
+*/
+.oph-typography {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  text-size-adjust: 100%;
+  color: var(--font-color-base);
+}
+
+/**
+* @styles 1-type-scale Type scale
+*
+* Adjust elements' font size with `oph-h{1-6}`. Overrides default size.
+*
+* [Rem](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#Rems) units are used for sizing.
+* Combine the classes with fluidly sized elements for best results.
+*
+* @demo demos/typography/type-scale.html
+*/
+.oph-h1 { font-size: var(--h1); }
+.oph-h2 { font-size: var(--h2); }
+.oph-h3 { font-size: var(--h3); }
+.oph-h4 { font-size: var(--h4); }
+.oph-h5 { font-size: var(--h5); }
+.oph-h6 { font-size: var(--h6); }
+
+/**
+* @styles 2-headings Headings (and bolded text)
+*
+* Style heading with `.oph-bold` and the font size classes. Font weight is set to 600.
+*
+* @demo demos/typography/headings.html
+*/
+.oph-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/**
+* @styles 3-links Links
+*
+* @demo demos/typography/links.html
+*/
+.oph-link {
+  text-decoration: none;
+  color: var(--link-color);
+  transition-property: color;
+  transition-duration: var(--transition-duration-base);
+  transition-timing-function: var(--transition-timing-function-base);
+}
+
+.oph-link:hover,
+.oph-link:focus {
+  color: var(--link-color-hover);
+  outline: none;
+}
+
+.oph-link-big {
+  font-size: var(--h3);
+  font-weight: var(--font-weight-bold);
+}
+
+/**
+* @styles 4-contextual-colors Contextual colors
+*
+* @demo demos/typography/contextual-colors.html
+*/
+.oph-muted { color: var(--color-muted); }
+
+.oph-error { color: var(--color-error); }
