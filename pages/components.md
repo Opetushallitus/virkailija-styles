@@ -1,7 +1,6 @@
 @page components Components
-@parent index
 
-Each component has it's own stylesheet in `src/modules`. They are compiled to 
+Each component has an individual stylesheet in `src/modules`. The stylesheets are compiled to 
 `oph-styles.css` and `oph-styles-min.css`.
 
 ## Usage

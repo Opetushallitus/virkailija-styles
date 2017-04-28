@@ -1,4 +1,6 @@
 /* Demo styles */
+
+/* Utils */
 .h5 {
   font-size: .875rem;
 }
@@ -70,6 +72,7 @@
   z-index: 600;
 }
 
+/* Component-specific */
 .demo-modal {
   height: 15rem;
 }
@@ -114,12 +117,12 @@
   pointer-events: all;
 }
 
-.color-swatch {
+.demo-color-swatch {
   height: 2rem;
   border-radius: 2px;
 }
 
-.color-swatch-text {
+.demo-color-swatch-text {
   font-size: .875rem;
   text-align: center;
   padding-top: .5rem;

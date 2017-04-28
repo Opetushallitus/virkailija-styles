@@ -7,7 +7,7 @@ module.exports = {
     'postcss-reporter'
   ],
   'cssnano': {
-    // postcss-cssnext already generates vendor-prefixed declarations
+    // postcss-cssnext already generates vendor-prefixes
     autoprefixer: false,
     // Preserve z-index values
     zindex: false

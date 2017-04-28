@@ -1,17 +1,17 @@
 @page index OPH Virkailija Style Guide
 
-A collection of component styles (documented in [components]) based on 
+A collection of [component styles](components.html) based on 
 [Sketch specs](../src/sketch).
 
 Generated with [DocumentCSS](http://documentcss.com/)
-&middot; View in [GitHub](https://github.com/Opetushallitus/virkailija-styles/tree/styleguide)
+&middot; View in [GitHub](https://github.com/Opetushallitus/virkailija-styles)
 
 ## Getting started
 
 Install [Node.js](https://nodejs.org) and [Git](https://git-scm.com), then: 
 
 ```
-npm install --save Opetushallitus/virkailija-styles#styleguide
+npm install --save Opetushallitus/virkailija-styles
 ```
 
 #### a. Importing

@@ -29,21 +29,11 @@
                         Home
                     </a>
                 </li>
-
-                {{#getActiveAndParents}}
-                    {{#each parents}}
-                        <li class="parent">
-                            {{> active-menu.mustache}}
-                        </li>
-                    {{/each}}
-                    {{#active}}
-                        {{^if hideChildrenInMenu}}
-                            <li class="active">
-                                {{> active-menu.mustache}}
-                            </li>
-                        {{/if}}
-                    {{/active}}
-                {{/getActiveAndParents}}
+                <li>
+                    <a href="./components.html">
+                        Components
+                    </a>
+                </li>
             </ul>
 
             <a class="nav-item" href="./contributing.html">Contributing</a>

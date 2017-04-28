@@ -1,6 +1,6 @@
 {
   "name": "oph-virkailija-style-guide",
-  "version": "0.22.0",
+  "version": "1.0.0",
   "description": "A collection of component styles based on Sketch specs",
   "scripts": {
     "start": "parallelshell \"npm run watch\" \"npm run serve\"",
@@ -12,7 +12,7 @@
     "minify-css": "cssnano --no-zindex oph-styles.css oph-styles-min.css",
     "build-styleguide": "documentjs",
     "update-theme": "documentjs -f",
-    "watch-theme": "watch \"update-theme\" theme",
+    "watch-theme": "watch \"npm run update-theme\" theme",
     "copy-sketch": "copyfiles -u 1 \"src/sketch/**\" docs",
     "clean": "rimraf docs/* dist/* oph-styles.css oph-styles-min.css"
   },
@@ -21,7 +21,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Opetushallitus/virkailija-styles.git#styleguide"
+    "url": "git+https://github.com/Opetushallitus/virkailija-styles.git"
   },
   "dependencies": {
     "browser-sync": "2.18.8",

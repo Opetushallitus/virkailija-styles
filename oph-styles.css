@@ -76,7 +76,7 @@
             transform: scale(1);
   }
 }
-/* Naming: component-property-modifier */
+/* Naming: property-modifier */
 :root {
 
   /*
@@ -365,37 +365,7 @@
   background-color: #00b5f0;
 }
 /**
-* @styles 1-confirm-button Confirm button
-*
-* @demo demos/buttons/button-confirm.html
-*/
-.oph-button-confirm {
-  border-color: #e44e4e;
-  background-color: #e44e4e;
-  color: #fff;
-}
-.oph-button-confirm:hover,
-.oph-button-confirm:focus {
-  border-color: #e09191;
-  background-color: #e09191;
-}
-/**
-* @styles 2-confirm-button Cancel button
-*
-* @demo demos/buttons/button-cancel.html
-*/
-.oph-button-cancel {
-  border-color: #666;
-  background-color: #666;
-  color: #fff;
-}
-.oph-button-cancel:hover,
-.oph-button-cancel:focus {
-  border-color: #999;
-  background-color: #999;
-}
-/**
-* @styles 5-disabled-button Disabled state
+* @styles 1-disabled-button Disabled state
 *
 * Use `disabled` attribute instead of `.oph-button-is-disabled` class in `button` and `input` tags.
 *
@@ -416,7 +386,44 @@
   pointer-events: none;
 }
 /**
-* @styles 3-ghost-button Ghost button
+* @styles 2-loading-state Loading state
+*
+* Indicate loading with the [src/modules/spinner.css] component.
+*
+* @demo demos/buttons/button-in-loading-state.html
+*/
+/**
+* @styles 3-confirm-button Confirm button
+*
+* @demo demos/buttons/button-confirm.html
+*/
+.oph-button-confirm {
+  border-color: #e44e4e;
+  background-color: #e44e4e;
+  color: #fff;
+}
+.oph-button-confirm:hover,
+.oph-button-confirm:focus {
+  border-color: #e09191;
+  background-color: #e09191;
+}
+/**
+* @styles 4-confirm-button Cancel button
+*
+* @demo demos/buttons/button-cancel.html
+*/
+.oph-button-cancel {
+  border-color: #666;
+  background-color: #666;
+  color: #fff;
+}
+.oph-button-cancel:hover,
+.oph-button-cancel:focus {
+  border-color: #999;
+  background-color: #999;
+}
+/**
+* @styles 5-ghost-button Ghost button
 *
 * @demo demos/buttons/button-ghost.html
 */
@@ -434,7 +441,7 @@
   color: #aeaeae;
 }
 /**
-* @styles 4-sizes Sizes
+* @styles 6-sizes Sizes
 *
 * @demo demos/buttons/button-sizes.html
 */
@@ -454,13 +461,6 @@
   padding-right: 8px;
   padding-right: 0.5rem;
 }
-/**
-* @styles 6-loading-state Loading state
-*
-* Indicate loading with the [src/modules/spinner.css] component.
-*
-* @demo demos/buttons/button-in-loading-state.html
-*/
 /**
 * @styles 7-big-button Close button
 *
@@ -1342,6 +1342,46 @@
   }
 }
 /**
+* @stylesheet src/modules/icons.css Icons
+* @parent components
+*/
+/**
+* @styles 0-icons
+*
+* Indicate loading with `.oph-icons`.
+*
+* @demo demos/icons/icons.html
+*/
+.oph-stack {
+  position: relative;
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  line-height: 0.75em;
+  vertical-align: middle;
+}
+.oph-stack i {
+  display: block;
+  text-indent: -9999px;
+  width: 100%;
+  height: 100%;
+  background-size: 0.75em 0.75em;
+}
+.oph-sort-asc-gray {
+  margin-bottom: -100%;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg' fill='%23ccc' stroke='%23fff'%3E%3Cpath d='M1408 704q0 26-19 45t-45 19h-896q-26 0-45-19t-19-45 19-45l448-448q19-19 45-19t45 19l448 448q19 19 19 45z'/%3E%3C/svg%3E") no-repeat top left;
+}
+.oph-sort-asc-blue {
+  margin-bottom: -100%;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg' fill='%23159ecb' stroke='%23fff'%3E%3Cpath d='M1408 704q0 26-19 45t-45 19h-896q-26 0-45-19t-19-45 19-45l448-448q19-19 45-19t45 19l448 448q19 19 19 45z'/%3E%3C/svg%3E") no-repeat top left;
+}
+.oph-sort-desc-blue {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg' fill='%23159ecb' stroke='%23fff'%3E%3Cpath d='M1408 1088q0 26-19 45l-448 448q-19 19-45 19t-45-19l-448-448q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z'/%3E%3C/svg%3E") no-repeat top left;
+}
+.oph-sort-desc-gray {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg' fill='%23ccc' stroke='%23fff'%3E%3Cpath d='M1408 1088q0 26-19 45l-448 448q-19 19-45 19t-45-19l-448-448q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z'/%3E%3C/svg%3E") no-repeat top left;
+}
+/**
 * @stylesheet src/modules/colors.css Colors
 * @parent components
 */
@@ -1488,43 +1528,3 @@
 */
 .oph-muted { color: #aeaeae; }
 .oph-error { color: #e44e4e; }
-/**
-* @stylesheet src/modules/icons.css Icons
-* @parent components
-*/
-/**
-* @styles 0-icons
-*
-* Indicate loading with `.oph-icons`.
-*
-* @demo demos/icons/icons.html
-*/
-.oph-stack {
-  position: relative;
-  display: inline-block;
-  width: 0.75em;
-  height: 0.75em;
-  line-height: 0.75em;
-  vertical-align: middle;
-}
-.oph-stack i {
-  display: block;
-  text-indent: -9999px;
-  width: 100%;
-  height: 100%;
-  background-size: 0.75em 0.75em;
-}
-.oph-sort-asc-gray {
-  margin-bottom: -100%;
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg' fill='%23ccc' stroke='%23fff'%3E%3Cpath d='M1408 704q0 26-19 45t-45 19h-896q-26 0-45-19t-19-45 19-45l448-448q19-19 45-19t45 19l448 448q19 19 19 45z'/%3E%3C/svg%3E") no-repeat top left;
-}
-.oph-sort-asc-blue {
-  margin-bottom: -100%;
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg' fill='%23159ecb' stroke='%23fff'%3E%3Cpath d='M1408 704q0 26-19 45t-45 19h-896q-26 0-45-19t-19-45 19-45l448-448q19-19 45-19t45 19l448 448q19 19 19 45z'/%3E%3C/svg%3E") no-repeat top left;
-}
-.oph-sort-desc-blue {
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg' fill='%23159ecb' stroke='%23fff'%3E%3Cpath d='M1408 1088q0 26-19 45l-448 448q-19 19-45 19t-45-19l-448-448q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z'/%3E%3C/svg%3E") no-repeat top left;
-}
-.oph-sort-desc-gray {
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg' fill='%23ccc' stroke='%23fff'%3E%3Cpath d='M1408 1088q0 26-19 45l-448 448q-19 19-45 19t-45-19l-448-448q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z'/%3E%3C/svg%3E") no-repeat top left;
-}

@@ -142,15 +142,26 @@ pre.prettyprint {
 
 
 // Docs General Styles
+.sidebar.block + .content.docs {
+  margin-left: 20rem;
+}
+
 .docs {
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 95%;
   background-color: @pageBackground;
 
+  .content.description {
+    p {
+      width: 70%;
+    }
+  }
+
   .content.docs {
     flex: 1;
     padding: 20px;
-    margin-left: 25%;
+    max-width: 80em;
+    margin: 0 auto;
 
     a {
       text-decoration: none;
@@ -175,8 +186,22 @@ pre.prettyprint {
       border: 1px solid @haze;
     }
 
-    .comment ul {
+    .comment ul,
+    .comment ol {
       margin-left: 20px;
+      width: 70%;
+    }
+
+    .comment li {
+      line-height: @lineHeightBase;
+    }
+
+    .comment li p {
+      width: 100%;
+    }
+
+    .comment p {
+      width: 70%;
     }
 
     .demo ul {

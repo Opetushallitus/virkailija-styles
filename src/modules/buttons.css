@@ -57,43 +57,7 @@
 }
 
 /**
-* @styles 1-confirm-button Confirm button
-*
-* @demo demos/buttons/button-confirm.html
-*/
-
-.oph-button-confirm {
-  border-color: var(--red);
-  background-color: var(--red);
-  color: var(--white);
-}
-
-.oph-button-confirm:hover,
-.oph-button-confirm:focus {
-  border-color: var(--red-lighten-1);
-  background-color: var(--red-lighten-1);
-}
-
-/**
-* @styles 2-confirm-button Cancel button
-*
-* @demo demos/buttons/button-cancel.html
-*/
-
-.oph-button-cancel {
-  border-color: var(--gray);
-  background-color: var(--gray);
-  color: var(--white);
-}
-
-.oph-button-cancel:hover,
-.oph-button-cancel:focus {
-  border-color: var(--gray-lighten-1);
-  background-color: var(--gray-lighten-1);
-}
-
-/**
-* @styles 5-disabled-button Disabled state
+* @styles 1-disabled-button Disabled state
 *
 * Use `disabled` attribute instead of `.oph-button-is-disabled` class in `button` and `input` tags.
 *
@@ -116,7 +80,51 @@
 }
 
 /**
-* @styles 3-ghost-button Ghost button
+* @styles 2-loading-state Loading state
+*
+* Indicate loading with the [src/modules/spinner.css] component.
+*
+* @demo demos/buttons/button-in-loading-state.html
+*/
+
+/**
+* @styles 3-confirm-button Confirm button
+*
+* @demo demos/buttons/button-confirm.html
+*/
+
+.oph-button-confirm {
+  border-color: var(--red);
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.oph-button-confirm:hover,
+.oph-button-confirm:focus {
+  border-color: var(--red-lighten-1);
+  background-color: var(--red-lighten-1);
+}
+
+/**
+* @styles 4-confirm-button Cancel button
+*
+* @demo demos/buttons/button-cancel.html
+*/
+
+.oph-button-cancel {
+  border-color: var(--gray);
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+.oph-button-cancel:hover,
+.oph-button-cancel:focus {
+  border-color: var(--gray-lighten-1);
+  background-color: var(--gray-lighten-1);
+}
+
+/**
+* @styles 5-ghost-button Ghost button
 *
 * @demo demos/buttons/button-ghost.html
 */
@@ -138,7 +146,7 @@
 }
 
 /**
-* @styles 4-sizes Sizes
+* @styles 6-sizes Sizes
 *
 * @demo demos/buttons/button-sizes.html
 */
@@ -154,14 +162,6 @@
   padding-left: var(--space-1);
   padding-right: var(--space-1);
 }
-
-/**
-* @styles 6-loading-state Loading state
-*
-* Indicate loading with the [src/modules/spinner.css] component.
-*
-* @demo demos/buttons/button-in-loading-state.html
-*/
 
 /**
 * @styles 7-big-button Close button
