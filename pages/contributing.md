@@ -91,11 +91,11 @@ Prefer relative units (`em`, `rem`, `%`) over absolute (`px`, `pt`).
 
 `dist` Compiled and optimized resource files
 
-`docs` Built style guide
+`docs/styleguide` Built style guide
 
 `pages` Style guide pages
 
-`src` Static resource files and Sketch specs (copied to `docs` when building)
+`src` Static resource files and Sketch specs
 
 `theme` Style guide templates and static resources
 
@@ -164,10 +164,11 @@ Configuration files are kept in `config`. DocumentCSS config is in root's
 
 Building is done with `npm` scripts (defined in `package.json`). When developing, 
 run the style guide with `npm start`:
+- deletes compiled CSS and contents of `dist` and `docs` folders
 - lints the CSS
 - compiles and minifies `oph-styles.css`
 - compiles minified versions of the component stylesheets
-- copies `src/sketch` to `docs/sketch` (for Github pages)
+- copies `src/sketch` to `docs/styleguide/sketch` (for Github pages)
 - starts a BrowserSync server
 - demos, pages and the stylesheets are watched for changes, which trigger a rebuild
 and refresh the browser tab

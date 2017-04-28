@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+    <!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: src/modules/modal.css
+	@stylesheet src/modules/modal.css
+######################################################################## -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>OPH Virkailija Style Guide - Modal </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    
+        <link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+    
+</head>
+
+<body class="docs">
+
+    <header>
+        <nav class="container">
+            <div class="logo-menu">
+                <a class="brand" href="./index.html">OPH Virkailija Style Guide</a>
+            </div>
+
+            <ul class="nav-menu">
+                <li>
+                    <a class="home" href="./index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="./components.html">
+                        Components
+                    </a>
+                </li>
+            </ul>
+
+            <a class="nav-item" href="./contributing.html">Contributing</a>
+            <a class="nav-item" href="./change-log.html">Change log</a>
+        </nav>
+
+    </header>
+
+
+
+<div class="container api">
+
+	
+    
+    
+	<nav class="sidebar block">
+		
+		<ul class="api cascading primary-grouping">
+    
+        
+            <li class="search-container active parent">
+                
+                    
+                
+            </li>
+        
+            <li class="search-container active parent">
+                
+                    
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="src__modules__alerts.css.html" data-search="Alert messages">
+						Alert messages
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="src__modules__buttons.css.html" data-search="Buttons">
+						Buttons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="src__modules__colors.css.html" data-search="Colors">
+						Colors
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="src__modules__forms.css.html" data-search="Form controls">
+						Form controls
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="src__modules__icons.css.html" data-search="Icons">
+						Icons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="stylesheet" href="src__modules__modal.css.html" data-search="Modal">
+						Modal
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="src__modules__overlay.css.html" data-search="Overlay">
+						Overlay
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="src__modules__popup.css.html" data-search="Popup">
+						Popup
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="src__modules__spinner.css.html" data-search="Spinner">
+						Spinner
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="src__modules__tabs.css.html" data-search="Tabs">
+						Tabs
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="src__modules__typography.css.html" data-search="Typography">
+						Typography
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+                
+            </li>
+        
+        
+            
+        
+    
+</ul>
+
+	</nav>
+    
+	
+
+	
+	<article class="content docs">
+	
+
+		
+		<section class="title">
+			<div class="heading">
+<h1>Modal</h1>
+	<ul class="tags">
+		<li>stylesheet</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">src/modules/modal.css</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+
+		
+		<section class="contents">
+		</section>
+		
+
+		
+
+		
+		<section class="description">
+			<p>Only styles are provided, create functionality with JS.</p>
+
+		</section>
+		
+
+		
+			
+		
+
+		
+
+
+		
+		<section class="comment">
+			<p>Block the background with the <a href="src__modules__overlay.css.html">Overlay</a> component while a modal is open.</p>
+<p><strong>Usage</strong></p>
+<ul>
+<li><p>Toggle the overlay's and modal's visibility with <code>.oph-overlay-is-visible</code> and <code>.oph-overlay-bg</code> classes
+on <code>.oph-overlay</code> element. See the JS tab for an example.</p></li>
+<li><p>Set <code>overflow: hidden</code> on <code>body</code> to hide the window's scroll bar while the modal is open</p></li>
+<li><p><code>.oph-modal-container</code> and <code>.oph-overlay-is-visible</code>'s z-indexes may have to overridden depending on your app</p></li>
+</ul>
+<p><strong>Accessibility</strong></p>
+<ul>
+<li><p><code>.oph-modal-container</code> is made focusable by setting <code>tabindex=-1</code>, has a <code>role=dialog</code> attribute
+and <code>aria-labelledby</code> linking to <code>.oph-modal-title</code></p></li>
+<li><p><code>.oph-modal</code> has a <code>role=document</code> attribute for screen reader users to browse the contents more easily</p></li>
+<li><p><code>.oph-modal-back-to-top-link</code> for setting focus back to <code>.oph-modal-container</code>. The link is initially visually
+hidden, and displayed on focus.</p></li>
+</ul>
+
+		</section>
+		
+		
+
+		
+			
+				<section class="comment">
+					<h2>Default modal</h2>
+				</section>
+
+				
+				<section class="description">
+					<div class='demo_wrapper' data-demo-src='demos/modal/modal.html'></div>
+
+				</section>
+				
+
+				
+					<section class="comment">
+						
+					</section>
+					
+				
+			
+				<section class="comment">
+					<h2>Modal with a pointer arrow</h2>
+				</section>
+
+				
+				<section class="description">
+					<p><strong>Usage</strong></p>
+
+				</section>
+				
+
+				
+					<section class="comment">
+						<ul>
+<li><p>Calculate positioning with JS</p></li>
+<li><p>May need custom CSS/JS for positioning on small screens depending on your app and modal usage</p></li>
+</ul>
+<div class='demo_wrapper' data-demo-src='demos/modal/modal-with-pointer-arrow.html'></div>
+
+					</section>
+					
+				
+			
+				<section class="comment">
+					<h2>Big modal</h2>
+				</section>
+
+				
+				<section class="description">
+					<div class='demo_wrapper' data-demo-src='demos/modal/modal-big.html'></div>
+
+				</section>
+				
+
+				
+					<section class="comment">
+						
+					</section>
+					
+				
+			
+		
+
+		
+
+	
+	</article>
+	
+
+
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+    var docObject = {"description":"Only styles are provided, create functionality with JS.","name":"src/modules/modal.css","title":"Modal","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"components","src":"src/modules/modal.css","static":"/Users/EsaTaskinen/Dev/Projects/virkailija-styles/theme/static","templates":"/Users/EsaTaskinen/Dev/Projects/virkailija-styles/theme/templates","glob":{"pattern":"{pages,src/modules}/*.{css,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/EsaTaskinen/Dev/Projects/virkailija-styles"},"dest":"/Users/EsaTaskinen/Dev/Projects/virkailija-styles/docs/styleguide","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+</script>
+
+
+    <script>
+        steal = {
+            instantiated: {
+                "bundles/static.css!$css" : null
+            }
+        }
+    </script>
+    <script type='text/javascript'
+            data-main="static"
+            data-config="./static/config.js"
+            src="./static/steal.production.js"
+            bundles-path="bundles"></script>
+
+</body>
+
+</html>
