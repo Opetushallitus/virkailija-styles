@@ -168,7 +168,7 @@ run the style guide with `npm start`:
 - lints the CSS
 - compiles and minifies `oph-styles.css`
 - compiles minified versions of the component stylesheets
-- copies `src/sketch` to `docs/styleguide/sketch` (for Github pages)
+- copies `src/{sketch|demos}` to `docs/{sketch|demos}` (for Github pages)
 - starts a BrowserSync server
 - demos, pages and the stylesheets are watched for changes, which trigger a rebuild
 and refresh the browser tab

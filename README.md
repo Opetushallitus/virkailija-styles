@@ -1,7 +1,7 @@
 # OPH Virkailija Style Guide
 
 See documentation and change log in 
-[GitHub pages](https://opetushallitus.github.io/virkailija-styles).
+[GitHub pages](https://opetushallitus.github.io/virkailija-styles/styleguide).
 
 ## Legacy virkailija-styles
 
