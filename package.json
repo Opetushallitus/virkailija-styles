@@ -7,7 +7,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Opetushallitus/virkailija-styles.git"
+    "url": "git+https://github.com/Opetushallitus/virkailija-styles.git#legacy"
   },
   "scripts": {
     "build-css": "node-sass --include-path scss styles/main.scss styles/styles.css"

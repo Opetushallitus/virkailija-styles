@@ -3,7 +3,7 @@
 Valmiiksi käytettävät tyylit ovat tiedossa styles/styles.css
 
 Tyylit voidaan ottaa käyttöön lisäämällä npm-riippuvuus:
-"Opetushallitus/virkailija-styles"
+"Opetushallitus/virkailija-styles#legacy"
 
 Tyylit voidaan lisätä projektiin esim:
 import 'virkailija-styles/styles/styles.css';
