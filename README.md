@@ -5,5 +5,6 @@ See documentation and change log in
 
 ## Legacy virkailija-styles
 
-Previous `virkailija-styles`  has been moved to `legacy` branch. Update
-your `package.json` accordingly.
+Previous `virkailija-styles`  has been moved to 
+[`legacy`](https://github.com/Opetushallitus/virkailija-styles/tree/legacy) branch. 
+Update your `package.json` accordingly.
