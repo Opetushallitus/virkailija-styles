@@ -1,10 +1,10 @@
 @page index OPH Virkailija Style Guide
 
 A collection of [component styles](components.html) based on 
-[Sketch specs](https://github.com/Opetushallitus/virkailija-styles/styleguide/sketch).
+[Sketch specs](sketch).
 
 Generated with [DocumentCSS](http://documentcss.com/)
-&middot; View in [GitHub](https://github.com/Opetushallitus/virkailija-styles/styleguide)
+&middot; View in [GitHub](https://github.com/Opetushallitus/virkailija-styles)
 
 ## Getting started
 
