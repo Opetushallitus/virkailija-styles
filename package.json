@@ -24,7 +24,7 @@
     "type": "git",
     "url": "git+https://github.com/Opetushallitus/virkailija-styles.git"
   },
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "2.18.8",
     "copyfiles": "1.2.0",
     "cssnano": "3.10.0",
