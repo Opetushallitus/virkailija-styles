@@ -39,7 +39,7 @@
 
 /* Naming: property-modifier */
 :root {
-  --font-family-base: "Open Sans", "Helvetica", sans-sefif;
+  --font-family-base: "Open Sans", "Helvetica", sans-serif;
 
   /*
     A relative unit is used to allow the changing of user agent's font size
